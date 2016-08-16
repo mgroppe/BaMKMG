@@ -1,0 +1,27 @@
+brainstorm:
+rundenbasiertes Kampfsystem mit motioncapturing
+- Schwächensystem mit Waffen und Elementen
+- Gegner werden gebietsabhängig spawned, geben shards die Elemente aufwerten
+- Schrittzähler für normale Gegner, feste Punkte für Bosse (?)
+- 3D-Grafik/sprites von vorne
+	- Recoloring von sprites, erstmal 5 normale + 5 Bosssprites ins Auge fassen
+- Motioncapturing mit Accelerometer
+- verschiedene Bewegungen möglicherweise als verschiedene Waffen
+- delay nach input damit Feedback sichtbar ist
+- Schwächen System mit Elementen
+	Probleme: 
+	- Präzision fragwürdig
+	- Geschwindigkeit darf nicht hoch sein, Rutschgefahr
+	- spaßig?
+	- responsive?
+
+Optional (abhängig von Zeit/Präzision):
+- blocken
+- Rätseleinlagen
+- winken/salutieren
+- Schlüssel drehen
+- Höheneinschätzung
+- zeigen
+
+Schnitzeljagd als story, feste GPS-Koordinaten, Abstandsmessung
+Geplante Dauer zwischen 10 und 40 Stunden
