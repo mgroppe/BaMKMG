@@ -5,8 +5,10 @@ using UnityEngine;
 public class TestCharacterBehaviour : MonoBehaviour {
 	public float speed;
 	public float minDistance;
-	public Character testChar=null;
+	public Character testChar = null;
+
 	public Animator anim;
+
 	private List<GameObject> path;
 	private GameObject currentTile;
 	private GameObject nextTile;
@@ -28,9 +30,9 @@ public class TestCharacterBehaviour : MonoBehaviour {
 	}
 
 	void walkNextStep(){
-		if (Vector3.Distance (this.transform.position, nextTile.transform.position) < minDistance) {
+		if (Vector3.Distance (new Vector3(this.transform.position.x, this.transform.position.y-testChar.offsetY, this.transform.position.z), nextTile.transform.position) < minDistance) {
 			if (path.Count <= 1) {
-				transform.position = nextTile.transform.position;
+				transform.position = new Vector3(nextTile.transform.position.x, nextTile.transform.position.y+testChar.offsetY, nextTile.transform.position.z);
 				testChar.location = nextTile.GetComponent<TileBehaviour> ().tile.location;
 				moving = false;
 				anim.SetBool ("moving", false);
@@ -45,7 +47,7 @@ public class TestCharacterBehaviour : MonoBehaviour {
 				}
 				testChar.location = currentTile.GetComponent<TileBehaviour> ().tile.location;
 				path.Remove (currentTile);
-				Debug.Log (nextTile.transform.position + " " + currentTile.transform.position);
+		//		Debug.Log (nextTile.transform.position + " " + currentTile.transform.position);
 				this.transform.Translate (new Vector3 ((nextTile.transform.position.x - currentTile.transform.position.x) / speed, (nextTile.transform.position.y - currentTile.transform.position.y) / speed, 0));
 			}
 		} else {

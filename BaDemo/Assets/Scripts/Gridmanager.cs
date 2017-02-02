@@ -84,9 +84,12 @@ public class Gridmanager : MonoBehaviour {
 	}
 	void setCharacter(){
 		Vector3 position = calcInitPosition ();
-		GameObject newCharacter = (GameObject)Instantiate (character,position,transform.rotation);
+		//GameObject newCharacter = (GameObject)Instantiate (character,position,transform.rotation);
+		//die 0.2 sind testChar.offsetY, gefällt mir momentan gar nicht. Gibt es eine Möglichkeit, die position von newCharacter nachträglich zu manipulieren?
+		GameObject newCharacter = (GameObject)Instantiate (character,new Vector3(position.x, position.y+0.2f, position.z),transform.rotation);
 		newCharacter.transform.SetParent  (this.transform);
-		newCharacter.GetComponent<TestCharacterBehaviour> ().testChar = new Character (10, 1, 3, 10, 10, new Point (0, 0), 10, false);
+		newCharacter.GetComponent<TestCharacterBehaviour> ().testChar = new Character (10, 1, 3, 10, 10, new Point (0, 0), 10, false,0.2f);
+		
 		field [newCharacter.GetComponent<TestCharacterBehaviour>().testChar.location.x, newCharacter.GetComponent<TestCharacterBehaviour>().testChar.location.y].GetComponent<TileBehaviour> ().tile.isBlocked = true;
 		//if (newCharacter.GetComponent<TestCharacterBehaviour>().testChar.isEnemy) newCharacter.GetComponent<TestCharacterBehaviour>().testChar.facingRight=false;
 		activeChar = newCharacter;
