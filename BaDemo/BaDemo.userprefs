@@ -2,10 +2,10 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\TestCharacterBehaviour.cs">
     <Files>
-      <File FileName="Assets\Scripts\PathFinder.cs" Line="1" Column="6" />
-      <File FileName="Assets\Scripts\Character.cs" Line="8" Column="25" />
-      <File FileName="Assets\Scripts\TestCharacterBehaviour.cs" Line="77" Column="2" />
-      <File FileName="Assets\Scripts\Gridmanager.cs" Line="26" Column="29" />
+      <File FileName="Assets\Scripts\PathFinder.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Character.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\TestCharacterBehaviour.cs" Line="75" Column="18" />
+      <File FileName="Assets\Scripts\Gridmanager.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Path.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>

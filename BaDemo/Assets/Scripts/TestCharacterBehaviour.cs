@@ -49,6 +49,7 @@ public class TestCharacterBehaviour : MonoBehaviour {
 				nextTile = null;
 				currentTile = null;
 				path = null;
+
 			} else {
 				currentTile = path [0];
 				nextTile = path [1];
@@ -72,10 +73,11 @@ public class TestCharacterBehaviour : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (!moving)
-			anim.SetTrigger ("attack");
+
+
 		if (moving) {
 			walkNextStep ();
 		}
+		else anim.SetTrigger ("attack");
 	}
 }
