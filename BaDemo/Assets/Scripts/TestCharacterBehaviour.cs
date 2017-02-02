@@ -16,9 +16,13 @@ public class TestCharacterBehaviour : MonoBehaviour {
 
 	void Start () {
 		anim = GetComponent<Animator> ();
+		path = new List<GameObject> ();
+		anim.enabled = true;
 	}
 	public void Walk (List<GameObject> path){
+		
 		this.path = path;
+		Debug.Log (anim == null);
 		anim.SetBool ("moving", true);
 		currentTile = path [0];
 		nextTile = path [1];
@@ -29,7 +33,7 @@ public class TestCharacterBehaviour : MonoBehaviour {
 			flip ();
 		}
 	}
-	void setPosWithOffset (Vector3 pos){
+	public void setPosWithOffset (Vector3 pos){
 		transform.position= pos + testChar.offset;		
 	}
 
@@ -68,6 +72,8 @@ public class TestCharacterBehaviour : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		if (!moving)
+			anim.SetTrigger ("attack");
 		if (moving) {
 			walkNextStep ();
 		}

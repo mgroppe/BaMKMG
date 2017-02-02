@@ -138,6 +138,7 @@ MonoBehaviour:
     type: 2}
   columns: 10
   rows: 8
+  inAnimation: 0
 --- !u!1 &93094722
 GameObject:
   m_ObjectHideFlags: 0

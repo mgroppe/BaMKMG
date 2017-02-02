@@ -20,8 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4999538654265448}
   - component: {fileID: 212178937494528274}
-  - component: {fileID: 95404746684768942}
   - component: {fileID: 114941305877323490}
+  - component: {fileID: 95404746684768942}
   m_Layer: 0
   m_Name: viking_morningstar
   m_TagString: Untagged

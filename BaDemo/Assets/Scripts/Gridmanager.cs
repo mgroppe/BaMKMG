@@ -19,7 +19,6 @@ public class Gridmanager : MonoBehaviour {
 
 
 
-
 	void setsize(){
 		squaresize = square.GetComponent<SpriteRenderer> ().sprite.bounds.extents.x * 2;
 	}
@@ -32,6 +31,13 @@ public class Gridmanager : MonoBehaviour {
 		Vector3 initPosition = calcInitPosition ();
 		float xcoord = initPosition.x + x * squaresize;
 		float ycoord = initPosition.y - y * squaresize;
+		return new Vector3 (xcoord, ycoord, 0);
+	}
+
+	public Vector3 calcPosition (Point p){
+		Vector3 initPosition = calcInitPosition ();
+		float xcoord = initPosition.x + p.x * squaresize;
+		float ycoord = initPosition.y - p.y * squaresize;
 		return new Vector3 (xcoord, ycoord, 0);
 	}
 	// Generates the Grid and initializes the Tiles
@@ -84,13 +90,13 @@ public class Gridmanager : MonoBehaviour {
 		}
 	}
 	void setCharacter(){
-		Vector3 position = calcInitPosition ();
+	//	Vector3 position = calcInitPosition ();
 		//GameObject newCharacter = (GameObject)Instantiate (character,position,transform.rotation);
 		//die 0.2 sind testChar.offsetY, gefällt mir momentan gar nicht. Gibt es eine Möglichkeit, die position von newCharacter nachträglich zu manipulieren?
-		GameObject newCharacter = (GameObject)Instantiate (character,new Vector3(position.x, position.y+0.2f, position.z),transform.rotation);
+		GameObject newCharacter = (GameObject)Instantiate (character,new Vector3(0,0,0),transform.rotation);
 		newCharacter.transform.SetParent  (this.transform);
 		newCharacter.GetComponent<TestCharacterBehaviour> ().testChar = new Character (10, 1, 3, 10, 10, new Point (0, 0), 10, false,new Vector3(0f,0.2f,0f));
-
+		newCharacter.GetComponent<TestCharacterBehaviour> ().setPosWithOffset (calcPosition(newCharacter.GetComponent<TestCharacterBehaviour> ().testChar.location));
 		field [newCharacter.GetComponent<TestCharacterBehaviour>().testChar.location.x, newCharacter.GetComponent<TestCharacterBehaviour>().testChar.location.y].GetComponent<TileBehaviour> ().tile.isBlocked = true;
 		//if (newCharacter.GetComponent<TestCharacterBehaviour>().testChar.isEnemy) newCharacter.GetComponent<TestCharacterBehaviour>().testChar.facingRight=false;
 		activeChar = newCharacter;
@@ -141,7 +147,6 @@ public class Gridmanager : MonoBehaviour {
 				showReachableTiles (activeChar);
 			}
 		}
-
 	}
 
 
@@ -155,10 +160,6 @@ public class Gridmanager : MonoBehaviour {
 		showReachableTiles (activeChar);
 		instance = this;
 	}
-
-
-
-
 
 	}
 
