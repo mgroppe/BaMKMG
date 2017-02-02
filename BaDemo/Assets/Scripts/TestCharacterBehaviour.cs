@@ -24,18 +24,24 @@ public class TestCharacterBehaviour : MonoBehaviour {
 		nextTile = path [1];
 		path.Remove (path [0]);
 		moving = true;
+		Gridmanager.instance.inAnimation = true;
 		if (nextTile.transform.position.x > currentTile.transform.position.x && !testChar.facingRight || nextTile.transform.position.x<currentTile.transform.position.x && testChar.facingRight) {
 			flip ();
 		}
 	}
+	void setPosWithOffset (Vector3 pos){
+		transform.position= pos + testChar.offset;		
+	}
+
 
 	void walkNextStep(){
-		if (Vector3.Distance (new Vector3(this.transform.position.x, this.transform.position.y-testChar.offsetY, this.transform.position.z), nextTile.transform.position) < minDistance) {
+		if (Vector3.Distance (transform.position-testChar.offset, nextTile.transform.position) < minDistance) {
 			if (path.Count <= 1) {
-				transform.position = new Vector3(nextTile.transform.position.x, nextTile.transform.position.y+testChar.offsetY, nextTile.transform.position.z);
+				setPosWithOffset (nextTile.transform.position);
 				testChar.location = nextTile.GetComponent<TileBehaviour> ().tile.location;
 				moving = false;
 				anim.SetBool ("moving", false);
+				Gridmanager.instance.inAnimation = false;
 				nextTile = null;
 				currentTile = null;
 				path = null;

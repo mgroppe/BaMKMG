@@ -9,6 +9,7 @@ public class Gridmanager : MonoBehaviour {
 	public GameObject selectedTile;
 	public int columns;
 	public int rows;
+	public bool inAnimation;
 
 	private GameObject[,] field;
 	private List<GameObject> initiative;
@@ -88,8 +89,8 @@ public class Gridmanager : MonoBehaviour {
 		//die 0.2 sind testChar.offsetY, gefällt mir momentan gar nicht. Gibt es eine Möglichkeit, die position von newCharacter nachträglich zu manipulieren?
 		GameObject newCharacter = (GameObject)Instantiate (character,new Vector3(position.x, position.y+0.2f, position.z),transform.rotation);
 		newCharacter.transform.SetParent  (this.transform);
-		newCharacter.GetComponent<TestCharacterBehaviour> ().testChar = new Character (10, 1, 3, 10, 10, new Point (0, 0), 10, false,0.2f);
-		
+		newCharacter.GetComponent<TestCharacterBehaviour> ().testChar = new Character (10, 1, 3, 10, 10, new Point (0, 0), 10, false,new Vector3(0f,0.2f,0f));
+
 		field [newCharacter.GetComponent<TestCharacterBehaviour>().testChar.location.x, newCharacter.GetComponent<TestCharacterBehaviour>().testChar.location.y].GetComponent<TileBehaviour> ().tile.isBlocked = true;
 		//if (newCharacter.GetComponent<TestCharacterBehaviour>().testChar.isEnemy) newCharacter.GetComponent<TestCharacterBehaviour>().testChar.facingRight=false;
 		activeChar = newCharacter;
@@ -127,16 +128,18 @@ public class Gridmanager : MonoBehaviour {
 	}
 
 	public void TileClicked(Point location){
-		Point start = activeChar.GetComponent<TestCharacterBehaviour> ().testChar.location;
-		List<GameObject> path = PathFinder.generatePath (field [start.x, start.y], field [location.x, location.y]);
+		if (!inAnimation) {
+			Point start = activeChar.GetComponent<TestCharacterBehaviour> ().testChar.location;
+			List<GameObject> path = PathFinder.generatePath (field [start.x, start.y], field [location.x, location.y]);
 
-		if (PathFinder.PathLength(path) <= activeChar.GetComponent<TestCharacterBehaviour> ().testChar.movement && path.Count>0) {
-			field [start.x, start.y].GetComponent<TileBehaviour> ().tile.isBlocked = false;
-			field [location.x, location.y].GetComponent<TileBehaviour> ().tile.isBlocked = true;
-			activeChar.GetComponent<TestCharacterBehaviour> ().testChar.location = location;
-			deleteReachableTiles ();
-			activeChar.GetComponent<TestCharacterBehaviour> ().Walk (path);
-			showReachableTiles (activeChar);
+			if (PathFinder.PathLength (path) <= activeChar.GetComponent<TestCharacterBehaviour> ().testChar.movement && path.Count > 0) {
+				field [start.x, start.y].GetComponent<TileBehaviour> ().tile.isBlocked = false;
+				field [location.x, location.y].GetComponent<TileBehaviour> ().tile.isBlocked = true;
+				activeChar.GetComponent<TestCharacterBehaviour> ().testChar.location = location;
+				deleteReachableTiles ();
+				activeChar.GetComponent<TestCharacterBehaviour> ().Walk (path);
+				showReachableTiles (activeChar);
+			}
 		}
 
 	}
