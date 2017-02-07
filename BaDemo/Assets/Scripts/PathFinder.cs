@@ -14,10 +14,7 @@ public static class PathFinder
 		possibleMoves.Add (new Path (null, startTile, 0, Distance (startTile, endTile)));
 		while (!possibleMoves.Contains (finishCheck) && possibleMoves.Count > 0) {
 			currentTile = possibleMoves [0];
-			Debug.Log ("currentTile = " + currentTile.tile.GetComponent<TileBehaviour> ().tile.location.x + " " + currentTile.tile.GetComponent<TileBehaviour> ().tile.location.y + "with f=" + currentTile.f);
-			foreach (Path p in possibleMoves) {
-				Debug.Log ("possibleMoves contains "+ p.tile.GetComponent<TileBehaviour>().tile.location.x+" "+p.tile.GetComponent<TileBehaviour>().tile.location.y+"with f="+ p.f);
-			}
+
 			possibleMoves.Remove (currentTile);
 			triedMoves.Add (currentTile);
 			foreach (GameObject g in currentTile.tile.GetComponent<TileBehaviour>().tile.getUnblockedOrthogonalNeighbours()) {
@@ -28,7 +25,6 @@ public static class PathFinder
 					else {
 						
 						if (possibleMoves [possibleMoves.IndexOf (p)].f > p.f) {
-							Debug.Log ("overwrite");
 							possibleMoves.Remove (p);
 							Insert (possibleMoves, p);
 						}
@@ -37,7 +33,6 @@ public static class PathFinder
 			}
 			foreach (GameObject g in currentTile.tile.GetComponent<TileBehaviour>().tile.getUnblockedDiagonalNeighbours()) {
 				Path p = new Path (currentTile, g, currentTile.g + 2, Distance (g, endTile));
-				//Debug.Log ("triedMoves may add diagonal "+ p.tile.GetComponent<TileBehaviour>().tile.location.x+" "+p.tile.GetComponent<TileBehaviour>().tile.location.y+"with f="+ p.f);
 				if (!triedMoves.Contains (p)) {
 					if (!possibleMoves.Contains (p))
 						Insert (possibleMoves, p);

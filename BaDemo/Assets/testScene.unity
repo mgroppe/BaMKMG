@@ -132,13 +132,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   square: {fileID: 1185817795464666, guid: 46784cbf23a877646b8f8547fb93d68a, type: 2}
-  character: {fileID: 1277929430747750, guid: 144f63d600f44d245a15baf5caa30b44, type: 2}
+  playerCharacters:
+  - {fileID: 1277929430747750, guid: 144f63d600f44d245a15baf5caa30b44, type: 2}
+  - {fileID: 1277929430747750, guid: 144f63d600f44d245a15baf5caa30b44, type: 2}
+  - {fileID: 1277929430747750, guid: 144f63d600f44d245a15baf5caa30b44, type: 2}
+  enemies:
+  - {fileID: 1010710146246508, guid: ebe4efdb6ac24b84a818db18ae2a908a, type: 2}
+  - {fileID: 1010710146246508, guid: ebe4efdb6ac24b84a818db18ae2a908a, type: 2}
+  - {fileID: 1010710146246508, guid: ebe4efdb6ac24b84a818db18ae2a908a, type: 2}
   rock: {fileID: 1311443659736754, guid: fdad012f6f12edd48bd16927b54e5691, type: 2}
   selectedTile: {fileID: 1883118811323258, guid: 03e930915c4f5704b93767da96421df2,
     type: 2}
   columns: 10
   rows: 8
   inAnimation: 0
+  initiative: []
+  activeChar: {fileID: 0}
 --- !u!1 &93094722
 GameObject:
   m_ObjectHideFlags: 0

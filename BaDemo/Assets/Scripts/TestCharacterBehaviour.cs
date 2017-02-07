@@ -5,7 +5,7 @@ using UnityEngine;
 public class TestCharacterBehaviour : MonoBehaviour {
 	public float speed;
 	public float minDistance;
-	public Character testChar = null;
+	public Character testChar;
 
 	public Animator anim;
 
@@ -19,8 +19,21 @@ public class TestCharacterBehaviour : MonoBehaviour {
 		path = new List<GameObject> ();
 		anim.enabled = true;
 	}
+
+	public void refresh(){
+		testChar.hasMoved = false;
+		testChar.defending = false;
+		if (!testChar.isEnemy) {
+			Gridmanager.instance.showReachableTiles (this.gameObject);
+		}
+	}
+	public void defend (){
+		testChar.defending = true;
+		Gridmanager.instance.nextTurn ();
+	}
 	public void Walk (List<GameObject> path){
-		
+		Gridmanager gm = Gridmanager.instance;
+		gm.deleteReachableTiles ();
 		this.path = path;
 		Debug.Log (anim == null);
 		anim.SetBool ("moving", true);
@@ -28,7 +41,9 @@ public class TestCharacterBehaviour : MonoBehaviour {
 		nextTile = path [1];
 		path.Remove (path [0]);
 		moving = true;
-		Gridmanager.instance.inAnimation = true;
+		testChar.hasMoved = true;
+		gm.inAnimation = true;
+		gm.field [testChar.location.x, testChar.location.y].GetComponent<TileBehaviour> ().tile.isBlocked = false;
 		if (nextTile.transform.position.x > currentTile.transform.position.x && !testChar.facingRight || nextTile.transform.position.x<currentTile.transform.position.x && testChar.facingRight) {
 			flip ();
 		}
@@ -38,11 +53,29 @@ public class TestCharacterBehaviour : MonoBehaviour {
 	}
 
 
+	public void attack (GameObject attackedEnemy){
+		anim.SetTrigger ("attack");
+		attackedEnemy.GetComponent<TestCharacterBehaviour> ().takeDmg (testChar.damage);
+		Gridmanager.instance.nextTurn ();
+	}
+
+	public void takeDmg (int dmg){
+		if (testChar.currentHealth <= dmg) {
+			this.death ();
+		} else {
+			testChar.currentHealth -= dmg;
+		}
+	}
+	public void death (){
+		Gridmanager.instance.killCharacter (this.gameObject);
+	}
+
 	void walkNextStep(){
 		if (Vector3.Distance (transform.position-testChar.offset, nextTile.transform.position) < minDistance) {
 			if (path.Count <= 1) {
 				setPosWithOffset (nextTile.transform.position);
 				testChar.location = nextTile.GetComponent<TileBehaviour> ().tile.location;
+				nextTile.GetComponent<TileBehaviour>().tile.isBlocked = true;
 				moving = false;
 				anim.SetBool ("moving", false);
 				Gridmanager.instance.inAnimation = false;
@@ -66,7 +99,7 @@ public class TestCharacterBehaviour : MonoBehaviour {
 		}
 	}
 
-	void flip(){
+	public void flip(){
 		transform.localScale = new Vector3 (transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
 		testChar.facingRight = !testChar.facingRight;
 	}
@@ -78,6 +111,9 @@ public class TestCharacterBehaviour : MonoBehaviour {
 		if (moving) {
 			walkNextStep ();
 		}
-		else anim.SetTrigger ("attack");
+		Gridmanager gm = Gridmanager.instance;
+		if (gm.activeChar == this.gameObject && testChar.isEnemy && !gm.inAnimation) {
+			testChar.nextAiMove ();
+		}
 	}
 }
