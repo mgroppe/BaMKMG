@@ -54,22 +54,22 @@ public class Character  {
 					foreach (GameObject g2 in gridmanager.field[c.location.x,c.location.y].GetComponent<TileBehaviour>().tile.getUnblockedOrthogonalNeighbours()) {
 						
 						List<GameObject> possiblePath = PathFinder.generatePath (gridmanager.field [location.x, location.y], g2);
-						if (path.Count == 0 || path.Count > possiblePath.Count) {
+						if (path.Count == 0 || PathFinder.PathLength(path) > PathFinder.PathLength(possiblePath)) {
 							path = possiblePath;
 						}
 					}
 					foreach (GameObject g2 in gridmanager.field[c.location.x,c.location.y].GetComponent<TileBehaviour>().tile.getUnblockedDiagonalNeighbours()) {
 
 						List<GameObject> possiblePath = PathFinder.generatePath (gridmanager.field [location.x, location.y], g2);
-						if (path.Count == 0 || path.Count > possiblePath.Count) {
+						if (path.Count == 0 || PathFinder.PathLength(path) > PathFinder.PathLength(possiblePath)) {
 							path = possiblePath;
 						}
 					}
 				}
 			}
 			if (path.Count > 0) {
-				if (path.Count > movement + 1) {
-					path.RemoveRange (movement + 1, path.Count - (movement + 1));
+				while (PathFinder.PathLength(path) > movement + 1) {
+					path.RemoveAt (path.Count - 1);
 				}
 				parent.GetComponent<TestCharacterBehaviour> ().Walk (path);
 			}

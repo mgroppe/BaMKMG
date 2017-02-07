@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -189,6 +190,19 @@ public class Gridmanager : MonoBehaviour {
 		Character c = character.GetComponent<TestCharacterBehaviour> ().testChar;
 		field [c.location.x, c.location.y].GetComponent<TileBehaviour> ().tile.isBlocked = false;
 		initiative.Remove (character);
+		if (c.isEnemy) {
+			bool checkVictory = true;
+			foreach (GameObject g in initiative) {
+				if (g.GetComponent<TestCharacterBehaviour> ().testChar.isEnemy) {
+					checkVictory = false;
+					break;
+				}
+			}
+			if (checkVictory) {
+				SceneManager.LoadScene("Victory");
+			}
+		} else {
+		}
 		Destroy (character);
 	}
 
