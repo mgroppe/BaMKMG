@@ -74,7 +74,10 @@ public class Character  {
 				parent.GetComponent<TestCharacterBehaviour> ().Walk (path);
 			}
 
-		} else {parent.GetComponent<TestCharacterBehaviour> ().defend ();
+		} else {
+			if (!hasAttacked) {
+				parent.GetComponent<TestCharacterBehaviour> ().defend ();
+			}
 		}
 	
 	}
