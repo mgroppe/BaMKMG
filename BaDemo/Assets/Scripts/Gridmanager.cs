@@ -9,6 +9,7 @@ public class Gridmanager : MonoBehaviour {
 	public GameObject[] enemies;
 	public GameObject rock;
 	public GameObject selectedTile;
+	public GameObject healthBar;
 	public int columns;
 	public int rows;
 	public bool inAnimation;
@@ -106,6 +107,9 @@ public class Gridmanager : MonoBehaviour {
 			newCharacter.GetComponent<TestCharacterBehaviour> ().setPosWithOffset (calcPosition(location));
 			field [location.x, location.y].GetComponent<TileBehaviour> ().tile.isBlocked = true;
 			insertInitiative (newCharacter);
+			GameObject newHealthBar = (GameObject)Instantiate (healthBar);
+			newHealthBar.transform.SetParent (newCharacter.transform);
+			newHealthBar.transform.localPosition = (new Vector3 (0, -0.95f, 0));
 		}
 		foreach (GameObject g in enemies) {
 			GameObject newCharacter = (GameObject)Instantiate (g,new Vector3(0,0,0),transform.rotation);
@@ -116,6 +120,9 @@ public class Gridmanager : MonoBehaviour {
 			newCharacter.GetComponent<TestCharacterBehaviour> ().flip ();
 			field [location.x, location.y].GetComponent<TileBehaviour> ().tile.isBlocked = true;
 			insertInitiative (newCharacter);
+			GameObject newHealthBar = (GameObject)Instantiate (healthBar);
+			newHealthBar.transform.SetParent (newCharacter.transform);
+			newHealthBar.transform.localPosition = (new Vector3 (0, -0.95f, 0));
 		}
 
 		//if (newCharacter.GetComponent<TestCharacterBehaviour>().testChar.isEnemy) newCharacter.GetComponent<TestCharacterBehaviour>().testChar.facingRight=false;

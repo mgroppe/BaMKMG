@@ -64,6 +64,7 @@ public class TestCharacterBehaviour : MonoBehaviour {
 			this.death ();
 		} else {
 			testChar.currentHealth -= dmg;
+			transform.GetChild (0).localScale = new Vector3 ((float)testChar.currentHealth / testChar.maxHealth, 1, 1);
 		}
 	}
 	public void death (){
