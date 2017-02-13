@@ -135,7 +135,7 @@ MonoBehaviour:
   playerCharacters:
   - {fileID: 1277929430747750, guid: 144f63d600f44d245a15baf5caa30b44, type: 2}
   - {fileID: 1277929430747750, guid: 144f63d600f44d245a15baf5caa30b44, type: 2}
-  - {fileID: 1277929430747750, guid: 144f63d600f44d245a15baf5caa30b44, type: 2}
+  - {fileID: 1469958660110278, guid: aa60b15f7ee0b2f499dba25bf73b8f44, type: 2}
   enemies:
   - {fileID: 1010710146246508, guid: ebe4efdb6ac24b84a818db18ae2a908a, type: 2}
   - {fileID: 1010710146246508, guid: ebe4efdb6ac24b84a818db18ae2a908a, type: 2}
