@@ -20,8 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4002615327975902}
   - component: {fileID: 212398993004879852}
-  - component: {fileID: 114445195295036664}
   - component: {fileID: 95623086123735652}
+  - component: {fileID: 114135808716638866}
   m_Layer: 10
   m_Name: E_ra_pr_projectile
   m_TagString: Untagged
@@ -59,7 +59,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114445195295036664
+--- !u!114 &114135808716638866
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -67,12 +67,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1010710146246508}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 202ae75b24b59084b8f3b83b55ff83fc, type: 3}
+  m_Script: {fileID: 11500000, guid: be0bd7e7dd1d852448d51169d891a281, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startPos: {x: 0, y: 0, z: 0}
+  goalPos: {x: 0, y: 0, z: 0}
   speed: 20
   minDistance: 0.1
-  anim: {fileID: 0}
 --- !u!212 &212398993004879852
 SpriteRenderer:
   m_ObjectHideFlags: 1

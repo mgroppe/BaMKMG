@@ -72,6 +72,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 20
   minDistance: 0.1
+  projectile: {fileID: 1010710146246508, guid: 2239dc3ec3596f64993440bd5ef19f3e, type: 2}
   anim: {fileID: 0}
 --- !u!212 &212449954975137342
 SpriteRenderer:

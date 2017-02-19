@@ -28,7 +28,7 @@ public class Character  {
 		this.location = location;
 		this.currentInitiative = currentInitiative;
 		this.isEnemy = isEnemy;
-		this.facingRight = !isEnemy;
+		this.facingRight = true;
 		this.offset = offset;
 		this.parent = parent;
 		this.hasMoved = false;

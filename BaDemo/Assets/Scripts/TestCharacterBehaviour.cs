@@ -6,6 +6,8 @@ public class TestCharacterBehaviour : MonoBehaviour {
 	public float speed;
 	public float minDistance;
 	public Character testChar;
+	public GameObject projectile;
+
 
 	public Animator anim;
 
@@ -42,7 +44,7 @@ public class TestCharacterBehaviour : MonoBehaviour {
 		path.Remove (path [0]);
 		moving = true;
 		testChar.hasMoved = true;
-		gm.inAnimation = true;
+		gm.inAnimation.Add(this.gameObject);
 		gm.field [testChar.location.x, testChar.location.y].GetComponent<TileBehaviour> ().tile.isBlocked = false;
 		if (nextTile.transform.position.x > currentTile.transform.position.x && !testChar.facingRight || nextTile.transform.position.x<currentTile.transform.position.x && testChar.facingRight) {
 			flip ();
@@ -55,6 +57,16 @@ public class TestCharacterBehaviour : MonoBehaviour {
 
 	public void attack (GameObject attackedEnemy){
 		anim.SetTrigger ("attack");
+		if (attackedEnemy.transform.position.x > this.transform.position.x && !testChar.facingRight || attackedEnemy.transform.position.x < this.transform.position.x && testChar.facingRight)
+			flip ();
+		if (projectile != null) {
+			GameObject newProjectile = (GameObject)Instantiate (projectile);
+			Gridmanager.instance.inAnimation.Add (newProjectile);
+			newProjectile.GetComponent<ProjectileBehaviour> ().startPos = this.transform.position;
+			newProjectile.GetComponent<ProjectileBehaviour> ().goalPos = attackedEnemy.transform.position;
+			newProjectile.transform.position = this.transform.position;
+			Debug.Log (Gridmanager.instance.inAnimation.Count);
+		}
 		attackedEnemy.GetComponent<TestCharacterBehaviour> ().takeDmg (testChar.damage);
 		Gridmanager.instance.nextTurn ();
 	}
@@ -79,7 +91,7 @@ public class TestCharacterBehaviour : MonoBehaviour {
 				nextTile.GetComponent<TileBehaviour>().tile.isBlocked = true;
 				moving = false;
 				anim.SetBool ("moving", false);
-				Gridmanager.instance.inAnimation = false;
+				Gridmanager.instance.inAnimation.Remove (this.gameObject);
 				nextTile = null;
 				currentTile = null;
 				path = null;
@@ -113,7 +125,7 @@ public class TestCharacterBehaviour : MonoBehaviour {
 			walkNextStep ();
 		}
 		Gridmanager gm = Gridmanager.instance;
-		if (gm.activeChar == this.gameObject && testChar.isEnemy && !gm.inAnimation) {
+		if (gm.activeChar == this.gameObject && testChar.isEnemy && gm.inAnimation.Count == 0) {
 			testChar.nextAiMove ();
 		}
 	}

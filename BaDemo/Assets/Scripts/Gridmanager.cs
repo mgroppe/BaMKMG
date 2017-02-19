@@ -12,7 +12,7 @@ public class Gridmanager : MonoBehaviour {
 	public GameObject healthBar;
 	public int columns;
 	public int rows;
-	public bool inAnimation;
+	public List<GameObject> inAnimation;
 
 	public GameObject[,] field;
 	public List<GameObject> initiative;
@@ -99,11 +99,15 @@ public class Gridmanager : MonoBehaviour {
 
 		//GameObject newCharacter = (GameObject)Instantiate (character,position,transform.rotation);
 		//die 0.2 sind testChar.offsetY, gefällt mir momentan gar nicht. Gibt es eine Möglichkeit, die position von newCharacter nachträglich zu manipulieren?
-		foreach (GameObject g in playerCharacters){
-			GameObject newCharacter = (GameObject)Instantiate (g,new Vector3(0,0,0),transform.rotation);
+		for(int x =0; x<playerCharacters.Length;x++){
+			GameObject newCharacter = (GameObject)Instantiate (playerCharacters[x],new Vector3(0,0,0),transform.rotation);
 			newCharacter.transform.SetParent  (this.transform);
 			Point location = findLocation (false);
-			newCharacter.GetComponent<TestCharacterBehaviour> ().testChar = new Character (10, 1, 3, 10, 3, location, 10, false,new Vector3(0f,0.2f,0f),newCharacter);
+			if (x != 2) {
+				newCharacter.GetComponent<TestCharacterBehaviour> ().testChar = new Character (10, 1, 3, 10, 3, location, 10, false, new Vector3 (0f, 0.2f, 0f), newCharacter);
+			} else {
+				newCharacter.GetComponent<TestCharacterBehaviour> ().testChar = new Character (10, 5, 3, 10, 3, location, 10, false, new Vector3 (0f, 0.2f, 0f), newCharacter);
+			}
 			newCharacter.GetComponent<TestCharacterBehaviour> ().setPosWithOffset (calcPosition(location));
 			field [location.x, location.y].GetComponent<TileBehaviour> ().tile.isBlocked = true;
 			insertInitiative (newCharacter);
@@ -222,7 +226,7 @@ public class Gridmanager : MonoBehaviour {
 	}
 	//called by the Tile that was clicked and gives its Coordinates
 	public void TileClicked(Point location){
-		if (!inAnimation) {
+		if (inAnimation.Count == 0) {
 			if (!activeChar.GetComponent<TestCharacterBehaviour> ().testChar.isEnemy) {
 				if (field [location.x, location.y].GetComponent<TileBehaviour> ().tile.isBlocked) {
 					if (activeChar.GetComponent<TestCharacterBehaviour> ().testChar.location.x == location.x && activeChar.GetComponent<TestCharacterBehaviour> ().testChar.location.y == location.y) {
@@ -260,13 +264,15 @@ public class Gridmanager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		instance = this;
 		initiative = new List<GameObject> ();
+		inAnimation = new List<GameObject> ();
 		field = new GameObject[columns,rows];
 		setsize ();	
 		generateGrid ();
 		setCharacter ();
 		generateRocks ();
-		instance = this;
+
 		nextTurn ();
 	}
 
