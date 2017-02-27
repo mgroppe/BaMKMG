@@ -6,7 +6,7 @@ using System.Collections.Generic;
 public class Gridmanager : MonoBehaviour {
 	public GameObject square;
 	public GameObject[] playerCharacters;
-	public GameObject[] enemies;
+	public GameObject[] enemyCharacters;
 	public GameObject rock;
 	public GameObject selectedTile;
 	public GameObject healthBar;
@@ -115,11 +115,15 @@ public class Gridmanager : MonoBehaviour {
 			newHealthBar.transform.SetParent (newCharacter.transform);
 			newHealthBar.transform.localPosition = (new Vector3 (0, -0.95f, 0));
 		}
-		foreach (GameObject g in enemies) {
-			GameObject newCharacter = (GameObject)Instantiate (g,new Vector3(0,0,0),transform.rotation);
+		for(int x =0; x<enemyCharacters.Length;x++){
+			GameObject newCharacter = (GameObject)Instantiate (enemyCharacters[x],new Vector3(0,0,0),transform.rotation);
 			newCharacter.transform.SetParent  (this.transform);
 			Point location = findLocation (true);
-			newCharacter.GetComponent<TestCharacterBehaviour> ().testChar = new Character (10, 1, 3, 10, 2, location, 10, true,new Vector3(0f,0.2f,0f),newCharacter);
+			if (x == 1)
+				newCharacter.GetComponent<TestCharacterBehaviour> ().testChar = new Character (10, 5, 3, 10, 2, location, 10, true, new Vector3 (0f, 0.2f, 0f), newCharacter);
+			else {
+				newCharacter.GetComponent<TestCharacterBehaviour> ().testChar = new Character (10, 1, 3, 10, 2, location, 10, true, new Vector3 (0f, 0.2f, 0f), newCharacter);
+			}
 			newCharacter.GetComponent<TestCharacterBehaviour> ().setPosWithOffset (calcPosition(location));
 			newCharacter.GetComponent<TestCharacterBehaviour> ().flip ();
 			field [location.x, location.y].GetComponent<TileBehaviour> ().tile.isBlocked = true;
