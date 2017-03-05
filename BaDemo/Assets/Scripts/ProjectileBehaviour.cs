@@ -14,7 +14,6 @@ public class ProjectileBehaviour : MonoBehaviour {
 	void Start () {
 		moving = true;
 		anim = GetComponent<Animator> ();
-		Gridmanager gm = Gridmanager.instance;
 	}
 
 	// Update is called once per frame

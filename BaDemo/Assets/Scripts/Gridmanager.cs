@@ -20,7 +20,18 @@ public class Gridmanager : MonoBehaviour {
 	private float squaresize;
 	public static Gridmanager instance;
 
+	void StartPackage(string package){    
+		AndroidJavaClass activityClass;
+		AndroidJavaObject activity, packageManager;
+		AndroidJavaObject launch;
 
+
+		activityClass = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
+		activity = activityClass.GetStatic<AndroidJavaObject>("currentActivity");
+		//packageManager = activity.Call<AndroidJavaObject>("getPackageManager");
+		//launch = packageManager.Call<AndroidJavaObject>("getLaunchIntentForPackage",package);
+		activity.Call("test");
+	}
 
 	void setsize(){
 		squaresize = square.GetComponent<SpriteRenderer> ().sprite.bounds.extents.x * 2;
@@ -214,7 +225,8 @@ public class Gridmanager : MonoBehaviour {
 				}
 			}
 			if (checkVictory) {
-				SceneManager.LoadScene("Victory");
+				StartPackage("TestActivity");
+				//SceneManager.LoadScene("Victory");
 			}
 		} else {
 		}
