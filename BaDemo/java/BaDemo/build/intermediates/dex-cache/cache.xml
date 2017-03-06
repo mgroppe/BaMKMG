@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="D:\media and data\documents\BA\UnityFiles\BaDemo\Gradle_Export\BaDemo\libs\unity-classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7dca6db41779fb6c313278e5805a6ae6dc499e1f">
+        <dex dex="D:\media and data\documents\BA\UnityFiles\BaDemo\Gradle_Export\BaDemo\build\intermediates\pre-dexed\debug\unity-classes_9d212b605a98c87363d9c0c66fbc35ccd1f50885.jar" />
+    </item>
+
+</items>

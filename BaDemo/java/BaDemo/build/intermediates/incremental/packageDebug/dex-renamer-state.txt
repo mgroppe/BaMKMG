@@ -1,0 +1,4 @@
+#Mon Mar 06 02:52:08 CET 2017
+base.0=D\:\\media and data\\documents\\BA\\UnityFiles\\BaDemo\\Gradle_Export\\BaDemo\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
+renamed.0=classes.dex
+file.0=D\:\\media and data\\documents\\BA\\UnityFiles\\BaDemo\\Gradle_Export\\BaDemo\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex
