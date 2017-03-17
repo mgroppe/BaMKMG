@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Character  {
-	public Vector3 offset;
 	public int initiative;
 	public int attackRange;
 	public int movement;
@@ -18,7 +17,7 @@ public class Character  {
 	public bool hasMoved;
 	public bool defending;
 
-	public Character (int initiative, int attackRange, int movement, int maxHealth, int damage, Point location, int currentInitiative, bool isEnemy, Vector3 offset, GameObject parent){
+	public Character (int initiative, int attackRange, int movement, int maxHealth, int damage, Point location, bool isEnemy, GameObject parent){
 		this.initiative = initiative;
 		this.attackRange = attackRange;
 		this.movement = movement;
@@ -26,10 +25,8 @@ public class Character  {
 		this.damage = damage;
 		this.currentHealth = maxHealth;
 		this.location = location;
-		this.currentInitiative = currentInitiative;
 		this.isEnemy = isEnemy;
 		this.facingRight = true;
-		this.offset = offset;
 		this.parent = parent;
 		this.hasMoved = false;
 		this.defending = false;

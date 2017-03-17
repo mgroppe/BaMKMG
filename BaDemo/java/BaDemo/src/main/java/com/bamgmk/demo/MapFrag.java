@@ -3,6 +3,7 @@ package com.bamgmk.demo;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +16,8 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -83,7 +86,17 @@ public class MapFrag extends Fragment implements OnMapReadyCallback {
         this.mMap=googleMap;
         googleMap.setOnMarkerClickListener(new OnMarkerClickListener(){
             public boolean onMarkerClick (Marker arg0){
+                Gson gson = new GsonBuilder().create();
+                CharData cd = new CharData();
+                cd.addChar(1,1,3,40,5,false,0);
+                cd.addChar(1,1,3,40,5,false,0);
+                cd.addChar(5,1,5,30,8,false,1);
+                cd.addChar(3,1,3,30,6,true,2);
+                cd.addChar(3,1,3,30,6,true,2);
+                cd.addChar(6,5,2,20,5,true,3);
+                Log.d("json",gson.toJson(cd));
                 Intent intent = new Intent(getActivity(), UnityPlayerActivity.class);
+                intent.putExtra("charData",gson.toJson(cd));
                 startActivity(intent);
                 return true;
             }

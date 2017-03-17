@@ -7,6 +7,7 @@ public class TestCharacterBehaviour : MonoBehaviour {
 	public float minDistance;
 	public Character testChar;
 	public GameObject projectile;
+	public Vector3 offset;
 
 
 	public Animator anim;
@@ -51,7 +52,7 @@ public class TestCharacterBehaviour : MonoBehaviour {
 		}
 	}
 	public void setPosWithOffset (Vector3 pos){
-		transform.position= pos + testChar.offset;		
+		transform.position= pos + offset;		
 	}
 
 
@@ -84,7 +85,7 @@ public class TestCharacterBehaviour : MonoBehaviour {
 	}
 
 	void walkNextStep(){
-		if (Vector3.Distance (transform.position-testChar.offset, nextTile.transform.position) < minDistance) {
+		if (Vector3.Distance (transform.position- offset, nextTile.transform.position) < minDistance) {
 			if (path.Count <= 1) {
 				setPosWithOffset (nextTile.transform.position);
 				testChar.location = nextTile.GetComponent<TileBehaviour> ().tile.location;

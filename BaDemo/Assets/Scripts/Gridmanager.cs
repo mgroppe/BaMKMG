@@ -5,8 +5,7 @@ using System.Collections.Generic;
 
 public class Gridmanager : MonoBehaviour {
 	public GameObject square;
-	public GameObject[] playerCharacters;
-	public GameObject[] enemyCharacters;
+	public GameObject[] models;
 	public GameObject rock;
 	public GameObject selectedTile;
 	public GameObject healthBar;
@@ -22,14 +21,12 @@ public class Gridmanager : MonoBehaviour {
 
 	void StartPackage(string package){    
 		AndroidJavaClass activityClass;
-		AndroidJavaObject activity, packageManager;
-		AndroidJavaObject launch;
+		AndroidJavaObject activity;
+
 
 
 		activityClass = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
 		activity = activityClass.GetStatic<AndroidJavaObject>("currentActivity");
-		//packageManager = activity.Call<AndroidJavaObject>("getPackageManager");
-		//launch = packageManager.Call<AndroidJavaObject>("getLaunchIntentForPackage",package);
 		activity.Call("test");
 	}
 
@@ -106,19 +103,15 @@ public class Gridmanager : MonoBehaviour {
 	}
 
 	//creates the characters
-	void setCharacter(){
+	void generateCharacters(string json){
 
-		//GameObject newCharacter = (GameObject)Instantiate (character,position,transform.rotation);
-		//die 0.2 sind testChar.offsetY, gefällt mir momentan gar nicht. Gibt es eine Möglichkeit, die position von newCharacter nachträglich zu manipulieren?
-		for(int x =0; x<playerCharacters.Length;x++){
-			GameObject newCharacter = (GameObject)Instantiate (playerCharacters[x],new Vector3(0,0,0),transform.rotation);
+		CharData cd = JsonUtility.FromJson<CharData> (json);
+
+		for (int i = 0; i < cd.size; i++) {
+			GameObject newCharacter = (GameObject) Instantiate (models[cd.model[i]]);
 			newCharacter.transform.SetParent  (this.transform);
-			Point location = findLocation (false);
-			if (x != 2) {
-				newCharacter.GetComponent<TestCharacterBehaviour> ().testChar = new Character (10, 1, 3, 10, 3, location, 10, false, new Vector3 (0f, 0.2f, 0f), newCharacter);
-			} else {
-				newCharacter.GetComponent<TestCharacterBehaviour> ().testChar = new Character (10, 5, 3, 10, 3, location, 10, false, new Vector3 (0f, 0.2f, 0f), newCharacter);
-			}
+			Point location = findLocation (cd.isEnemy[i]);
+			newCharacter.GetComponent<TestCharacterBehaviour> ().testChar = cd.generateCharacter (i, location, newCharacter);
 			newCharacter.GetComponent<TestCharacterBehaviour> ().setPosWithOffset (calcPosition(location));
 			field [location.x, location.y].GetComponent<TileBehaviour> ().tile.isBlocked = true;
 			insertInitiative (newCharacter);
@@ -126,25 +119,6 @@ public class Gridmanager : MonoBehaviour {
 			newHealthBar.transform.SetParent (newCharacter.transform);
 			newHealthBar.transform.localPosition = (new Vector3 (0, -0.95f, 0));
 		}
-		for(int x =0; x<enemyCharacters.Length;x++){
-			GameObject newCharacter = (GameObject)Instantiate (enemyCharacters[x],new Vector3(0,0,0),transform.rotation);
-			newCharacter.transform.SetParent  (this.transform);
-			Point location = findLocation (true);
-			if (x == 1)
-				newCharacter.GetComponent<TestCharacterBehaviour> ().testChar = new Character (10, 5, 3, 10, 2, location, 10, true, new Vector3 (0f, 0.2f, 0f), newCharacter);
-			else {
-				newCharacter.GetComponent<TestCharacterBehaviour> ().testChar = new Character (10, 1, 3, 10, 2, location, 10, true, new Vector3 (0f, 0.2f, 0f), newCharacter);
-			}
-			newCharacter.GetComponent<TestCharacterBehaviour> ().setPosWithOffset (calcPosition(location));
-			newCharacter.GetComponent<TestCharacterBehaviour> ().flip ();
-			field [location.x, location.y].GetComponent<TileBehaviour> ().tile.isBlocked = true;
-			insertInitiative (newCharacter);
-			GameObject newHealthBar = (GameObject)Instantiate (healthBar);
-			newHealthBar.transform.SetParent (newCharacter.transform);
-			newHealthBar.transform.localPosition = (new Vector3 (0, -0.95f, 0));
-		}
-
-		//if (newCharacter.GetComponent<TestCharacterBehaviour>().testChar.isEnemy) newCharacter.GetComponent<TestCharacterBehaviour>().testChar.facingRight=false;
 	}
 
 	//inserts the Character at the correct Place in the Initiative order
@@ -218,13 +192,20 @@ public class Gridmanager : MonoBehaviour {
 		initiative.Remove (character);
 		if (c.isEnemy) {
 			bool checkVictory = true;
+			bool checkLose = true;
 			foreach (GameObject g in initiative) {
 				if (g.GetComponent<TestCharacterBehaviour> ().testChar.isEnemy) {
 					checkVictory = false;
 					break;
 				}
 			}
-			if (checkVictory) {
+			foreach (GameObject g in initiative) {
+				if (!g.GetComponent<TestCharacterBehaviour> ().testChar.isEnemy) {
+					checkLose = false;
+					break;
+				}
+			}
+			if (checkVictory || checkLose) {
 				StartPackage("TestActivity");
 				//SceneManager.LoadScene("Victory");
 			}
@@ -280,13 +261,21 @@ public class Gridmanager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		AndroidJavaClass activityClass;
+		AndroidJavaObject activity;
+
+
+
+		activityClass = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
+		activity = activityClass.GetStatic<AndroidJavaObject>("currentActivity");
+		string cd = activity.Get<string> ("charData");
 		instance = this;
 		initiative = new List<GameObject> ();
 		inAnimation = new List<GameObject> ();
 		field = new GameObject[columns,rows];
 		setsize ();	
 		generateGrid ();
-		setCharacter ();
+		generateCharacters (cd);
 		generateRocks ();
 
 		nextTurn ();
