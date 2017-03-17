@@ -15,6 +15,8 @@ import android.view.WindowManager;
 public class UnityPlayerActivity extends Activity
 {
 	protected UnityPlayer mUnityPlayer; // don't change the name of this variable; referenced from native code
+	public String charData;
+
 
 	public void test (){
 		Intent intent = new Intent(this, MainActivity.class);
@@ -26,6 +28,7 @@ public class UnityPlayerActivity extends Activity
 	{
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		super.onCreate(savedInstanceState);
+		charData = getIntent().getExtras().getString("charData");
 
 		getWindow().setFormat(PixelFormat.RGBX_8888); // <--- This makes xperia play happy
 
