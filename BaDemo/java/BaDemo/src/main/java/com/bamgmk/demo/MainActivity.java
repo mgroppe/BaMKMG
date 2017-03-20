@@ -9,6 +9,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -19,13 +20,16 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.model.LatLng;
 
 import android.widget.TextView;
 
 public class MainActivity extends FragmentActivity implements
         GoogleApiClient.ConnectionCallbacks,
         GoogleApiClient.OnConnectionFailedListener,
-        LocationListener{
+        LocationListener,MapReadyListener{
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -42,6 +46,8 @@ public class MainActivity extends FragmentActivity implements
      */
     private ViewPager mViewPager;
     private GoogleApiClient mGoogleApiClient;
+    private LocationRequest mLocationRequest;
+    private GoogleMap map = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,6 +69,22 @@ public class MainActivity extends FragmentActivity implements
 
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        // Connect the client.
+        mGoogleApiClient.connect();
+    }
+    @Override
+    protected void onStop() {
+        // Disconnecting the client invalidates it.
+        mGoogleApiClient.disconnect();
+        super.onStop();
+    }
+
+    public void onMapReady(GoogleMap map){
+        map = map;
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -88,6 +110,16 @@ public class MainActivity extends FragmentActivity implements
 
     @Override
     public void onConnected(@Nullable Bundle bundle) {
+        mLocationRequest = LocationRequest.create();
+        mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+        mLocationRequest.setInterval(1000); // Update location every second
+        try{
+        LocationServices.FusedLocationApi.requestLocationUpdates(
+                mGoogleApiClient, mLocationRequest, this);
+        }
+        catch (SecurityException e){
+            Log.d("Error","no permission for location");
+        }
 
     }
 
@@ -103,6 +135,12 @@ public class MainActivity extends FragmentActivity implements
 
     @Override
     public void onLocationChanged(Location location) {
+        if (map != null)
+            map.animateCamera(CameraUpdateFactory.newLatLng(new LatLng(location.getLatitude(),location.getLongitude())));
+    }
+
+    @Override
+    public void mapReady(GoogleMap map) {
 
     }
 /*

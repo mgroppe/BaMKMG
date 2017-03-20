@@ -1,5 +1,6 @@
 package com.bamgmk.demo;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -8,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.GoogleMap.OnMarkerClickListener;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -22,21 +24,16 @@ import com.google.gson.GsonBuilder;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link MapFrag.OnFragmentInteractionListener} interface
+ * { MapFrag.OnFragmentInteractionListener} interface
  * to handle interaction events.
  * Use the {@link MapFrag#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class MapFrag extends Fragment implements OnMapReadyCallback {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-//    private static final String ARG_PARAM1 = "param1";
-//    private static final String ARG_PARAM2 = "param2";
+public class MapFrag extends Fragment implements OnMapReadyCallback   {
 
     public GoogleMap mMap;
-    // TODO: Rename and change types of parameters
-//    private String mParam1;
-//    private String mParam2;
+    public MapReadyListener callback;
+
 
     public MapFrag() {
         // Required empty public constructor
@@ -65,6 +62,12 @@ public class MapFrag extends Fragment implements OnMapReadyCallback {
         // Get the SupportMapFragment and request notification
         // when the map is ready to be used.
 
+    }
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        callback = (MapReadyListener) getActivity();
     }
 
     @Override
@@ -102,6 +105,7 @@ public class MapFrag extends Fragment implements OnMapReadyCallback {
             }
         });
         initMarker(0, new LatLng(50.3511528, 7.5951959),"w/e");
+        callback.mapReady(mMap);
     }
 
     public Marker initMarker(float colorDouble, LatLng position, String name) {
@@ -112,4 +116,6 @@ public class MapFrag extends Fragment implements OnMapReadyCallback {
         marker.setIcon(BitmapDescriptorFactory.defaultMarker(colorDouble));
         return marker;
     }
+
+
 }
