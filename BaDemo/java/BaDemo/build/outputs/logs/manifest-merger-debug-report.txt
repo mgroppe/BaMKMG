@@ -1,0 +1,192 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\java\BaDemo\src\main\AndroidManifest.xml:2:1-72:12
+	package
+		ADDED from D:\java\BaDemo\src\main\AndroidManifest.xml:4:5-30
+	android:versionName
+		ADDED from D:\java\BaDemo\src\main\AndroidManifest.xml:7:5-30
+		INJECTED from D:\java\BaDemo\src\main\AndroidManifest.xml
+		INJECTED from D:\java\BaDemo\src\main\AndroidManifest.xml
+	xmlns:tools
+		ADDED from D:\java\BaDemo\src\main\AndroidManifest.xml:3:5-51
+	android:versionCode
+		ADDED from D:\java\BaDemo\src\main\AndroidManifest.xml:6:5-28
+		INJECTED from D:\java\BaDemo\src\main\AndroidManifest.xml
+		INJECTED from D:\java\BaDemo\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\java\BaDemo\src\main\AndroidManifest.xml:2:11-69
+	android:installLocation
+		ADDED from D:\java\BaDemo\src\main\AndroidManifest.xml:5:5-45
+uses-sdk
+ADDED from D:\java\BaDemo\src\main\AndroidManifest.xml:9:5-11:41
+MERGED from [com.android.support:support-v13:24.2.1] C:\Users\marting\.android\build-cache\2a311236944df92b24114998788f6c0f8f4b1fe6\output\AndroidManifest.xml:21:5-23:55
+MERGED from [com.android.support:appcompat-v7:24.2.1] C:\Users\marting\.android\build-cache\50a770dfc553e36b5e74a81583d677e343eec461\output\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:24.2.1] C:\Users\marting\.android\build-cache\5b31f1ed24eb66b2c2f85de9610aa1a6d3020c2a\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:24.2.1] C:\Users\marting\.android\build-cache\5cfa4de44729f20ea1d54b7811fad720a6094ab2\output\AndroidManifest.xml:21:5-43
+MERGED from [com.google.android.gms:play-services-maps:9.8.0] C:\Users\marting\.android\build-cache\80bac19b0cfe1af2375a7613aac6df880e261f7a\output\AndroidManifest.xml:23:5-42
+MERGED from [com.google.android.gms:play-services-location:9.8.0] C:\Users\marting\.android\build-cache\3a29e5d5a7eb2ee6fc24084309240f7c705e65fc\output\AndroidManifest.xml:3:5-42
+MERGED from [com.google.android.gms:play-services-base:9.8.0] C:\Users\marting\.android\build-cache\70dcfedbb8349d58b0ac88194cf3e64068e7a143\output\AndroidManifest.xml:17:5-42
+MERGED from [com.google.android.gms:play-services-tasks:9.8.0] C:\Users\marting\.android\build-cache\8801d3f39e0b38dd1186e53cc4235f32776b189c\output\AndroidManifest.xml:3:5-42
+MERGED from [com.google.android.gms:play-services-basement:9.8.0] C:\Users\marting\.android\build-cache\c52875b51ed648d24f0a3a165f4aa659f395bd06\output\AndroidManifest.xml:17:5-42
+MERGED from [com.android.support:support-v4:24.2.1] C:\Users\marting\.android\build-cache\0930da5e5d285077843494159fe9f3d8687b0a0f\output\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:24.2.1] C:\Users\marting\.android\build-cache\59c4ba3626019c1f5ef563201ee54ae6e9997600\output\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:24.2.1] C:\Users\marting\.android\build-cache\edc3eeb9ccf5f81078fdf5c4e5b3e52c0e5b3d39\output\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:24.2.1] C:\Users\marting\.android\build-cache\2fa0509f7e45cc4bfdac8b6d7d1dd878c15ba3d7\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:24.2.1] C:\Users\marting\.android\build-cache\022ad86784d5d7dd822b02bf915c88cf549c705c\output\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:24.2.1] C:\Users\marting\.android\build-cache\7b06c84576d95bec2c23bfaa0902eb44045fa698\output\AndroidManifest.xml:21:5-23:58
+	tools:overrideLibrary
+		ADDED from [com.android.support:support-v13:24.2.1] C:\Users\marting\.android\build-cache\2a311236944df92b24114998788f6c0f8f4b1fe6\output\AndroidManifest.xml:23:9-52
+	android:targetSdkVersion
+		ADDED from D:\java\BaDemo\src\main\AndroidManifest.xml:11:9-38
+		INJECTED from D:\java\BaDemo\src\main\AndroidManifest.xml
+		INJECTED from D:\java\BaDemo\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		ADDED from D:\java\BaDemo\src\main\AndroidManifest.xml:10:9-35
+supports-screens
+ADDED from D:\java\BaDemo\src\main\AndroidManifest.xml:13:5-18:40
+	android:largeScreens
+		ADDED from D:\java\BaDemo\src\main\AndroidManifest.xml:15:9-36
+	android:smallScreens
+		ADDED from D:\java\BaDemo\src\main\AndroidManifest.xml:17:9-36
+	android:normalScreens
+		ADDED from D:\java\BaDemo\src\main\AndroidManifest.xml:16:9-37
+	android:xlargeScreens
+		ADDED from D:\java\BaDemo\src\main\AndroidManifest.xml:18:9-37
+	android:anyDensity
+		ADDED from D:\java\BaDemo\src\main\AndroidManifest.xml:14:9-34
+uses-feature#0x00020000
+ADDED from D:\java\BaDemo\src\main\AndroidManifest.xml:20:5-54
+MERGED from [com.google.android.gms:play-services-maps:9.8.0] C:\Users\marting\.android\build-cache\80bac19b0cfe1af2375a7613aac6df880e261f7a\output\AndroidManifest.xml:21:5-77
+	android:glEsVersion
+		ADDED from D:\java\BaDemo\src\main\AndroidManifest.xml:20:19-51
+	android:required
+		ADDED from [com.google.android.gms:play-services-maps:9.8.0] C:\Users\marting\.android\build-cache\80bac19b0cfe1af2375a7613aac6df880e261f7a\output\AndroidManifest.xml:21:52-75
+uses-feature#android.hardware.touchscreen
+ADDED from D:\java\BaDemo\src\main\AndroidManifest.xml:21:5-23:36
+	android:required
+		ADDED from D:\java\BaDemo\src\main\AndroidManifest.xml:23:9-33
+	android:name
+		ADDED from D:\java\BaDemo\src\main\AndroidManifest.xml:22:9-52
+uses-feature#android.hardware.touchscreen.multitouch
+ADDED from D:\java\BaDemo\src\main\AndroidManifest.xml:24:5-26:36
+	android:required
+		ADDED from D:\java\BaDemo\src\main\AndroidManifest.xml:26:9-33
+	android:name
+		ADDED from D:\java\BaDemo\src\main\AndroidManifest.xml:25:9-63
+uses-feature#android.hardware.touchscreen.multitouch.distinct
+ADDED from D:\java\BaDemo\src\main\AndroidManifest.xml:27:5-29:36
+	android:required
+		ADDED from D:\java\BaDemo\src\main\AndroidManifest.xml:29:9-33
+	android:name
+		ADDED from D:\java\BaDemo\src\main\AndroidManifest.xml:28:9-72
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from D:\java\BaDemo\src\main\AndroidManifest.xml:31:5-81
+	android:name
+		ADDED from D:\java\BaDemo\src\main\AndroidManifest.xml:31:22-78
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from D:\java\BaDemo\src\main\AndroidManifest.xml:32:5-75
+	android:name
+		ADDED from D:\java\BaDemo\src\main\AndroidManifest.xml:32:22-72
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from D:\java\BaDemo\src\main\AndroidManifest.xml:33:5-80
+	android:name
+		ADDED from D:\java\BaDemo\src\main\AndroidManifest.xml:33:22-77
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from D:\java\BaDemo\src\main\AndroidManifest.xml:34:5-78
+	android:name
+		ADDED from D:\java\BaDemo\src\main\AndroidManifest.xml:34:22-76
+application
+ADDED from D:\java\BaDemo\src\main\AndroidManifest.xml:36:5-70:19
+MERGED from [com.android.support:support-v13:24.2.1] C:\Users\marting\.android\build-cache\2a311236944df92b24114998788f6c0f8f4b1fe6\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:appcompat-v7:24.2.1] C:\Users\marting\.android\build-cache\50a770dfc553e36b5e74a81583d677e343eec461\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:24.2.1] C:\Users\marting\.android\build-cache\5b31f1ed24eb66b2c2f85de9610aa1a6d3020c2a\output\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:24.2.1] C:\Users\marting\.android\build-cache\5cfa4de44729f20ea1d54b7811fad720a6094ab2\output\AndroidManifest.xml:23:5-20
+MERGED from [com.google.android.gms:play-services-maps:9.8.0] C:\Users\marting\.android\build-cache\80bac19b0cfe1af2375a7613aac6df880e261f7a\output\AndroidManifest.xml:24:5-19
+MERGED from [com.google.android.gms:play-services-location:9.8.0] C:\Users\marting\.android\build-cache\3a29e5d5a7eb2ee6fc24084309240f7c705e65fc\output\AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-base:9.8.0] C:\Users\marting\.android\build-cache\70dcfedbb8349d58b0ac88194cf3e64068e7a143\output\AndroidManifest.xml:18:5-20:19
+MERGED from [com.google.android.gms:play-services-tasks:9.8.0] C:\Users\marting\.android\build-cache\8801d3f39e0b38dd1186e53cc4235f32776b189c\output\AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-basement:9.8.0] C:\Users\marting\.android\build-cache\c52875b51ed648d24f0a3a165f4aa659f395bd06\output\AndroidManifest.xml:19:5-21:19
+MERGED from [com.android.support:support-v4:24.2.1] C:\Users\marting\.android\build-cache\0930da5e5d285077843494159fe9f3d8687b0a0f\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-fragment:24.2.1] C:\Users\marting\.android\build-cache\59c4ba3626019c1f5ef563201ee54ae6e9997600\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:24.2.1] C:\Users\marting\.android\build-cache\edc3eeb9ccf5f81078fdf5c4e5b3e52c0e5b3d39\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:24.2.1] C:\Users\marting\.android\build-cache\2fa0509f7e45cc4bfdac8b6d7d1dd878c15ba3d7\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:24.2.1] C:\Users\marting\.android\build-cache\022ad86784d5d7dd822b02bf915c88cf549c705c\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\Users\marting\.android\build-cache\7b06c84576d95bec2c23bfaa0902eb44045fa698\output\AndroidManifest.xml:25:5-20
+	android:label
+		ADDED from D:\java\BaDemo\src\main\AndroidManifest.xml:40:9-41
+	android:icon
+		ADDED from D:\java\BaDemo\src\main\AndroidManifest.xml:38:9-42
+	android:banner
+		ADDED from D:\java\BaDemo\src\main\AndroidManifest.xml:37:9-46
+	android:theme
+		ADDED from D:\java\BaDemo\src\main\AndroidManifest.xml:41:9-50
+	android:isGame
+		ADDED from D:\java\BaDemo\src\main\AndroidManifest.xml:39:9-30
+meta-data#com.google.android.geo.API_KEY
+ADDED from D:\java\BaDemo\src\main\AndroidManifest.xml:45:9-47:55
+	android:value
+		ADDED from D:\java\BaDemo\src\main\AndroidManifest.xml:47:13-52
+	android:name
+		ADDED from D:\java\BaDemo\src\main\AndroidManifest.xml:46:13-58
+activity#com.bamgmk.demo.UnityPlayerActivity
+ADDED from D:\java\BaDemo\src\main\AndroidManifest.xml:48:9-59:20
+	android:process
+		ADDED from D:\java\BaDemo\src\main\AndroidManifest.xml:50:13-37
+	android:screenOrientation
+		ADDED from D:\java\BaDemo\src\main\AndroidManifest.xml:54:13-57
+	android:label
+		ADDED from D:\java\BaDemo\src\main\AndroidManifest.xml:52:13-45
+	android:launchMode
+		ADDED from D:\java\BaDemo\src\main\AndroidManifest.xml:53:13-44
+	android:configChanges
+		ADDED from D:\java\BaDemo\src\main\AndroidManifest.xml:51:13-170
+	android:name
+		ADDED from D:\java\BaDemo\src\main\AndroidManifest.xml:49:13-48
+meta-data#unityplayer.UnityActivity
+ADDED from D:\java\BaDemo\src\main\AndroidManifest.xml:56:13-58:40
+	android:value
+		ADDED from D:\java\BaDemo\src\main\AndroidManifest.xml:58:17-37
+	android:name
+		ADDED from D:\java\BaDemo\src\main\AndroidManifest.xml:57:17-57
+activity#com.bamgmk.demo.MainActivity
+ADDED from D:\java\BaDemo\src\main\AndroidManifest.xml:60:9-69:20
+	android:label
+		ADDED from D:\java\BaDemo\src\main\AndroidManifest.xml:62:13-56
+	android:name
+		ADDED from D:\java\BaDemo\src\main\AndroidManifest.xml:61:13-41
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER+android.intent.category.LEANBACK_LAUNCHER
+ADDED from D:\java\BaDemo\src\main\AndroidManifest.xml:63:13-68:29
+action#android.intent.action.MAIN
+ADDED from D:\java\BaDemo\src\main\AndroidManifest.xml:64:17-69
+	android:name
+		ADDED from D:\java\BaDemo\src\main\AndroidManifest.xml:64:25-66
+category#android.intent.category.LAUNCHER
+ADDED from D:\java\BaDemo\src\main\AndroidManifest.xml:66:17-77
+	android:name
+		ADDED from D:\java\BaDemo\src\main\AndroidManifest.xml:66:27-74
+category#android.intent.category.LEANBACK_LAUNCHER
+ADDED from D:\java\BaDemo\src\main\AndroidManifest.xml:67:17-86
+	android:name
+		ADDED from D:\java\BaDemo\src\main\AndroidManifest.xml:67:27-83
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [com.google.android.gms:play-services-maps:9.8.0] C:\Users\marting\.android\build-cache\80bac19b0cfe1af2375a7613aac6df880e261f7a\output\AndroidManifest.xml:19:5-78
+	android:name
+		ADDED from [com.google.android.gms:play-services-maps:9.8.0] C:\Users\marting\.android\build-cache\80bac19b0cfe1af2375a7613aac6df880e261f7a\output\AndroidManifest.xml:19:22-76
+uses-permission#android.permission.INTERNET
+ADDED from [com.google.android.gms:play-services-maps:9.8.0] C:\Users\marting\.android\build-cache\80bac19b0cfe1af2375a7613aac6df880e261f7a\output\AndroidManifest.xml:20:5-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-maps:9.8.0] C:\Users\marting\.android\build-cache\80bac19b0cfe1af2375a7613aac6df880e261f7a\output\AndroidManifest.xml:20:22-64
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:9.8.0] C:\Users\marting\.android\build-cache\70dcfedbb8349d58b0ac88194cf3e64068e7a143\output\AndroidManifest.xml:19:9-172
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:9.8.0] C:\Users\marting\.android\build-cache\70dcfedbb8349d58b0ac88194cf3e64068e7a143\output\AndroidManifest.xml:19:146-170
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:9.8.0] C:\Users\marting\.android\build-cache\70dcfedbb8349d58b0ac88194cf3e64068e7a143\output\AndroidManifest.xml:19:86-145
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:9.8.0] C:\Users\marting\.android\build-cache\70dcfedbb8349d58b0ac88194cf3e64068e7a143\output\AndroidManifest.xml:19:19-85
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:9.8.0] C:\Users\marting\.android\build-cache\c52875b51ed648d24f0a3a165f4aa659f395bd06\output\AndroidManifest.xml:20:9-121
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:9.8.0] C:\Users\marting\.android\build-cache\c52875b51ed648d24f0a3a165f4aa659f395bd06\output\AndroidManifest.xml:20:66-119
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:9.8.0] C:\Users\marting\.android\build-cache\c52875b51ed648d24f0a3a165f4aa659f395bd06\output\AndroidManifest.xml:20:20-65

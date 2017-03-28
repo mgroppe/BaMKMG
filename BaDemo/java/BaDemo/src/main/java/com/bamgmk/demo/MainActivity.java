@@ -1,5 +1,6 @@
 package com.bamgmk.demo;
 
+import android.content.Context;
 import android.location.Location;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -23,8 +24,21 @@ import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
+import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 import android.widget.TextView;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.InputStreamReader;
+import java.util.Calendar;
+import java.util.HashMap;
+import java.util.Random;
 
 public class MainActivity extends FragmentActivity implements
         GoogleApiClient.ConnectionCallbacks,
@@ -48,6 +62,10 @@ public class MainActivity extends FragmentActivity implements
     private GoogleApiClient mGoogleApiClient;
     private LocationRequest mLocationRequest;
     private GoogleMap map = null;
+    private Gson gson;
+    public PlayerCharacter[] heroTeam = new PlayerCharacter[3];
+    public HashMap<Marker,Fight> currentFights = new HashMap<Marker,Fight>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +74,7 @@ public class MainActivity extends FragmentActivity implements
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
+
 
         // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) findViewById(R.id.container);
@@ -66,7 +85,48 @@ public class MainActivity extends FragmentActivity implements
                 .addConnectionCallbacks(this)
                 .addOnConnectionFailedListener(this)
                 .build();
+        gson = new GsonBuilder().create();
 
+        if (!new File(getFilesDir().toString()+"/heroes").exists()){
+            createHeroesTeam();
+        }
+
+        loadHeroes();
+
+    }
+
+    private void loadHeroes() {
+        try {
+            FileInputStream inputStream = openFileInput("heroes");
+            InputStreamReader streamReader = new InputStreamReader(inputStream);
+            BufferedReader Br = new BufferedReader(streamReader);
+            String s = Br.readLine();
+            heroTeam = gson.fromJson(s,PlayerCharacter[].class);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    private void createHeroesTeam() {
+        heroTeam[0] = new PlayerCharacter(7,1,3,80,5,false,0,10,3,1,0);
+        heroTeam[1] =  new PlayerCharacter(7,1,3,80,5,false,0,10,3,1,0);
+        heroTeam[2] = new PlayerCharacter(5,1,5,60,7,false,1,8,4,1,0);
+
+        saveHeroes();
+
+    }
+
+    private void saveHeroes() {
+        String filename = "heroes";
+        FileOutputStream outputStream;
+
+        try {
+            outputStream = openFileOutput(filename, Context.MODE_PRIVATE);
+            outputStream.write(gson.toJson(heroTeam).getBytes());
+            outputStream.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -135,12 +195,66 @@ public class MainActivity extends FragmentActivity implements
 
     @Override
     public void onLocationChanged(Location location) {
-        if (map != null)
-            map.animateCamera(CameraUpdateFactory.newLatLng(new LatLng(location.getLatitude(),location.getLongitude())));
+        if (map != null){
+            LatLng ll = new LatLng(location.getLatitude(),location.getLongitude());
+            map.animateCamera(CameraUpdateFactory.newLatLng(ll));
+            long time = Calendar.getInstance().getTime().getTime();
+            for (Marker m : currentFights.keySet())
+                {
+
+                    if (currentFights.get(m).timeCreated.getTime() +900000 <= time){
+                        currentFights.remove(m);
+                        m.remove();
+                    }
+
+                }
+
+
+            if (currentFights.size() <= 15 && Math.random()<0.1){
+                int lvl = ((int) Math.random()*(heroTeam[0].lvl +2)) +1;
+                Marker newMarker = map.addMarker(new MarkerOptions().position(randLoc(ll,100)).title("lvl "+lvl));
+            }
+            //map.addMarker(new MarkerOptions().position(new LatLng(location.getLatitude(),location.getLongitude())).title());
+        }
+    }
+
+    /**
+     * generates a random location
+     * @param ll
+     * @param radius in meter
+     * @return random location in a circle of radius radius around coordinate ll
+     */
+
+    public  LatLng randLoc(LatLng ll, int radius) {
+        double y0 = ll.latitude, x0 = ll.longitude;
+        Random random = new Random();
+
+        // Convert radius from meters to degrees
+        double radiusInDegrees = radius / 111000f;
+
+        double u = random.nextDouble();
+        double v = random.nextDouble();
+        double w = radiusInDegrees * Math.sqrt(u);
+        double t = 2 * Math.PI * v;
+        double x = w * Math.cos(t);
+        double y = w * Math.sin(t);
+
+        // Adjust the x-coordinate for the shrinking of the east-west distances
+        double new_x = x / Math.cos(y0);
+
+        double foundLongitude = new_x + x0;
+        double foundLatitude = y + y0;
+        LatLng res = new LatLng(foundLatitude, foundLongitude);
+        return res;
     }
 
     @Override
     public void mapReady(GoogleMap map) {
+        map = map;
+    }
+
+    @Override
+    public void fightIfCloseEnough(Marker marker) {
 
     }
 /*

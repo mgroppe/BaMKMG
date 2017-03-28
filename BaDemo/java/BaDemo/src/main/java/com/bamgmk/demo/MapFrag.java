@@ -87,24 +87,13 @@ public class MapFrag extends Fragment implements OnMapReadyCallback   {
     @Override
     public void onMapReady(GoogleMap googleMap) {
         this.mMap=googleMap;
-        googleMap.setOnMarkerClickListener(new OnMarkerClickListener(){
-            public boolean onMarkerClick (Marker arg0){
-                Gson gson = new GsonBuilder().create();
-                CharData cd = new CharData();
-                cd.addChar(1,1,3,40,5,false,0);
-                cd.addChar(1,1,3,40,5,false,0);
-                cd.addChar(5,1,5,30,8,false,1);
-                cd.addChar(3,1,3,30,6,true,2);
-                cd.addChar(3,1,3,30,6,true,2);
-                cd.addChar(6,5,2,20,5,true,3);
-                Log.d("json",gson.toJson(cd));
-                Intent intent = new Intent(getActivity(), UnityPlayerActivity.class);
-                intent.putExtra("charData",gson.toJson(cd));
-                startActivity(intent);
-                return true;
-            }
-        });
-        initMarker(0, new LatLng(50.3511528, 7.5951959),"w/e");
+        googleMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
+                                                   @Override
+                                                   public void onInfoWindowClick(Marker marker) {
+                                                       callback.fightIfCloseEnough(marker);
+                                                   }
+                                               }
+        );
         callback.mapReady(mMap);
     }
 
@@ -112,7 +101,7 @@ public class MapFrag extends Fragment implements OnMapReadyCallback   {
         Marker marker = this.mMap.addMarker(new MarkerOptions()
                 .position(position)
                 .title(name)
-                .draggable(true));
+                );
         marker.setIcon(BitmapDescriptorFactory.defaultMarker(colorDouble));
         return marker;
     }

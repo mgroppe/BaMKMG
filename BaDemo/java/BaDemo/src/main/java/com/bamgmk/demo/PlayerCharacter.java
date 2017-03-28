@@ -15,6 +15,21 @@ public class PlayerCharacter extends GameCharacter {
     public int xp;
     public int xpForNextLvl;
 
+    public PlayerCharacter(int initiative, int attackRange, int movement, int maxHealth, int damage, boolean isEnemy, int model) {
+        super(initiative, attackRange, movement, maxHealth, damage, isEnemy, model);
+    }
+
+    public PlayerCharacter(int initiative, int attackRange, int movement, int maxHealth, int damage, boolean isEnemy, int model, int hpGrowth, int dmgGrowth, int lvl, int xp) {
+        super(initiative, attackRange, movement, maxHealth, damage, isEnemy, model);
+        this.hpGrowth = hpGrowth;
+        this.dmgGrowth = dmgGrowth;
+        this.lvl = lvl;
+        this.xp = xp;
+        xpForNextLvl = 100;
+        armor = null;
+        weapon = null;
+    }
+
     public void equip(Item item){
         if (item.isWeapon){
             if (weapon != null)
