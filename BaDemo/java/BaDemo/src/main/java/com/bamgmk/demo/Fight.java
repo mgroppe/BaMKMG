@@ -26,10 +26,11 @@ public class Fight {
                 enemies[2] = new GameCharacter(7,1,3,70+lvl*10,2+lvl*3,true,0);
                 break;
             case 2:
-                break;
+
                 enemies[0] = new GameCharacter(6,1,4,70+lvl*8,3+lvl*3,true,2);
                 enemies[1] = new GameCharacter(6,1,4,70+lvl*8,3+lvl*3,true,2);
                 enemies[2] = new GameCharacter(5,4,2,40+lvl*6,3+lvl*2,true,3);
+                break;
             case 3:
                 enemies[0] = new GameCharacter(5,4,2,40+lvl*6,3+lvl*2,true,3);
                 enemies[1] = new GameCharacter(5,4,2,40+lvl*6,3+lvl*2,true,3);

@@ -292,8 +292,8 @@ public class MainActivity extends FragmentActivity implements
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_main, container, false);
-            TextView textView = (TextView) rootView.findViewById(R.id.section_label);
-            textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
+        //    TextView textView = (TextView) rootView.findViewById(R.id.section_label);
+         //   textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
             return rootView;
         }
     }
@@ -313,6 +313,8 @@ public class MainActivity extends FragmentActivity implements
             // getItem is called to instantiate the fragment for the given page.
             // Return a PlaceholderFragment (defined as a static inner class below).
             if (position == 1) return new MapFrag();
+            if (position==0)return new CharFrag();
+
             return PlaceholderFragment.newInstance(position + 1);
         }
 
