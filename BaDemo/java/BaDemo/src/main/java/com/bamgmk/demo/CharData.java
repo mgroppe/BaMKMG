@@ -13,7 +13,8 @@ public class CharData {
     public List<Integer> attackRange;
     public List<Integer> movement;
     public List<Integer> maxHealth;
-    public List<Integer> damage;
+    public List<Integer> mindamage;
+    public List<Integer> maxdamage;
     public List<Boolean> isEnemy;
     public List<Integer> model;
 
@@ -23,18 +24,20 @@ public class CharData {
         attackRange = new LinkedList<Integer>();
         movement = new LinkedList<Integer>();
         maxHealth = new LinkedList<Integer>();
-        damage = new LinkedList<Integer>();
+        mindamage = new LinkedList<Integer>();
+        maxdamage = new LinkedList<Integer>();
         isEnemy = new LinkedList<Boolean>();
         model = new LinkedList<Integer>();
     }
 
-    public void addChar (int initiative, int attackrange, int movement, int maxhealth,int damage, boolean isEnemy, int model){
+    public void addChar (int initiative, int attackrange, int movement, int maxhealth,int mindamage,int maxdamage, boolean isEnemy, int model){
         size++;
         this.initiative.add(initiative);
         this.attackRange.add(attackrange);
         this.movement.add(movement);
         this.maxHealth.add(maxhealth);
-        this.damage.add(damage);
+        this.mindamage.add(mindamage);
+        this.maxdamage.add(maxdamage);
         this.isEnemy.add(isEnemy);
         this.model.add(model);
     }
@@ -45,7 +48,8 @@ public class CharData {
         this.attackRange.add(c.attackRange);
         this.movement.add(c.movement);
         this.maxHealth.add(c.maxHealth);
-        this.damage.add(c.damage);
+        this.mindamage.add(c.mindamage);
+        this.maxdamage.add(c.maxdamage);
         this.isEnemy.add(c.isEnemy);
         this.model.add(c.model);
     }

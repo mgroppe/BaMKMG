@@ -1,59 +1,74 @@
 package com.bamgmk.demo;
 
 import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Raven on 29.03.2017.
  */
-
 public class ImageAdapter extends BaseAdapter {
-    private Context mContext;
+    public  List<AdapterItem> mItems = new ArrayList<AdapterItem>();
+    private final LayoutInflater mInflater;
 
-    public ImageAdapter(Context c) {
-        mContext = c;
-    }
+    public ImageAdapter(Context context,List<PlayerCharacter> heroTeam) {
+        mInflater = LayoutInflater.from(context);
 
-    public int getCount() {
-        return mThumbIds.length;
-    }
-
-    public Object getItem(int position) {
-        return null;
-    }
-
-    public long getItemId(int position) {
-        return 0;
-    }
-
-    // create a new ImageView for each item referenced by the Adapter
-    public View getView(int position, View convertView, ViewGroup parent) {
-        ImageView imageView;
-        if (convertView == null) {
-            // if it's not recycled, initialize some attributes
-            imageView = new ImageView(mContext);
-            imageView.setLayoutParams(new GridView.LayoutParams(85, 85));
-            imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-            imageView.setPadding(8, 8, 8, 8);
-        } else {
-            imageView = (ImageView) convertView;
+        for (PlayerCharacter pc : heroTeam){
+            if(pc.isActive){
+                mItems.add(new AdapterItem(pc.name,pc.getImageId(),pc));
+            }
+        }
+        for (PlayerCharacter pc : heroTeam){
+            mItems.add(new AdapterItem(pc.name,pc.getImageId(),pc));
         }
 
-        imageView.setImageResource(mThumbIds[position]);
-        return imageView;
     }
 
-    // references to our images
-    private Integer[] mThumbIds = {
-            R.drawable.token_anubis_warrior, R.drawable.token_anubis_warrior,
-            R.drawable.token_priestess, R.drawable.token_priestess,
-            R.drawable.token_berserker, R.drawable.token_berserker,
-            R.drawable.token_morningstar, R.drawable.token_morningstar,
-            R.drawable.woody_background
-    };
+    @Override
+    public int getCount() {
+        return mItems.size();
+    }
+
+    @Override
+    public AdapterItem getItem(int i) {
+        return mItems.get(i);
+    }
+
+    @Override
+    public long getItemId(int i) {
+        return mItems.get(i).drawableId;
+    }
+
+    @Override
+    public View getView(int i, View view, ViewGroup viewGroup) {
+        View v = view;
+        ImageView picture;
+        TextView name;
+
+        if (v == null) {
+            v = mInflater.inflate(R.layout.grid_item, viewGroup, false);
+            v.setTag(R.id.picture, v.findViewById(R.id.picture));
+            v.setTag(R.id.text, v.findViewById(R.id.text));
+        }
+
+        picture = (ImageView) v.getTag(R.id.picture);
+        name = (TextView) v.getTag(R.id.text);
+
+        AdapterItem item = getItem(i);
+
+        picture.setImageResource(item.drawableId);
+        name.setText(item.name);
+
+        return v;
+    }
+
 
 }

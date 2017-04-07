@@ -1,0 +1,37 @@
+325-500hp *15-25%
+75-125atk *15-25%
+1/6range
+movement speed 3-6
+initiative *15-25%
+
+xp für lvl 2: 100
+xp/gegner lvl 1: 10
+lvlup xp/gegner and needed: *25%
+
+morningstar
+500hp
+65 - 85 atk,
+1 range
+ms 4
+initiative 50
+
+Berserker
+400hp
+100-150 atk
+1
+4
+55
+
+anubis
+360hp
+50 - 150 atk
+1
+6
+75
+
+priestess
+325
+75 - 95 atk
+6
+3
+40
