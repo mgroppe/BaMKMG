@@ -43,9 +43,11 @@ public class GameCharacter implements Serializable {
                 enemy = new GameCharacter(40,6,3,325,75,95,true,3);
                 break;
         }
-        enemy.multiplyStats(Math.pow(1.2,lvl-1));
+        enemy.multiplyStats(Math.pow(1.15,lvl-1));
         if (lvl >= 3){
-            enemy.multiplyStats(1.25);
+            enemy.multiplyStats(1.2);
+            if(lvl>=8)
+                enemy.multiplyStats(1.25);
         }
         return enemy;
     }
@@ -65,9 +67,11 @@ public class GameCharacter implements Serializable {
                 enemy = new GameCharacter(40,6,3,325,75,95,true,7);
                 break;
         }
-        enemy.multiplyStats(Math.pow(1.2,lvl-1));
+        enemy.multiplyStats(Math.pow(1.15,lvl-1));
         if (lvl >= 3){
-            enemy.multiplyStats(1.25);
+            enemy.multiplyStats(1.2);
+            if(lvl>=8)
+                enemy.multiplyStats(1.25);
         }
         return enemy;
     }
@@ -82,7 +86,7 @@ public class GameCharacter implements Serializable {
     public String getTypeString(){
         switch (model){
             case 0:
-                return "Vikinger";
+                return "Wikinger";
             case 1:
                 return "Berserker";
             case 2:
@@ -90,11 +94,11 @@ public class GameCharacter implements Serializable {
             case 3:
                 return "Priesterin des Ra";
             case 4:
-                return "Vikinger-Boss";
+                return "Wikinger-Boss";
             case 5:
                 return "Berserker-Boss";
             case 6:
-                return "Schalkskrieger-Boss";
+                return "Schakalskrieger-Boss";
             case 7:
                 return "Priesterin-Boss";
         }
