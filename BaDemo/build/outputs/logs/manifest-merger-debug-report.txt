@@ -1,0 +1,214 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:2:1-79:12
+	package
+		ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:4:5-30
+	android:versionName
+		ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:7:5-30
+		INJECTED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml
+		INJECTED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml
+	xmlns:tools
+		ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:3:5-51
+	android:versionCode
+		ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:6:5-28
+		INJECTED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml
+		INJECTED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:2:11-69
+	android:installLocation
+		ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:5:5-45
+uses-sdk
+ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:9:5-11:41
+MERGED from [com.android.support:support-v13:24.2.1] C:\Users\Raven\.android\build-cache\1dab808fc6f463f689afff55577ef1d38a8f9ef6\output\AndroidManifest.xml:21:5-23:55
+MERGED from [com.android.support:appcompat-v7:24.2.1] C:\Users\Raven\.android\build-cache\faa45597688ee5e778232451544fb67e80981fb5\output\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:24.2.1] C:\Users\Raven\.android\build-cache\0afc1e378982530b2de4ff609f0ae9e3d0bde120\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:24.2.1] C:\Users\Raven\.android\build-cache\2c335a6a65c991d688707680e59ecc38add140c0\output\AndroidManifest.xml:21:5-43
+MERGED from [com.google.android.gms:play-services-maps:9.8.0] C:\Users\Raven\.android\build-cache\ec3125aba2796299f72780d0030a518b1b1118d6\output\AndroidManifest.xml:23:5-42
+MERGED from [com.google.android.gms:play-services-location:9.8.0] C:\Users\Raven\.android\build-cache\c832b6b4a2850eb6928ce5553ec771baba23ec5e\output\AndroidManifest.xml:3:5-42
+MERGED from [com.google.android.gms:play-services-base:9.8.0] C:\Users\Raven\.android\build-cache\ccd7b42d9e929e4486c78b929fb04fa3280e3f34\output\AndroidManifest.xml:17:5-42
+MERGED from [com.google.android.gms:play-services-tasks:9.8.0] C:\Users\Raven\.android\build-cache\bfa6f1ba876d89ab7e83a41688ab82e0cbbc0ea8\output\AndroidManifest.xml:3:5-42
+MERGED from [com.google.android.gms:play-services-basement:9.8.0] C:\Users\Raven\.android\build-cache\65fe9b66f38a78bfede020b03fc5565b0de1a739\output\AndroidManifest.xml:17:5-42
+MERGED from [com.android.support:support-v4:24.2.1] C:\Users\Raven\.android\build-cache\a6d0e10893bc65cdb66c39398d9ec11c295ee41a\output\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:24.2.1] C:\Users\Raven\.android\build-cache\0e0f98906f2a73874481283176120407408aa02f\output\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:24.2.1] C:\Users\Raven\.android\build-cache\41f4848563f2252a18d490443f3a4e41140e7a0a\output\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:24.2.1] C:\Users\Raven\.android\build-cache\c3013bf75183536c4bac6bdd851a5822b04a7563\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:24.2.1] C:\Users\Raven\.android\build-cache\123f62f61890b8aadf67a16207f3d2e497fbf773\output\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:24.2.1] C:\Users\Raven\.android\build-cache\9a9fae9410ba43744823efd175074add9f6727e3\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Raven\.android\build-cache\cf288bab3e4db9fd6372622e9ef9c3c57b3f3434\output\AndroidManifest.xml:5:5-7:41
+	tools:overrideLibrary
+		ADDED from [com.android.support:support-v13:24.2.1] C:\Users\Raven\.android\build-cache\1dab808fc6f463f689afff55577ef1d38a8f9ef6\output\AndroidManifest.xml:23:9-52
+	android:targetSdkVersion
+		ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:11:9-38
+		INJECTED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml
+		INJECTED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:10:9-35
+supports-screens
+ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:13:5-18:40
+	android:largeScreens
+		ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:15:9-36
+	android:smallScreens
+		ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:17:9-36
+	android:normalScreens
+		ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:16:9-37
+	android:xlargeScreens
+		ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:18:9-37
+	android:anyDensity
+		ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:14:9-34
+uses-feature#0x00020000
+ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:20:5-54
+MERGED from [com.google.android.gms:play-services-maps:9.8.0] C:\Users\Raven\.android\build-cache\ec3125aba2796299f72780d0030a518b1b1118d6\output\AndroidManifest.xml:21:5-77
+	android:glEsVersion
+		ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:20:19-51
+	android:required
+		ADDED from [com.google.android.gms:play-services-maps:9.8.0] C:\Users\Raven\.android\build-cache\ec3125aba2796299f72780d0030a518b1b1118d6\output\AndroidManifest.xml:21:52-75
+uses-feature#android.hardware.touchscreen
+ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:21:5-23:36
+	android:required
+		ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:23:9-33
+	android:name
+		ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:22:9-52
+uses-feature#android.hardware.touchscreen.multitouch
+ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:24:5-26:36
+	android:required
+		ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:26:9-33
+	android:name
+		ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:25:9-63
+uses-feature#android.hardware.touchscreen.multitouch.distinct
+ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:27:5-29:36
+	android:required
+		ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:29:9-33
+	android:name
+		ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:28:9-72
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:31:5-81
+	android:name
+		ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:31:22-78
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:32:5-75
+	android:name
+		ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:32:22-72
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:33:5-80
+	android:name
+		ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:33:22-77
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:34:5-79
+	android:name
+		ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:34:22-76
+application
+ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:36:5-77:19
+MERGED from [com.android.support:support-v13:24.2.1] C:\Users\Raven\.android\build-cache\1dab808fc6f463f689afff55577ef1d38a8f9ef6\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:appcompat-v7:24.2.1] C:\Users\Raven\.android\build-cache\faa45597688ee5e778232451544fb67e80981fb5\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:24.2.1] C:\Users\Raven\.android\build-cache\0afc1e378982530b2de4ff609f0ae9e3d0bde120\output\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:24.2.1] C:\Users\Raven\.android\build-cache\2c335a6a65c991d688707680e59ecc38add140c0\output\AndroidManifest.xml:23:5-20
+MERGED from [com.google.android.gms:play-services-maps:9.8.0] C:\Users\Raven\.android\build-cache\ec3125aba2796299f72780d0030a518b1b1118d6\output\AndroidManifest.xml:24:5-19
+MERGED from [com.google.android.gms:play-services-location:9.8.0] C:\Users\Raven\.android\build-cache\c832b6b4a2850eb6928ce5553ec771baba23ec5e\output\AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-base:9.8.0] C:\Users\Raven\.android\build-cache\ccd7b42d9e929e4486c78b929fb04fa3280e3f34\output\AndroidManifest.xml:18:5-20:19
+MERGED from [com.google.android.gms:play-services-tasks:9.8.0] C:\Users\Raven\.android\build-cache\bfa6f1ba876d89ab7e83a41688ab82e0cbbc0ea8\output\AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-basement:9.8.0] C:\Users\Raven\.android\build-cache\65fe9b66f38a78bfede020b03fc5565b0de1a739\output\AndroidManifest.xml:19:5-21:19
+MERGED from [com.android.support:support-v4:24.2.1] C:\Users\Raven\.android\build-cache\a6d0e10893bc65cdb66c39398d9ec11c295ee41a\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-fragment:24.2.1] C:\Users\Raven\.android\build-cache\0e0f98906f2a73874481283176120407408aa02f\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:24.2.1] C:\Users\Raven\.android\build-cache\41f4848563f2252a18d490443f3a4e41140e7a0a\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:24.2.1] C:\Users\Raven\.android\build-cache\c3013bf75183536c4bac6bdd851a5822b04a7563\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:24.2.1] C:\Users\Raven\.android\build-cache\123f62f61890b8aadf67a16207f3d2e497fbf773\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:24.2.1] C:\Users\Raven\.android\build-cache\9a9fae9410ba43744823efd175074add9f6727e3\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Raven\.android\build-cache\cf288bab3e4db9fd6372622e9ef9c3c57b3f3434\output\AndroidManifest.xml:9:5-20
+	android:label
+		ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:40:9-41
+	android:icon
+		ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:38:9-42
+	android:banner
+		ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:37:9-46
+	android:theme
+		ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:41:9-50
+	android:isGame
+		ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:39:9-30
+meta-data#com.google.android.geo.API_KEY
+ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:42:9-44:55
+	android:value
+		ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:44:13-52
+	android:name
+		ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:43:13-58
+activity#com.bamgmk.demo.activities.UnityPlayerActivity
+ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:46:9-56:20
+	android:process
+		ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:51:13-37
+	android:screenOrientation
+		ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:52:13-57
+	android:label
+		ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:49:13-45
+	android:launchMode
+		ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:50:13-44
+	android:configChanges
+		ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:48:13-170
+	android:name
+		ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:47:13-59
+meta-data#unityplayer.UnityActivity
+ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:53:13-55:40
+	android:value
+		ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:55:17-37
+	android:name
+		ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:54:17-57
+activity#com.bamgmk.demo.activities.MainActivity
+ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:57:9-67:20
+	android:screenOrientation
+		ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:60:13-49
+	android:label
+		ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:59:13-56
+	android:name
+		ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:58:13-52
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER+android.intent.category.LEANBACK_LAUNCHER
+ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:61:13-66:29
+action#android.intent.action.MAIN
+ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:62:17-69
+	android:name
+		ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:62:25-66
+category#android.intent.category.LAUNCHER
+ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:64:17-77
+	android:name
+		ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:64:27-74
+category#android.intent.category.LEANBACK_LAUNCHER
+ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:65:17-86
+	android:name
+		ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:65:27-83
+activity#com.bamgmk.demo.activities.StatScreenActivity
+ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:68:9-71:62
+	android:screenOrientation
+		ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:71:13-49
+	android:label
+		ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:70:13-63
+	android:name
+		ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:69:13-58
+activity#com.bamgmk.demo.activities.CreateCharActivity
+ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:72:9-76:61
+	android:screenOrientation
+		ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:76:13-49
+	android:label
+		ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:75:13-63
+	android:windowSoftInputMode
+		ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:74:13-54
+	android:name
+		ADDED from D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\src\main\AndroidManifest.xml:73:13-58
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [com.google.android.gms:play-services-maps:9.8.0] C:\Users\Raven\.android\build-cache\ec3125aba2796299f72780d0030a518b1b1118d6\output\AndroidManifest.xml:19:5-78
+	android:name
+		ADDED from [com.google.android.gms:play-services-maps:9.8.0] C:\Users\Raven\.android\build-cache\ec3125aba2796299f72780d0030a518b1b1118d6\output\AndroidManifest.xml:19:22-76
+uses-permission#android.permission.INTERNET
+ADDED from [com.google.android.gms:play-services-maps:9.8.0] C:\Users\Raven\.android\build-cache\ec3125aba2796299f72780d0030a518b1b1118d6\output\AndroidManifest.xml:20:5-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-maps:9.8.0] C:\Users\Raven\.android\build-cache\ec3125aba2796299f72780d0030a518b1b1118d6\output\AndroidManifest.xml:20:22-64
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:9.8.0] C:\Users\Raven\.android\build-cache\ccd7b42d9e929e4486c78b929fb04fa3280e3f34\output\AndroidManifest.xml:19:9-172
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:9.8.0] C:\Users\Raven\.android\build-cache\ccd7b42d9e929e4486c78b929fb04fa3280e3f34\output\AndroidManifest.xml:19:146-170
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:9.8.0] C:\Users\Raven\.android\build-cache\ccd7b42d9e929e4486c78b929fb04fa3280e3f34\output\AndroidManifest.xml:19:86-145
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:9.8.0] C:\Users\Raven\.android\build-cache\ccd7b42d9e929e4486c78b929fb04fa3280e3f34\output\AndroidManifest.xml:19:19-85
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:9.8.0] C:\Users\Raven\.android\build-cache\65fe9b66f38a78bfede020b03fc5565b0de1a739\output\AndroidManifest.xml:20:9-121
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:9.8.0] C:\Users\Raven\.android\build-cache\65fe9b66f38a78bfede020b03fc5565b0de1a739\output\AndroidManifest.xml:20:66-119
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:9.8.0] C:\Users\Raven\.android\build-cache\65fe9b66f38a78bfede020b03fc5565b0de1a739\output\AndroidManifest.xml:20:20-65
