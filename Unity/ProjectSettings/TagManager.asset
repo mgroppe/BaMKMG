@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - SelectedTile
+  - TextObject
+  - XpBar
+  - creature_viking
+  - creature_berserker
+  - creature_anubis
+  - creature_priestess
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - BackGround
+  - Squares
+  - Creatures
+  - Row3
+  - Row4
+  - Row5
+  - Row6
+  - Row7
+  - Row8
+  - Row9
+  - Row10
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: BackGround
+    uniqueID: 3868442435
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Squares
+    uniqueID: 972464285
+    locked: 0
+  - name: Stones
+    uniqueID: 3602750317
+    locked: 0
+  - name: Characters
+    uniqueID: 1986891899
+    locked: 0

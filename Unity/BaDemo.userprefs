@@ -1,0 +1,19 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\scene1\Character.cs">
+    <Files>
+      <File FileName="Assets\Scripts\scene1\Gridmanager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\scene1\ProjectileBehaviour.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\scene1\TestCharacterBehaviour.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\scene1\Character.cs" Line="70" Column="50" />
+      <File FileName="Assets\Scripts\scene2\VicData.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\scene2\VictoryScreen.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\scene1\Path.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\scene1\CharData.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
