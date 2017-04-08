@@ -187,10 +187,12 @@ public class MainActivity extends FragmentActivity implements
 
     private void loadHeroes() {
         try {
+
             FileInputStream inputStream = openFileInput("heroes");
             InputStreamReader streamReader = new InputStreamReader(inputStream);
             BufferedReader Br = new BufferedReader(streamReader);
             String s = Br.readLine();
+            Log.d("test","heroteam: "+s);
             heroTeam = new ArrayList<PlayerCharacter>();
             heroTeam.addAll(Arrays.asList(gson.fromJson(s,PlayerCharacter[].class)));
         }catch (Exception e){
@@ -382,7 +384,7 @@ public class MainActivity extends FragmentActivity implements
         loc.setLatitude(marker.getPosition().latitude);
         loc.setLongitude(marker.getPosition().longitude);
 
-        if (loc.distanceTo(currentLocation)<=10){
+        if (loc.distanceTo(currentLocation)<=150){
             if (currentFights.containsKey(marker)){
                 CharData cd = new CharData();
                 VicData vd = new VicData();
@@ -423,6 +425,10 @@ public class MainActivity extends FragmentActivity implements
 
 
 
+    }
+
+    @Override
+    public void onBackPressed() {
     }
 
     private void loadFightList(){
@@ -483,6 +489,7 @@ public class MainActivity extends FragmentActivity implements
         if (this.getIntent().getExtras() != null && this.getIntent().getExtras().containsKey("enemyTypes")&& !questsUpdated){
             ArrayList<Integer> types = getIntent().getIntegerArrayListExtra("enemyTypes");
             for (int i : types){
+                if(i<=4)
                 questFragment.increaseCounters(i);
             }
             if (types.size() == 1)

@@ -377,5 +377,9 @@ public class StatScreenActivity extends Activity {
         myAdapter.notifyDataSetChanged();
         mode = 2;
     }
+    @Override
+    public void onBackPressed() {
+        goBack(null);
+    }
 
 }

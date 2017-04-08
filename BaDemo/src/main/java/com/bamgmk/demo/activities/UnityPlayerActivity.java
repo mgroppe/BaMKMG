@@ -97,6 +97,10 @@ public class UnityPlayerActivity extends Activity
 		return super.dispatchKeyEvent(event);
 	}
 
+	@Override
+	public void onBackPressed() {
+	}
+
 	// Pass any events not handled by (unfocused) views straight to UnityPlayer
 	@Override public boolean onKeyUp(int keyCode, KeyEvent event)     { return mUnityPlayer.injectEvent(event); }
 	@Override public boolean onKeyDown(int keyCode, KeyEvent event)   { return mUnityPlayer.injectEvent(event); }

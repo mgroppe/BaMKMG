@@ -65,8 +65,8 @@ public class Quest {
                     questText = generateText(type,i,currentNumbers,requiredNumbers);
                     break;
                 case completeQuests:
-                    currentNumbers.add(3);
-                    requiredNumbers.add(8);
+                    currentNumbers.add(0);
+                    requiredNumbers.add(5);
                     increases.put(completeQuests,0);
                     questText = generateText(type,i,currentNumbers,requiredNumbers);
                     break;
@@ -145,18 +145,12 @@ public class Quest {
                     questText = generateText(type,questNumber,currentNumbers,requiredNumbers);
                     break;
                 case completeQuests:
-                    requiredNumbers.add(8);
+                    requiredNumbers.add(5);
                     increases.put(completeQuests,0);
                     questText = generateText(type,questNumber,currentNumbers,requiredNumbers);
                     break;
             }
-            isFinished = true;
-            for (int k = 0; k<currentNumbers.size();k++){
-                if (currentNumbers.get(k)< requiredNumbers.get(k)){
-                    isFinished = false;
-                    break;
-                }
-            }
+
         }
         else {
             switch (questNumber){
@@ -180,6 +174,13 @@ public class Quest {
                     increases.put(killPriestess,0);
                     questText = generateText(type,questNumber,currentNumbers,requiredNumbers);
                     break;
+            }
+        }
+        isFinished = true;
+        for (int k = 0; k<currentNumbers.size();k++){
+            if (currentNumbers.get(k)< requiredNumbers.get(k)){
+                isFinished = false;
+                break;
             }
         }
 
@@ -218,8 +219,8 @@ public class Quest {
 
                     case completeQuests:
                         return "Zeig den Koblenzern, dass Essling sich um ihr Wohlbefinden sorgt. Vielleicht lassen sie ihn dann ihre Werft mitbenutzen."+
-                                "\nErfülle zehn Quests."+
-                                "\n\nErfülle Quests " + currentNumbers.get(0) + " von " + requiredNumbers.get(0);
+                                "\nErfülle acht Quests."+
+                                "\n\nErfüllte Quests " + currentNumbers.get(0) + " von " + requiredNumbers.get(0);
                 }
             }
            case 1:{

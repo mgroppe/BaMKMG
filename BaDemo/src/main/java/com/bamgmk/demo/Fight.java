@@ -172,7 +172,7 @@ public class Fight {
         }
         Log.d("test","fight strength formula: "+(enemies.size() + fightlvl - lvl));
 
-        if(enemies.size()+fightlvl - lvl >= 4||enemies.size()==1){
+        if(enemies.size()+fightlvl - lvl >= 4 || enemies.size()==1){
             difficulty = "hard";
         }
         else if(enemies.size()+fightlvl - lvl <=1){

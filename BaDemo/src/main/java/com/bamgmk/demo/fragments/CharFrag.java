@@ -38,6 +38,7 @@ public class CharFrag extends Fragment {
     public ImageAdapter adapter;
     public List<PlayerCharacter> heroTeam;
     public ArrayList<GameItem> gameItems;
+    public int selected = -1;
 
 
     private OnCharFragInteractionListener mListener;
@@ -80,7 +81,7 @@ public class CharFrag extends Fragment {
 
 
         gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            private int selected = -1;
+
             public void onItemClick(AdapterView<?> parent, View v,
                                     int position, long id) {
                 if (position <=2){
