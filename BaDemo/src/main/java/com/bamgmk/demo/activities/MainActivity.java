@@ -235,6 +235,7 @@ public class MainActivity extends FragmentActivity implements
         // Disconnecting the client invalidates it.
         mGoogleApiClient.disconnect();
         super.onStop();
+        finish();
     }
 
 
@@ -384,7 +385,7 @@ public class MainActivity extends FragmentActivity implements
         loc.setLatitude(marker.getPosition().latitude);
         loc.setLongitude(marker.getPosition().longitude);
 
-        if (loc.distanceTo(currentLocation)<=150){
+        if (loc.distanceTo(currentLocation)<=20){
             if (currentFights.containsKey(marker)){
                 CharData cd = new CharData();
                 VicData vd = new VicData();
@@ -491,6 +492,8 @@ public class MainActivity extends FragmentActivity implements
             for (int i : types){
                 if(i<=4)
                 questFragment.increaseCounters(i);
+                if (i>=4)
+                    questFragment.increaseCounters(i-4);
             }
             if (types.size() == 1)
                 questFragment.increaseCounters(Quest.killSolo);

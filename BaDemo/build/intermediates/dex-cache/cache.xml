@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\libs\unity-classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="70f91f02a166596e7391b89cd7e51575e325357b">
+        <dex dex="D:\media and data\documents\BA\UnityFiles\BaDemo\java\BaDemo\build\intermediates\pre-dexed\debug\unity-classes_ca1275f7b36b5bc370af56fd93e44b0f442d0ec7.jar" />
+    </item>
+
+</items>

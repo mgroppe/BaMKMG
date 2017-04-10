@@ -44,6 +44,7 @@ public class GameCharacter implements Serializable {
                 break;
         }
         enemy.multiplyStats(Math.pow(1.15,lvl-1));
+        if (lvl==1)enemy.multiplyStats(0.9f);
         if (lvl >= 3){
             enemy.multiplyStats(1.2);
             if(lvl>=8)
@@ -68,6 +69,7 @@ public class GameCharacter implements Serializable {
                 break;
         }
         enemy.multiplyStats(Math.pow(1.15,lvl-1));
+        if (lvl==1)enemy.multiplyStats(0.9f);
         if (lvl >= 3){
             enemy.multiplyStats(1.2);
             if(lvl>=8)

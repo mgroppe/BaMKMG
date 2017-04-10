@@ -1,11 +1,13 @@
 package com.bamgmk.demo.activities;
 
+import android.content.Context;
 import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
 import android.app.Activity;
 import android.util.Log;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -146,6 +148,23 @@ public class CreateCharActivity extends Activity {
         }
         else
             Toast.makeText(this,"Bitte Namen eingeben",Toast.LENGTH_SHORT);
+    }
+
+    @Override
+    public void onBackPressed() {
+        EditText et = (EditText) findViewById(R.id.editText);
+        InputMethodManager imm = (InputMethodManager)
+                getSystemService(Context.INPUT_METHOD_SERVICE);
+
+        if (imm.isActive(et)) {
+            findViewById(R.id.createCharacterLayout).requestFocus();
+        }
+
+
+        else{
+            Intent intent = new Intent(this,MainActivity.class);
+            startActivity(intent);
+        }
     }
 
 }

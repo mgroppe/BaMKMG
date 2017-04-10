@@ -106,15 +106,15 @@ public class GameItem implements Serializable {
                     // enemy = new GameCharacter(50,1,4,500,65,85,true,0);
                     switch (rarity) {
                         case 0:
-                            item = new GameItem(lvl, "Morgenstern", 38, 42, 0, 0, 0, 0, GameItem.weapon, GameItem.morningstar);
+                            item = new GameItem(lvl, "Morgenstern", 30, 35, 0, 0, 0, 0, GameItem.weapon, GameItem.morningstar);
                             item.lvlupstats(lvl);
                             return item;
                         case 1:
-                            item = new GameItem(lvl, "seltener Morgenstern", 65, 85, 0, 0, 0, 0, GameItem.weapon, GameItem.morningstar);
+                            item = new GameItem(lvl, "seltener Morgenstern", 60, 70, 0, 0, 0, 0, GameItem.weapon, GameItem.morningstar);
                             item.lvlupstats(lvl);
                             return item;
                         case 2:
-                            item = new GameItem(lvl, "epischer Morgenstern", 130, 170, 0, 0, 0, 0, GameItem.weapon, GameItem.morningstar);
+                            item = new GameItem(lvl, "epischer Morgenstern", 120, 140, 0, 0, 0, 0, GameItem.weapon, GameItem.morningstar);
                             item.lvlupstats(lvl);
                             return item;
                     }
@@ -123,15 +123,15 @@ public class GameItem implements Serializable {
                 // enemy = new GameCharacter(55,1,4,400,100,150,true,1);
                 switch (rarity) {
                     case 0:
-                        item = new GameItem(lvl, "Äxte", 50, 75, 0, 0, 0, 0, GameItem.weapon, GameItem.berserker);
+                        item = new GameItem(lvl, "Äxte", 40, 60, 0, 0, 0, 0, GameItem.weapon, GameItem.berserker);
                         item.lvlupstats(lvl);
                         return item;
                     case 1:
-                        item = new GameItem(lvl, "seltene Äxte", 100, 150, 0, 0, 0, 0, GameItem.weapon, GameItem.berserker);
+                        item = new GameItem(lvl, "seltene Äxte", 80, 120, 0, 0, 0, 0, GameItem.weapon, GameItem.berserker);
                         item.lvlupstats(lvl);
                         return item;
                     case 2:
-                        item = new GameItem(lvl, "epische Äxte", 200, 300, 0, 0, 0, 0, GameItem.weapon, GameItem.berserker);
+                        item = new GameItem(lvl, "epische Äxte", 160, 240, 0, 0, 0, 0, GameItem.weapon, GameItem.berserker);
                         item.lvlupstats(lvl);
                         return item;
                 }
@@ -140,15 +140,15 @@ public class GameItem implements Serializable {
                 //enemy =new  GameCharacter(75,1,6,360,50,150,true,2);
                 switch (rarity) {
                     case 0:
-                        item = new GameItem(lvl, "Khopesh", 25, 75, 0, 0, 0, 0, GameItem.weapon, GameItem.anubis);
+                        item = new GameItem(lvl, "Khopesh", 20, 60, 0, 0, 0, 0, GameItem.weapon, GameItem.anubis);
                         item.lvlupstats(lvl);
                         return item;
                     case 1:
-                        item = new GameItem(lvl, "seltener Khopesh", 50, 150, 0, 0, 0, 0, GameItem.weapon, GameItem.anubis);
+                        item = new GameItem(lvl, "seltener Khopesh", 40, 120, 0, 0, 0, 0, GameItem.weapon, GameItem.anubis);
                         item.lvlupstats(lvl);
                         return item;
                     case 2:
-                        item = new GameItem(lvl, "epischer Khopesh", 100, 300, 0, 0, 0, 0, GameItem.weapon, GameItem.anubis);
+                        item = new GameItem(lvl, "epischer Khopesh", 80, 240, 0, 0, 0, 0, GameItem.weapon, GameItem.anubis);
                         item.lvlupstats(lvl);
                         return item;
                 }
@@ -157,15 +157,15 @@ public class GameItem implements Serializable {
                 //enemy = new GameCharacter(40,6,3,325,75,95,true,3);
                 switch (rarity) {
                     case 0:
-                        item = new GameItem(lvl, "Stab", 38, 47, 0, 0, 0, 0, GameItem.weapon, GameItem.priestess);
+                        item = new GameItem(lvl, "Stab", 30, 40, 0, 0, 0, 0, GameItem.weapon, GameItem.priestess);
                         item.lvlupstats(lvl);
                         return item;
                     case 1:
-                        item = new GameItem(lvl, "seltener Stab", 75, 95, 0, 0, 0, 1, GameItem.weapon, GameItem.priestess);
+                        item = new GameItem(lvl, "seltener Stab", 60, 80, 0, 0, 0, 1, GameItem.weapon, GameItem.priestess);
                         item.lvlupstats(lvl);
                         return item;
                     case 2:
-                        item = new GameItem(lvl, "epischer Stab", 75, 95, 0, 0, 0, 2, GameItem.weapon, GameItem.priestess);
+                        item = new GameItem(lvl, "epischer Stab", 120, 160, 0, 0, 0, 2, GameItem.weapon, GameItem.priestess);
                         item.lvlupstats(lvl);
                         return item;
                 }
@@ -177,15 +177,15 @@ public class GameItem implements Serializable {
             case 1:
                 switch (rarity){
                     case 0:
-                        item = new GameItem(lvl,"Rüstung",0,0,200,0,0,0,GameItem.armor,GameItem.priestess);
+                        item = new GameItem(lvl,"Rüstung",0,0,150,0,0,0,GameItem.armor,GameItem.priestess);
                         item.lvlupstats(lvl);
                         return item;
                     case 1:
-                        item = new GameItem(lvl,"seltene Rüstung",0,0,400,0,0,0,GameItem.armor,GameItem.priestess);
+                        item = new GameItem(lvl,"seltene Rüstung",0,0,300,0,0,0,GameItem.armor,GameItem.priestess);
                         item.lvlupstats(lvl);
                         return item;
                     case 2:
-                        item = new GameItem(lvl,"epische Rüstung",0,0,800,0,0,0,GameItem.armor,GameItem.priestess);
+                        item = new GameItem(lvl,"epische Rüstung",0,0,600,0,0,0,GameItem.armor,GameItem.priestess);
                         item.lvlupstats(lvl);
                         return item;
                 }

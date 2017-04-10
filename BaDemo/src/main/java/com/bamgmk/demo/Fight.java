@@ -161,13 +161,13 @@ public class Fight {
                 fightlvl = lvl +2;
 
                 enemies.add(GameCharacter.createSolo(fightlvl,rnd.nextInt(4)));
-                enemies.get(0).multiplyStats(2.5);
+                enemies.get(0).multiplyStats(2);
             }
             else {
                 fightlvl = lvl +1;
 
                 enemies.add(GameCharacter.createSolo(fightlvl,rnd.nextInt(4)));
-                enemies.get(0).multiplyStats(2.5);
+                enemies.get(0).multiplyStats(2);
             }
         }
         Log.d("test","fight strength formula: "+(enemies.size() + fightlvl - lvl));
