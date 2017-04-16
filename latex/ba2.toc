@@ -1,0 +1,40 @@
+\select@language {ngerman}
+\contentsline {section}{\numberline {1}Abstract}{1}
+\contentsline {section}{\numberline {2}Abstract (english)}{1}
+\contentsline {section}{\numberline {3}Motivation}{2}
+\contentsline {section}{\numberline {4}Grundlagen}{3}
+\contentsline {subsection}{\numberline {4.1}Android}{3}
+\contentsline {subsubsection}{\numberline {4.1.1}AR-Funktionen von Android}{3}
+\contentsline {subsection}{\numberline {4.2}Unity}{4}
+\contentsline {subsection}{\numberline {4.3}Photoshop}{5}
+\contentsline {section}{\numberline {5}Recherche von Rollenspiel und AR-Hybriden auf Android}{6}
+\contentsline {subsection}{\numberline {5.1}Pok\IeC {\'e}mon Go}{6}
+\contentsline {subsection}{\numberline {5.2}Parallel Kingdom}{8}
+\contentsline {subsection}{\numberline {5.3}Motion Tennis Cast}{9}
+\contentsline {section}{\numberline {6}Recherche von Rollenspielen auf dem PC und auf Konsolen}{10}
+\contentsline {subsection}{\numberline {6.1}klassische Rollenspiele}{10}
+\contentsline {subsection}{\numberline {6.2}Open-World Titel und MMORPGs}{10}
+\contentsline {subsection}{\numberline {6.3}Action-Rollenspiele}{11}
+\contentsline {subsection}{\numberline {6.4}Taktik-Rollenspiele}{11}
+\contentsline {subsubsection}{\numberline {6.4.1}Final Fantasy Tactics}{11}
+\contentsline {subsubsection}{\numberline {6.4.2}The Banner Saga}{12}
+\contentsline {subsection}{\numberline {6.5}Strategie-Rollenspiel-Hybriden}{13}
+\contentsline {section}{\numberline {7}Konzeption}{14}
+\contentsline {subsection}{\numberline {7.1}Fr\IeC {\"u}he Konzeption}{14}
+\contentsline {subsection}{\numberline {7.2}Zweite Konzept-Phase}{16}
+\contentsline {section}{\numberline {8}Implementierung}{18}
+\contentsline {subsection}{\numberline {8.1}Erstellung des Kampfes in Unity}{18}
+\contentsline {subsection}{\numberline {8.2}A*-Pfadfindung}{19}
+\contentsline {subsection}{\numberline {8.3}Karte und Men\IeC {\"u}s auf Android}{22}
+\contentsline {subsubsection}{\numberline {8.3.1}Haupt-Activity und Karte}{22}
+\contentsline {subsubsection}{\numberline {8.3.2}Quest-Fragment}{23}
+\contentsline {subsubsection}{\numberline {8.3.3}Gruppen-Bildschirm}{24}
+\contentsline {subsubsection}{\numberline {8.3.4}Statuswerte-Bildschirm}{25}
+\contentsline {subsubsection}{\numberline {8.3.5}Activity zum Erschaffen von Charakteren}{26}
+\contentsline {subsubsection}{\numberline {8.3.6}Unity/Kampf-Activity}{27}
+\contentsline {subsection}{\numberline {8.4}Grafik und Stil}{28}
+\contentsline {subsection}{\numberline {8.5}Die Figuren}{31}
+\contentsline {subsubsection}{\numberline {8.5.1}Der erste Wikinger}{31}
+\contentsline {subsubsection}{\numberline {8.5.2}Der Morgenstern-Wikinger}{35}
+\contentsline {subsubsection}{\numberline {8.5.3}Der Berserker}{36}
+\contentsline {subsubsection}{\numberline {8.5.4}Die Priesterin des Ra}{37}

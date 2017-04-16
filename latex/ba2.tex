@@ -134,7 +134,40 @@ In Unity werden Gameobjects als Basiseinheit für die Erstellung von Spielen ver
 Für die Steuerung unseres rundenbasierten Kampfes generieren wir in Unity ein Gitter aus Quadraten, die sich anklicken lassen und ihre Position im Gitter kennen. Damit der Kampf sich nicht immer gleich anfühlt, erzeugen wir zufällig auf unseren Quadraten Steine als Hindernisse, die Felder blockieren. Anschließend werden aus unseren sogenannten Prefabs, Schablonen aus denen man ein Gameobject instanziieren kann, die am Kampf beteiligten Spielfiguren erzeugt und an die Ränder des Spielfeldes gesetzt. Figuren sind nun reihum am Zug. Wenn eine Figur, die dem Spieler gehört an der Reihe ist, markieren wir alle Felder, zu denen sie sich bewegen kann. Wird eines dieser Felder angeklickt, generieren wir wie in \ref{Pfadfindung} beschrieben einen Pfad, den unsere Figur dann abläuft. In unseren Prefabs sind die zugehörigen Animationen für die verschiedenen Befehle vorgemerkt. Wenn der Benutzer auf eine gegnerische Figur in Reichweite der aktiven klickt, wird diese angegriffen und der Zug beendet. Alternativ kann man die aktive Figur anklicken, um den Zug ohne Angriff zu beenden. Wenn die aktive Figur dem Gegner gehört, übernimmt eine simple künstliche Intelligenz (fortan Ai genannt) die Entscheidungen, die sonst der Spieler trifft. Die Ai überprüft, ob eine feindliche Figur in Reichweite ist und greift diese an, falls möglich. Wenn nicht, bewegt sie sich auf die nächste feindliche Figur auf dem Feld zu. Falls sie nun in Reichweite ist, greift sie die Figur an, andernfalls beendet sie ihren Zug.
 \subsection{A*-Pfadfindung}\label{Pfadfindung}
 Um Figuren auf unserem Spielfeld zu bewegen, benötigen wir einen Suchalgorithmus, um einen Pfad zu finden. Wir haben dazu den sogenannten A*-Algorithmus implementiert. Im Gegensatz zu uninformierten Suchalgorithmen wie z.B. Dijkstra wird in A* eine Heuristik benutzt, um zielgerichtet zu suchen. Alle Felder werden in drei Gruppen unterteilt. Die erste Gruppe sind die noch nicht gefundenen Felder. Am Anfang sind dies alle außer dem Startfeld. Die zweite Gruppe sind die Felder, zu denen mindestens ein Weg bekannt ist. Diese werden, zusammen mit einem Wert f(x), in einer Liste gespeichert. Der Wert von f(x) ergibt sich aus der Summe der Kosten g(x), um den Knoten zu erreichen und den geschätzten Kosten h(x), um von dort zum Ziel zu kommen. Im Falle von unserem Spiel kostet es einen Punkt, um sich orthogonal und zwei, um sich diagonal zu bewegen. Die Schätzfunktion nimmt einfach die Summe der Abstände in x- und y-Koordinate zwischen einem Feld und dem Zielfeld. Zusätzlich wird für jedes Feld in dieser sogenannten Open List vermerkt, von welchem Feld ausgehend der momentane Weg dort ankommt. Die dritte Gruppe besteht aus den Feldern, zu denen bereits ein optimaler Weg gefunden wurde. Diese Felder werden in der sogenannten Closed List ebenfalls mit dem Feld, von dem der kürzeste Weg zu ihm ausgeht, gespeichert.
-Zu Beginn befindet sich nur das Startfeld in der Open List und die Closed List ist leer. Nun wird in jedem Schritt das Feld a mit dem geringsten f-Wert aus der Open List in die Closed List aufgenommen. Für jedes Nachbarfeld b wird nun g(b) berechnet aus g(a)+1, falls es ein orthogonaler Nachbar, und g(a)+2, falls es ein diagonaler Nachbar ist. Zusammen mit der oben beschriebenen Heuristik wird nun f(b) = g(b)+h(b) berechnet und b wird in die Open List mit a als Vorgänger aufgenommen, falls es dort nicht schon mit einem gleichgroßen oder kleineren f-Wert vorhanden ist. Der Algorithmus endet, sobald das Zielfeld in der Open List aufgenommen wird. Der Weg ergibt sich nun, indem man über die gemerkten Vorgänger die Felder bis zum Start zurückverfolgt.
+
+Zu Beginn befindet sich nur das Startfeld in der Open List und die Closed List ist leer. Nun wird in jedem Schritt das Feld a mit dem geringsten f-Wert aus der Open List in die Closed List aufgenommen. 
+
+Für jedes Nachbarfeld b wird nun g(b) berechnet aus g(a)+1, falls es ein orthogonaler Nachbar, und g(a)+2, falls es ein diagonaler Nachbar ist. Zusammen mit der oben beschriebenen Heuristik wird nun f(b) = g(b)+h(b) berechnet und b wird in die Open List mit a als Vorgänger aufgenommen, falls es dort nicht schon mit einem gleichgroßen oder kleineren f-Wert vorhanden ist. Der Algorithmus endet, sobald das Zielfeld in die Closed List aufgenommen wird. Der Weg ergibt sich nun, indem man über die gemerkten Vorgänger die Felder bis zum Start zurückverfolgt.
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=0.5\textwidth]{pathfinding1.png}
+	\caption{Der Schakalskrieger sucht einen Weg zum Ziel. Im ersten Schritt werden die Nachbarfelder mit ihrem f,g und h Werten in die Open List eingetragen.}
+	\label{pathfinding1}
+\end{figure}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.5\textwidth]{pathfinding2.png}
+	\caption{Die Felder mit f = 4 wurden nun in die Closed List übernommen (grün markierte Felder). Für ihre Nachbarn wurde der f Wert berechnet und sie wurden in die Open List aufgenommen}
+	\label{pathfinding2}
+\end{figure}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.5\textwidth]{pathfinding3.png}
+	\caption{Die kleinsten f-Werte aus der Open List wurden wieder in die Closed List aufgenommen.}
+	\label{pathfinding3}
+\end{figure}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.6\textwidth]{pathfinding4.png}
+	\caption{Das Zielfeld ist jetzt in der Open List angekommen. Da es den kleinsten f-Wert hat sind wir im nächsten Schritt fertig.}
+	\label{pathfinding4}
+\end{figure}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.6\textwidth]{pathfinding5.png}
+	\caption{Das Ziel ist nun in der Closed List. Der Pfad ergibt sich nun dadurch, dass sich jedes Feld gemerkt hat von welchem Vorgänger aus der kürzeste Weg zu ihm führt.}
+	\label{pathfinding5}
+\end{figure}
 \newpage
 \subsection{Karte und Menüs auf Android}
 Unser Android-Code besteht aus vier Activities. Eine Activity in Android ist eine Oberfläche, in der beschrieben wird, was momentan angezeigt wird und wie mit Benutzereingaben umzugehen ist. Um zwischen den Activities zu kommunizieren werden sogenannte Intents verwendet. 
@@ -189,12 +222,12 @@ In der vierten Activity kann man sich eigene Charaktere erstellen. Über die vie
 \newpage
 \begin{figure}[htb]
 	\centering
-	\includegraphics[width=0.4\textwidth]{fightscreen.png}
+	\includegraphics[width=0.8\textwidth]{fightscreen.png}
 	\caption{Kampfbildschirm in Unity}
 	\label{fightscreen}
 \end{figure}
 \subsubsection{Unity/Kampf-Activity}
-In der auf der Karte aufgerufenen Kampf-Activity kann der von Unity kompilierte Code abgespielt werden. Um zwischen Java und Unity-Code zu kommunizieren verwenden wir Java Native Interface, kurz JNI. JNI ist eine Programmierschnitstelle, die es uns erlaubt, von Unity aus Java Funktionen aufzurufen, die sich in unserer Unity-PLayer-Activity befinden. Wir benutzen JNI, um die Kampfinformationen, die der Activity mitgeteilt werden, im Unity-Code abzurufen und um, nachdem der Kampf fertig ist, zurück zur MainActivity zu kommen.
+In der auf der Karte aufgerufenen Kampf-Activity kann der von Unity kompilierte Code abgespielt werden. Um zwischen Java und Unity-Code zu kommunizieren verwenden wir Java Native Interface, kurz JNI. JNI ist eine Programmierschnitstelle, die es uns erlaubt, von Unity aus Java Funktionen aufzurufen, die sich in unserer Kampf-Activity befinden. Wir benutzen JNI, um die Kampfinformationen, die der Activity mitgeteilt werden, im Unity-Code abzurufen und um, nachdem der Kampf fertig ist, zurück zur MainActivity zu kommen.
 
 \newpage
 \subsection{Grafik und Stil}
