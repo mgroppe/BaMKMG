@@ -1,5 +1,6 @@
 \documentclass[extern,palatino]{cgBA}
 \usepackage{setspace}
+\usepackage{graphicx} 
 %\onehalfspacing
 \doublespacing
 
@@ -82,7 +83,56 @@ Rollenspiele auf dem PC-Markt setzen häufig andere Prioritäten als Smartphone 
 Auch große Konsolenprojekte wie moderne Ableger der Final Fantasy-Serie legen großen Wert auf Story und Präsentation.
 \\Leider fehlt uns sowohl Zeit, als auch Budget für derartige Projekte, weshalb wir uns eher an Indie-Projekten auf dem PC und "kleineren" Projekten auf den Konsolen orientieren. Das hoch gelobte the Banner Saga hat ein ausgereiftes Kampfsystem und wurde am Anfang von drei Leuten programmiert. Andere sogenannte Taktik-Rollenspiele wie Disgaea und Final Fantasy Tactics haben reduziertere Grafik und Story und konzentrieren sich eher auf vielschichtige Level-Systeme. Unser Ziel war es daher eher strategische Kämpfe und einen deutlich merkbaren Level-Fortschritt zu generieren, Dinge, die Pokémon Go fehlen.
 \newpage
-\subsubsection{5.2.1 The Banner Saga}
+\subsubsection{The Banner Saga}
 The Banner Saga ist ein von Stoic entwickeltes Taktik-Rollenspiel. Es wurde von drei ehemaligen BioWare-Mitarbeitern produziert, die 
 
+\section{Implementation}
+\subsection{Erstellung des Kampfes in Unity}
+In Unity werden Gameobjects als Basiseinheit für die Erstellung von Spielen verwendet. Gameobjects sind Behälter denen man verschiedene Komponenten wie Sprites und Skripte hinzufügen kann. Für die Steuerung unseres rundenbasierten Kampfes generieren wir in Unity ein Gitter aus Quadraten die sich anklicken lassen und ihre Position im Gitter kennen. Damit der Kampf sich nicht immer gleich anfühlt erzeugen wir zufällig auf unseren Quadraten Steine als Hindernisse. Unsere Spielfiguren werden dann abhängig davon welche am Kampf beteiligt sind aus sogenannten Prefabs, Schablonen aus denen man ein Gameobject instanziieren kann, erzeugt und auf die Seiten des Spielfeldes gesetzt. Figuren sind nun reihum am Zug. Wenn eine Figur die dem Spieler gehört an der Reihe ist markieren wir alle Felder zu denen sie sich bewegen kann auf unserem Feld. Wird eines dieser Felder angeklickt generieren wir wie in \ref{Pfadfindung} beschrieben einen Pfad den unsere Figur dann abläuft. In unseren Prefabs sind die zugehörigen Animationen für die verschiedenen Befehle vorgemerkt. Wenn der Benutzer auf eine gegnerische Figur in Reichweite der aktiven klickt wird diese angegriffen und der Zug beendet. Alternativ kann man die aktive Figur anklicken um den Zug ohne Angriff zu beenden. Wenn die aktive Figur dem Gegner gehört übernimmt eine simple Ai die Entscheidungen die sonst der Spieler trifft. Die Ai überprüft ob eine feindliche Figur in Reichweite ist und greift diese an fals möglich. Wenn nicht bewegt sie sich auf die nächste feindliche Figur auf dem Feld zu. Falls sie nun in Reichweite ist greift sie die Figur an andernfalls beendet sie ihren Zug.
+\subsection{A* Pfadfindung}\label{Pfadfindung}
+Um Figuren auf unserem Spielfeld zu bewegen benötigen wir einen Suchalgorithmus um einen Pfad zu finden. Wir haben dazu den A* Algorithmus implementiert. Im Gegensatz zu uninformierten Suchalgorithmen wie Dijkstra wird in A* eine Heuristik benutzt um Zielgerichtet zu suchen. Alle Felder werden in 3 Gruppen unterteilt. Die erste Gruppe sind die noch nicht gefundenen Felder. Am Anfang sind dies alle außer dem Startfeld. Die 2. Gruppe sind die Felder zu denen mindestens ein Weg bekannt ist. Diese werden zusammen mit einem Wert f(x) in einer Liste gespeichert. Der Wert von f(x) ergibt sich aus der Summe der Kosten um den Knoten zu erreichen g(x) und den geschätzten Kosten um von dort zum Ziel zu kommen. Im Falle von unserem Spiel kostet es einen Punkt um sich orthogonal zu bewegen und 2 diagonal. Die Schätzfunktion nimmt einfach die Summe der Abstände in x und y Koordinate zwischen einem Feld und dem Zielfeld. Zusätzlich wird für jedes Feld in dieser sogenannten Open List gemerkt von welchem Feld ausgehend der momentane Weg dort ankommt. Die 3. Gruppe besteht aus den Feldern zu denen bereits ein optimaler Weg gefunden wurde. Diese Felder werden in der sogenannten Closed List ebenfalls mit dem Feld von dem der kürzeste Weg zu ihm ausgeht gespeichert.
+Zu Beginn befindet sich nur das Startfeld in der Open List und die Closed List ist leer. Nun wird in jedem Schritt das Feld x mit dem geringsten f-Wert aus der Open List in die Closed List aufgenommen. Für jedes Nachbarfeld y wird nun g(y) berechnet aus g(x)+1, falls es ein orthogonaler Nachbar, und g(x)+2 , falls es ein diagonaler Nachbar ist. Zusammen mit der oben beschriebenen Heuristik wird nun f(y) = g(y)+h(y) berechnet und y wird in die Open List mit x als Vorgänger aufgenommen, falls es dort nicht schon mit einem gleichgroßen oder kleineren f-Wert vorhanden ist. Der Algorithmus endet sobald das Zielfeld in der Open List aufgenommen wird. Der Weg ergibt sich nun indem man über die gemerkten Vorgänger die Felder bis zum Start zurückverfolgt.
+\subsection{Karte und Menüs auf Android}
+Unser Android Code besteht aus 4 Activities. Eine Activity in Android ist eine Oberfläche in der beschrieben wird was momentan angezeigt wird und wie mit Benutzereingaben umzugehen ist. Um zwischen den Activities zu kommunizieren werden sogenannte Intents verwendet. Unsere Hauptactivity auf der der Benutzer startet besteht aus 3 Fragmenten zwischen denen man mit swipen hin und her tauschen kann. In der Mitte befindet sich unsere Karte. Auf unserer Karte wird die Position des Spielers, die über Gps abgerufen wird, und die Position von Gegnergruppen gegen die man kämpfen kann angezeigt. Wird eine Gegnergruppe angeklickt wird ein Infofenster mit näheren Informationen zu den Gegnern angezeigt über das wenn man nah genug dran ist den Kampf starten kann. Die notwendigen Daten für den Kampf werden als Json Strings serialisiert und der Unity-Player-Activity über den Intent mitgeteilt.
+\begin{figure}[htb] 
+	\centering
+	\includegraphics[width=0.4\textwidth]{map.png}
+	\caption{Karte mit Spielfigur in der Mitte. Die Portraits representieren Gegnergruppen}
+	\label{fig:Bild1}
+\end{figure}
+Im linken Fragment befindet sich unser Gruppen-Bildschirm. Auf ihm wird dem Spieler die eigene Gruppe angezeigt und er kann auswählen welche Charaktere am Kampf teilnehmen sollen. Die Charaktere in der oberen Leiste sind momentan aktiv und man kann sie indem man sie anklickt gegen einen beliebigen inaktiven Charakter austauschen.\begin{figure}[htb] 
+	\centering
+	\includegraphics[width=0.4\textwidth]{charfragment.png}
+	\caption{Charakter Fragment. Die aktive Party ist in der roten Leiste. Waterloo wurde angeklickt um ihn auszutauschen. Die möglichen Ziele für den Tausch sind Leipzig und Aspern}
+	\label{fig:Bild2}
+\end{figure} 
+Wenn man auf einen Charakter im unteren Teil klickt werden die Daten des Characters in einen Intent gepackt und die StatusActivity (wir müssen unsere Bildschirme im Text besser benennen ersetze durch was du willst) wird gestartet. Über den Button unten rechts gelangt man zur Charaktererstellungs-Activity.
+\newpage
+Im rechten Fragment befindet sich eine Anzeige für momentane Aufgaben die der Spieler erfüllen kann um zusätzliche Belohnungen zu erhalten. Wenn der Spieler die Aufgabe erfüllt hat kann er diese über den Button abgeben und er bekommt einen zufälligen Gegenstand auf dem Level seiner Gruppe als Belohnung.
+\newpage
+\begin{figure}[htb] 
+	\centering
+	\includegraphics[width=0.4\textwidth]{questfragment.png}
+	\caption{Questfragment mit momentan aktiven Aufgaben}
+	\label{fig:Bild3}
+\end{figure} 
+Die zweite Activity ist die Unity-Player-Activity. In ihr kann der von Unity kompilierte Code abgespielt werden. Um zwischen Java und Unity-Code zu kommunizieren verwenden wir Java Native Interface, kurz JNI. JNI ist eine Programmierschnitstelle die es uns erlaubt von Unity aus Java Funktionen aufzurufen, die sich in unserer Unity-PLayer-Activity befinden. Wir benutzen JNI um die Kampfinformationen, die der Activity mitgeteilt werden, im Unity-Code abzurufen und um nachdem der Kampf fertig ist zurück zur MainActivity zu kommen.
+
+Die dritte Activity ist die Statscreen-Activity. Hier werden die Statuswerte der Figur, die sie aufgerufen hat, angezeigt. Außerdem kann man hier der Figur gefundene Gegenstände anziehen um ihre Statuswerte zu verbessern.
+\newpage
+\begin{figure}[htb] 
+	\centering
+	\includegraphics[width=0.4\textwidth]{statscreen.png}
+	\caption{Statusbildschirm von Waterloo. Unten kann man die momentan ausgerüstete Waffe austauschen. Über die drei Symbole kann man zwischen Waffen, Rüstungen und Schuhen wechseln.}
+	\label{fig:Bild4}
+\end{figure} 
+
+In der vierten Activity kann man sich eigene Charaktere erstellen. Über die vier Bilder kann man die Klasse des Charakters aussuchen und über das Textfeld einen Namen eingeben.
+\newpage
+\begin{figure}[htb] 
+	\centering
+	\includegraphics[width=0.4\textwidth]{createcharscreen.png}
+	\caption{Hier kann man einen neuen Charakter erstellen.}
+	\label{fig:Bild5}
+\end{figure} 
 \end{document}
