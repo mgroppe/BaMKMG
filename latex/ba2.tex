@@ -1,6 +1,7 @@
 \documentclass[extern,palatino]{cgBA}
 \usepackage{setspace}
 \usepackage{graphicx}
+\usepackage{float}
 %\onehalfspacing
 \doublespacing
 
@@ -44,7 +45,23 @@ Spätestens seit dem massiven Erfolg von Pokémon Go sind Smartphones als Spiele
 Da das Spiel auf dem Betriebssystem Android laufen soll, wurde die Entscheidung gefällt, Interface und Basis-Programm in Java zu programmieren. Als Entwicklungsumgebung für den Java-Code wird Google's hauseigenes Android Studio verwendet, da es gut dokumentiert und weit verbreitet ist.
 \\Die Kämpfe hingegen werden mit der Unity-game-engine erstellt, sodass für die Erstellung der Grafik nur ein Bildbearbeitungsprogramm benötigt wird. Dazu wird Adobe Photoshop verwendet.
 \subsection{Android}
+Android ist ein von Google entwickeltes Betriebssystem für Smartphones. Es basiert auf dem Linux-Kernel und ist eine freie, quelloffene Software. Wir haben uns dafür entschieden unser Projekt für Android zu entwickeln, weil es einen sehr hohen Marktanteil von 87.5\% besitzt und wir ein möglichst großes Zielpublikum erreichen wollten. 
+\subsubsection{Android-Programmierung}Android Applikationen bestehen aus einer oder  mehreren Komponenten. Es gibt vier verschiedene Komponententypen.
+\begin{itemize}
+	\item 
+	 Activities in Android ist eine Oberfläche, in denen beschrieben wird, was momentan angezeigt wird und wie mit Benutzereingaben umzugehen ist. Android Applikationen haben meistens mehrere Activities. Zum Beispiel könnte es in einer Email-App eine Activity geben, die eine Liste neuer E-Mails anzeigt, eine weitere, in der man neue E-Mails schreiben kann, und eine dritte zum lesen von E-Mails. 
+	 \item
+	 Servic laufen im Hintergrund ab ohne dem Benutzer dargestellt zu werden. Während sie am laufen sind können andere Apps im Vordergrund sein. Services werden zum Beispiel zum  Abspielen von Musik verwendet.
+	 \item Broadcast Receiver sind Komponenten die Systemnachrichten von außerhalb der eigenen Applikation entgegennehmen und behandeln. Solche Nachrichten sind beispielsweise Benachrichtungen über einen niedrigen Akkustand.
+	 \item Content Provider ermöglichen es Daten in Datenbanken oder Dateien abzuspeichern und für andere Applikationen sichtbar zu machen. Außerdem können über ihn solche Daten von anderen Apps abgerufen werden.
+\end{itemize}
+Um zwischen den Komponenten zu kommunizieren werden sogenannte Intents verwendet. Mit ihnen können sie sich Botschaften mitteilen. Außerdem werden Activities, Services und Broadcast-Receiver über Intents gestartet.
 \subsubsection{AR-Funktionen von Android}
+Im Gegensatz zu Desktop-Computern erlauben uns Smartphones auch die Umwelt in Spiele mit einzubinden. Mithilfe der Positionserkennung durch Gps, Wifi und Mobilfunkmasten stellt einem Android die Möglichkeit zur Verfügung die Position des Spielers Teil des Spiels werden zu lassen. Ein Service hierfür wird von Google direkt bereitgestellt, so dass man sich nicht für eine der drei Möglichkeiten entscheiden muss, sondern direkt das beste Ergebnis bekommt.\\
+Auch die Sensoren des Smartphones können in ein Spiel eingebaut werden. Durch das Accelorometer kann man versuchen Gesten zu erkennen und das Spiel darüber steuern. Im Spiel kann es Events geben die von der Temperatur abhängen und über den Orientierungssensor kann abgefragt werden ob ein Spieler auf virtuelle Objekte oder andere Mitspieler zeigt.\\
+Eine weitere Möglichkeit die reale Welt in Spiele mit einzubinden ist die Kamera des Smartphones. Durch sie können virtuelle Objekte in der realen Welt angezeigt werden. 
+
+
 \newpage
 \subsection{Unity}
 Unity, eine von Unity Technologies entwickelte Game engine ist seit ihrer Veröffentlichung 2005 zunehmend erfolgreich. %laut wikipedia nutzen 47% der Spiele auf mobilen Geräten unity.
@@ -138,31 +155,31 @@ Um Figuren auf unserem Spielfeld zu bewegen, benötigen wir einen Suchalgorithmu
 Zu Beginn befindet sich nur das Startfeld in der Open List und die Closed List ist leer. Nun wird in jedem Schritt das Feld a mit dem geringsten f-Wert aus der Open List in die Closed List aufgenommen. 
 
 Für jedes Nachbarfeld b wird nun g(b) berechnet aus g(a)+1, falls es ein orthogonaler Nachbar, und g(a)+2, falls es ein diagonaler Nachbar ist. Zusammen mit der oben beschriebenen Heuristik wird nun f(b) = g(b)+h(b) berechnet und b wird in die Open List mit a als Vorgänger aufgenommen, falls es dort nicht schon mit einem gleichgroßen oder kleineren f-Wert vorhanden ist. Der Algorithmus endet, sobald das Zielfeld in die Closed List aufgenommen wird. Der Weg ergibt sich nun, indem man über die gemerkten Vorgänger die Felder bis zum Start zurückverfolgt.
-\begin{figure}[htb]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.6\textwidth]{pathfinding1.png}
 	\caption{Der Schakalskrieger sucht einen Weg zum Ziel. Im ersten Schritt werden die Nachbarfelder mit ihrem f,g und h Werten in die Open List eingetragen.}
 	\label{pathfinding1}
 \end{figure}
-\begin{figure}
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.6\textwidth]{pathfinding2.png}
 	\caption{Die Felder mit f = 4 wurden nun in die Closed List übernommen (grün markierte Felder). Für ihre Nachbarn wurde der f Wert berechnet und sie wurden in die Open List aufgenommen}
 	\label{pathfinding2}
 \end{figure}
-\begin{figure}
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.6\textwidth]{pathfinding3.png}
 	\caption{Die kleinsten f-Werte aus der Open List wurden wieder in die Closed List aufgenommen.}
 	\label{pathfinding3}
 \end{figure}
-\begin{figure}
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.6\textwidth]{pathfinding4.png}
 	\caption{Das Zielfeld ist jetzt in der Open List angekommen. Da es den kleinsten f-Wert hat sind wir im nächsten Schritt fertig.}
 	\label{pathfinding4}
 \end{figure}
-\begin{figure}
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.6\textwidth]{pathfinding5.png}
 	\caption{Das Ziel ist nun in der Closed List. Der Pfad ergibt sich nun dadurch, dass sich jedes Feld gemerkt hat von welchem Vorgänger aus der kürzeste Weg zu ihm führt.}
@@ -170,7 +187,7 @@ Für jedes Nachbarfeld b wird nun g(b) berechnet aus g(a)+1, falls es ein orthog
 \end{figure}
 \newpage
 \subsection{Karte und Menüs auf Android}
-Unser Android-Code besteht aus vier Activities. Eine Activity in Android ist eine Oberfläche, in der beschrieben wird, was momentan angezeigt wird und wie mit Benutzereingaben umzugehen ist. Um zwischen den Activities zu kommunizieren werden sogenannte Intents verwendet. 
+Unser Android-Code besteht aus vier Activities. 
 \begin{figure}[htb] 
 	\centering
 	\includegraphics[width=0.4\textwidth]{map.png}
