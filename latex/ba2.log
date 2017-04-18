@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.10)  18 APR 2017 00:43
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.10)  18 APR 2017 17:41
 entering extended mode
 **ba2.tex
-(D:\github\BaMkMg\latex\ba2.tex
+(D:\test\cgBA_Latex\ba2.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -13,7 +13,7 @@ german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
 ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
 an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
 ishmax, welsh, loaded.
-(D:\github\BaMkMg\latex\cgBA.cls
+(D:\test\cgBA_Latex\cgBA.cls
 Document Class: cgBA 2016/07/28 v1.9 Dokumentenklasse fuer Abschlussarbeiten de
 r AG Computergraphik
 (D:\Programme\MikTex\tex\latex\base\ifthen.sty
@@ -431,378 +431,624 @@ Package: palatino 2005/04/12 PSNFSS-v9.2a (SPQR)
 \voffsetBackup=\skip48
 \hoffsetBackup=\skip49
 )
+(D:\Programme\MikTex\tex\latex\hyperref\hyperref.sty
+Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
+
+(D:\Programme\MikTex\tex\generic\oberdiek\hobsub-hyperref.sty
+Package: hobsub-hyperref 2012/04/25 v1.12 Bundle oberdiek, subset hyperref (HO)
+
+
+(D:\Programme\MikTex\tex\generic\oberdiek\hobsub-generic.sty
+Package: hobsub-generic 2012/04/25 v1.12 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2012/04/25 v1.12 Construct package bundles (HO)
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+Package: intcalc 2007/09/27 v1.1 Expandable calculations with integers (HO)
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2011/11/25 v1.13 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2012/04/08 v1.3 Expandable calculations on big integers (HO
+)
+Package: bitset 2011/01/30 v1.1 Handle bit-vector datatype (HO)
+Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
+Package: hopatch 2011/06/24 v1.1 Wrapper for package hooks (HO)
+Package: xcolor-patch 2011/01/30 xcolor patch
+Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
+Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
+Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
+)
+(D:\Programme\MikTex\tex\generic\ifxetex\ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+(D:\Programme\MikTex\tex\latex\oberdiek\auxhook.sty
+Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
+)
+(D:\Programme\MikTex\tex\latex\oberdiek\kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+)
+\@linkdim=\dimen129
+\Hy@linkcounter=\count103
+\Hy@pagecounter=\count104
+
+(D:\Programme\MikTex\tex\latex\hyperref\pd1enc.def
+File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+\Hy@SavedSpaceFactor=\count105
+
+(D:\Programme\MikTex\tex\latex\00miktex\hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Hyper figures OFF on input line 4443.
+Package hyperref Info: Link nesting OFF on input line 4448.
+Package hyperref Info: Hyper index ON on input line 4451.
+Package hyperref Info: Plain pages OFF on input line 4458.
+Package hyperref Info: Backreferencing OFF on input line 4463.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4688.
+\c@Hy@tempcnt=\count106
+
+(D:\Programme\MikTex\tex\latex\url\url.sty
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5041.
+\XeTeXLinkMargin=\dimen130
+\Fld@menulength=\count107
+\Field@Width=\dimen131
+\Fld@charsize=\dimen132
+Package hyperref Info: Hyper figures OFF on input line 6295.
+Package hyperref Info: Link nesting OFF on input line 6300.
+Package hyperref Info: Hyper index ON on input line 6303.
+Package hyperref Info: backreferencing OFF on input line 6310.
+Package hyperref Info: Link coloring OFF on input line 6315.
+Package hyperref Info: Link coloring with OCG OFF on input line 6320.
+Package hyperref Info: PDF/A mode OFF on input line 6325.
+LaTeX Info: Redefining \ref on input line 6365.
+LaTeX Info: Redefining \pageref on input line 6369.
+\Hy@abspage=\count108
+\c@Item=\count109
+\c@Hfootnote=\count110
+)
+
+Package hyperref Message: Driver (autodetected): hpdftex.
+
+(D:\Programme\MikTex\tex\latex\hyperref\hpdftex.def
+File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
+\Fld@listcount=\count111
+\c@bookmark@seq@number=\count112
+
+(D:\Programme\MikTex\tex\latex\oberdiek\rerunfilecheck.sty
+Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+\Hy@SectionHShift=\skip50
+)
 (D:\Programme\MikTex\tex\latex\float\float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count103
+\c@float@type=\count113
 \float@exts=\toks25
 \float@box=\box28
 \@float@everytoks=\toks26
 \@floatcapt=\box29
-) (D:\github\BaMkMg\latex\ba2.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Try loading font information for T1+ppl on input line 14.
- (D:\Programme\MikTex\tex\latex\psnfss\t1ppl.fd
+) (D:\test\cgBA_Latex\ba2.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Try loading font information for T1+ppl on input line 15.
+
+(D:\Programme\MikTex\tex\latex\psnfss\t1ppl.fd
 File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
 )
 (D:\Programme\MikTex\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count104
-\scratchdimen=\dimen129
+\scratchcounter=\count114
+\scratchdimen=\dimen133
 \scratchbox=\box30
-\nofMPsegments=\count105
-\nofMParguments=\count106
+\nofMPsegments=\count115
+\nofMParguments=\count116
 \everyMPshowfont=\toks27
-\MPscratchCnt=\count107
-\MPscratchDim=\dimen130
-\MPnumerator=\count108
-\makeMPintoPDFobject=\count109
+\MPscratchCnt=\count117
+\MPscratchDim=\dimen134
+\MPnumerator=\count118
+\makeMPintoPDFobject=\count119
 \everyMPtoPDFconversion=\toks28
 )
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Try loading font information for U+msa on input line 20.
- (D:\Programme\MikTex\tex\latex\amsfonts\umsa.fd
+\AtBeginShipoutBox=\box31
+Package hyperref Info: Link coloring OFF on input line 15.
+ (D:\Programme\MikTex\tex\latex\hyperref\nameref.sty
+Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
+
+(D:\Programme\MikTex\tex\generic\oberdiek\gettitlestring.sty
+Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
+)
+\c@section@level=\count120
+)
+LaTeX Info: Redefining \ref on input line 15.
+LaTeX Info: Redefining \pageref on input line 15.
+LaTeX Info: Redefining \nameref on input line 15.
+
+(D:\test\cgBA_Latex\ba2.out) (D:\test\cgBA_Latex\ba2.out)
+\@outlinefile=\write3
+LaTeX Font Info:    Try loading font information for U+msa on input line 22.
+
+(D:\Programme\MikTex\tex\latex\amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 20.
+LaTeX Font Info:    Try loading font information for U+msb on input line 22.
 
 (D:\Programme\MikTex\tex\latex\amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<logos/UniLogoNeu.pdf, id=1, 566.12401pt x 162.73297pt>
+<logos/UniLogoNeu.pdf, id=175, 566.12401pt x 162.73297pt>
 File: logos/UniLogoNeu.pdf Graphic file (type pdf)
 
 <use logos/UniLogoNeu.pdf>
-Package pdftex.def Info: logos/UniLogoNeu.pdf used on input line 20.
+Package pdftex.def Info: logos/UniLogoNeu.pdf used on input line 22.
 (pdftex.def)             Requested size: 211.82086pt x 60.88887pt.
 
-Overfull \hbox (186.21356pt too wide) in paragraph at lines 20--20
+Overfull \hbox (186.21356pt too wide) in paragraph at lines 22--22
 []|[]| 
  []
 
 File: logos/UniLogoNeu.pdf Graphic file (type pdf)
 <use logos/UniLogoNeu.pdf>
-Package pdftex.def Info: logos/UniLogoNeu.pdf used on input line 20.
+Package pdftex.def Info: logos/UniLogoNeu.pdf used on input line 22.
 (pdftex.def)             Requested size: 212.25774pt x 61.01477pt.
 
-Overfull \hbox (41.54121pt too wide) in paragraph at lines 20--20
+Overfull \hbox (41.54121pt too wide) in paragraph at lines 22--22
  []|[]|
  []
 
 
-Overfull \hbox (59.4931pt too wide) in alignment at lines 20--20
+Overfull \hbox (59.4931pt too wide) in alignment at lines 22--22
 [][][] 
  []
 
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <20.74> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 20.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 22.
 
-Overfull \hbox (18.99358pt too wide) in paragraph at lines 20--20
+Overfull \hbox (18.99358pt too wide) in paragraph at lines 22--22
 [] 
  []
 
 [-1
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <D:/github/BaMkMg/latex/lo
-gos/UniLogoNeu.pdf>] [0]
-Underfull \hbox (badness 10000) in paragraph at lines 20--20
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <D:/test/cgBA_Latex/logos/
+UniLogoNeu.pdf>] [0]
+Underfull \hbox (badness 10000) in paragraph at lines 22--22
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 20--20
+Underfull \hbox (badness 10000) in paragraph at lines 22--22
 
  []
 
 
-Overfull \hbox (48.02075pt too wide) in alignment at lines 20--20
+Overfull \hbox (55.52159pt too wide) in alignment at lines 22--22
 [][][] 
  []
 
 [1]
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 25.
- (D:\github\BaMkMg\latex\ba2.toc
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 26.
+ (D:\test\cgBA_Latex\ba2.toc
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <10.95> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 2.
  [1])
-\tf@toc=\write3
+\tf@toc=\write4
  [2] [1
 
 ] [2]
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <12> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 47.
-LaTeX Font Info:    Try loading font information for OMS+ppl on input line 52.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 48.
+LaTeX Font Info:    Try loading font information for OMS+ppl on input line 53.
 
 (D:\Programme\MikTex\tex\latex\psnfss\omsppl.fd
 File: omsppl.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 52.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 53.
  [3] [4] [5]
-Overfull \hbox (14.42377pt too wide) in paragraph at lines 67--72
+Overfull \hbox (14.42377pt too wide) in paragraph at lines 66--71
 \T1/ppl/m/n/10.95 Ver-öf-fent-li-chung 2005 zu-neh-mend er-folg-reich. Sie wird
  von Indie-Entwicklern
  []
 
 
-Overfull \hbox (1.19318pt too wide) in paragraph at lines 67--72
+Overfull \hbox (1.19318pt too wide) in paragraph at lines 66--71
 \T1/ppl/m/n/10.95 fa-che Ent-wick-lung für die Smartphone-Betriebssysteme iOS, 
 An-dro-id, Win-
  []
 
-[6] [7]
-Overfull \hbox (9.05804pt too wide) in paragraph at lines 85--94
+[6]
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 76.
+ (D:\Programme\MikTex\tex\latex\psnfss\t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
+Underfull \hbox (badness 10000) in paragraph at lines 76--76
+[][][]\T1/ppl/m/n/9 Bundeskartellamt, []$\T1/pcr/m/n/9 http : / / www . bundesk
+artellamt . de / SharedDocs /$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--76
+$\T1/pcr/m/n/9 Entscheidung / DE / Entscheidungen / Fusionskontrolle / 2005 / B
+7-[]162-[]05 .$
+ []
+
+[7]
+Overfull \hbox (9.05804pt too wide) in paragraph at lines 83--92
 \T1/ppl/m/n/10.95 un-ter-ent-wi-ckelt und es gab kein wirk-lich for-dern-des El
 e-ment. Arena-Kämpfe
  []
 
 [8] [9] [10] [11] [12]
-Overfull \hbox (4.646pt too wide) in paragraph at lines 116--117
+Overfull \hbox (4.646pt too wide) in paragraph at lines 114--115
 \T1/ppl/m/n/10.95 fluss. Langzeit-Motivation wird häu-fig durch zu-fäl-lig ge-n
 e-rier-te Items, Klas-
  []
 
 [13]
-Overfull \hbox (1.50218pt too wide) in paragraph at lines 120--121
+Overfull \hbox (1.50218pt too wide) in paragraph at lines 118--119
 \T1/ppl/m/n/10.95 un-ter den Taktik-Rollenspielen. Aus-ge-reif-te und kom-ple-x
 e Level- und Klas-
  []
 
-
-Overfull \hbox (13.7636pt too wide) in paragraph at lines 122--125
-\T1/ppl/m/n/10.95 men, wäh-rend die an-de-re Grup-pe aus haupt-säch-lich aus me
-nsch-li-chen Flücht-
- []
-
 [14] [15]
-Overfull \hbox (0.26563pt too wide) in paragraph at lines 132--136
+Overfull \hbox (0.26563pt too wide) in paragraph at lines 130--134
 \T1/ppl/m/n/10.95 vor-zeig-ba-res Er-geb-nis zu schaf-fen ist. Au-ÿer-dem brauc
 h-ten wir einen zwei-
  []
 
 
-Overfull \hbox (3.46294pt too wide) in paragraph at lines 132--136
+Overfull \hbox (3.46294pt too wide) in paragraph at lines 130--134
 \T1/ppl/m/n/10.95 dings den Spiel-fluss zu stark be-las-ten wür-de. Das ein-zi-
 ge Motion-Capturing
  []
 
 
-Overfull \hbox (7.18246pt too wide) in paragraph at lines 132--136
+Overfull \hbox (7.18246pt too wide) in paragraph at lines 130--134
 \T1/ppl/m/n/10.95 Vorstellbar wä-re ein sol-ches Kon-zept, wenn die Smartphone-
 VR-Technologie
  []
 
 
-Overfull \hbox (3.27654pt too wide) in paragraph at lines 132--136
+Overfull \hbox (3.27654pt too wide) in paragraph at lines 130--134
 \T1/ppl/m/n/10.95 tio-nie-ren-de Rollenspiel-Systeme als ei-ne stär-ke-re AR-An
 bindung. Da-zu war
  []
 
 [16] [17]
-Overfull \hbox (12.27364pt too wide) in paragraph at lines 138--145
+Overfull \hbox (12.27364pt too wide) in paragraph at lines 136--143
 \T1/ppl/m/n/10.95 dau-ern konn-ten, die-se in den Taktik-Rollenspielen sehr ähn
 -li-chen Rollenspiel-
  []
 
 
-Overfull \hbox (10.32404pt too wide) in paragraph at lines 138--145
-\T1/ppl/m/n/10.95 ne-riert und kom-men in ver-schie-de-nen Sel-ten-heits-stu-fe
-n und Le-veln/Stärken.
- []
-
-
-Overfull \hbox (3.33862pt too wide) in paragraph at lines 138--145
+Overfull \hbox (3.33862pt too wide) in paragraph at lines 136--143
 \T1/ppl/m/n/10.95 In Tests sorg-ten 3D-Modelle ins-be-son-de-re bei Ani-ma-tio-
 nen häu-fig für Ecken
  []
 
 [18] [19]
-Overfull \hbox (3.18506pt too wide) in paragraph at lines 147--149
+Overfull \hbox (3.18506pt too wide) in paragraph at lines 145--147
 \T1/ppl/m/n/10.95 Die Im-ple-men-tie-rung um-fass-te meh-re-re ver-schie-de-ne 
 Tei-la-spek-te und Spra-
  []
 
-[20]
-Overfull \hbox (2.32065pt too wide) in paragraph at lines 153--154
+
+Overfull \hbox (1.53603pt too wide) in paragraph at lines 145--147
+\T1/ppl/m/n/10.95 und Gra-fik kon-zen-trier-te. Da-nach er-zeug-te Mar-tin das 
+Android-Modul und
+ []
+
+<map.png, id=344, 542.025pt x 963.6pt>
+File: map.png Graphic file (type png)
+ <use map.png>
+Package pdftex.def Info: map.png used on input line 151.
+(pdftex.def)             Requested size: 143.9978pt x 255.99973pt.
+LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <10> not available
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 153.
+ [20] [21 <D:/test/cgBA_Latex/map.png>] [22] <questfragment.png, id=359, 542.02
+5pt x 963.6pt>
+File: questfragment.png Graphic file (type png)
+
+<use questfragment.png>
+Package pdftex.def Info: questfragment.png used on input line 161.
+(pdftex.def)             Requested size: 143.9978pt x 255.99973pt.
+ [23 <D:/test/cgBA_Latex/questfragment.png>]
+<charfragment.png, id=365, 542.025pt x 963.6pt>
+File: charfragment.png Graphic file (type png)
+ <use charfragment.png>
+Package pdftex.def Info: charfragment.png used on input line 172.
+(pdftex.def)             Requested size: 143.9978pt x 255.99973pt.
+ [24 <D:/test/cgBA_Latex/charfragment.png>]
+<statscreen.png, id=371, 542.025pt x 963.6pt>
+File: statscreen.png Graphic file (type png)
+ <use statscreen.png>
+Package pdftex.def Info: statscreen.png used on input line 182.
+(pdftex.def)             Requested size: 143.9978pt x 255.99973pt.
+ [25 <D:/test/cgBA_Latex/statscreen.png>]
+<createcharscreen.png, id=377, 542.025pt x 963.6pt>
+File: createcharscreen.png Graphic file (type png)
+ <use createcharscreen.png>
+Package pdftex.def Info: createcharscreen.png used on input line 191.
+(pdftex.def)             Requested size: 143.9978pt x 255.99973pt.
+
+[26 <D:/test/cgBA_Latex/createcharscreen.png>]
+<fightscreen.png, id=384, 963.6pt x 542.025pt>
+File: fightscreen.png Graphic file (type png)
+ <use fightscreen.png>
+Package pdftex.def Info: fightscreen.png used on input line 200.
+(pdftex.def)             Requested size: 288.0011pt x 161.99672pt.
+ [27 <D:/test/cgBA_Latex/fightscreen.png>]
+Overfull \hbox (2.32065pt too wide) in paragraph at lines 211--212
 \T1/ppl/m/n/10.95 Um Fi-gu-ren auf un-se-rem Spiel-feld zu be-we-gen, be-nö-ti-
 gen wir einen Suchal-
  []
 
-[21] <pathfinding1.png, id=101, 368.87813pt x 319.1925pt>
+[28] <pathfinding1.png, id=395, 368.87813pt x 319.1925pt>
 File: pathfinding1.png Graphic file (type png)
 
 <use pathfinding1.png>
-Package pdftex.def Info: pathfinding1.png used on input line 160.
+Package pdftex.def Info: pathfinding1.png used on input line 218.
 (pdftex.def)             Requested size: 216.0022pt x 186.90462pt.
-LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <10> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 161.
- <pathfinding2.png, id=102, 372.64218pt x 312.41719pt>
+ [29]
+<pathfinding2.png, id=400, 372.64218pt x 312.41719pt>
 File: pathfinding2.png Graphic file (type png)
-
-<use pathfinding2.png>
-Package pdftex.def Info: pathfinding2.png used on input line 166.
+ <use pathfinding2.png>
+Package pdftex.def Info: pathfinding2.png used on input line 224.
 (pdftex.def)             Requested size: 216.0022pt x 181.09244pt.
- [22]
-<pathfinding3.png, id=106, 380.92313pt x 317.68687pt>
+
+<pathfinding3.png, id=401, 380.92313pt x 317.68687pt>
 File: pathfinding3.png Graphic file (type png)
  <use pathfinding3.png>
-Package pdftex.def Info: pathfinding3.png used on input line 172.
+Package pdftex.def Info: pathfinding3.png used on input line 230.
 (pdftex.def)             Requested size: 216.0022pt x 180.14297pt.
 
-<pathfinding4.png, id=107, 454.69875pt x 298.11375pt>
+<pathfinding4.png, id=402, 454.69875pt x 298.11375pt>
 File: pathfinding4.png Graphic file (type png)
  <use pathfinding4.png>
-Package pdftex.def Info: pathfinding4.png used on input line 178.
+Package pdftex.def Info: pathfinding4.png used on input line 236.
 (pdftex.def)             Requested size: 216.0022pt x 141.61914pt.
 
-[23 <D:/github/BaMkMg/latex/pathfinding1.png> <D:/github/BaMkMg/latex/pathfindi
-ng2.png>] <pathfinding5.png, id=111, 391.4625pt x 256.70906pt>
+[30 <D:/test/cgBA_Latex/pathfinding1.png> <D:/test/cgBA_Latex/pathfinding2.png>
+] <pathfinding5.png, id=409, 391.4625pt x 256.70906pt>
 File: pathfinding5.png Graphic file (type png)
-
-<use pathfinding5.png>
-Package pdftex.def Info: pathfinding5.png used on input line 184.
+ <use pathfinding5.png>
+Package pdftex.def Info: pathfinding5.png used on input line 242.
 (pdftex.def)             Requested size: 216.0022pt x 141.6487pt.
- [24 <D:/github/BaMkMg/latex/pathfinding3.png> <D:/github/BaMkMg/latex/pathfind
-ing4.png>] [25 <D:/github/BaMkMg/latex/pathfinding5.png>] <map.png, id=118, 542
-.025pt x 963.6pt>
-File: map.png Graphic file (type png)
- <use map.png>
-Package pdftex.def Info: map.png used on input line 193.
-(pdftex.def)             Requested size: 143.9978pt x 255.99973pt.
- [26 <D:/github/BaMkMg/latex/map.png>] [27] <questfragment.png, id=126, 542.025
-pt x 963.6pt>
-File: questfragment.png Graphic file (type png)
 
-<use questfragment.png>
-Package pdftex.def Info: questfragment.png used on input line 203.
-(pdftex.def)             Requested size: 143.9978pt x 255.99973pt.
- [28 <D:/github/BaMkMg/latex/questfragment.png>]
-<charfragment.png, id=130, 542.025pt x 963.6pt>
-File: charfragment.png Graphic file (type png)
- <use charfragment.png>
-Package pdftex.def Info: charfragment.png used on input line 214.
-(pdftex.def)             Requested size: 143.9978pt x 255.99973pt.
- [29 <D:/github/BaMkMg/latex/charfragment.png>]
-<statscreen.png, id=134, 542.025pt x 963.6pt>
-File: statscreen.png Graphic file (type png)
- <use statscreen.png>
-Package pdftex.def Info: statscreen.png used on input line 224.
-(pdftex.def)             Requested size: 143.9978pt x 255.99973pt.
- [30 <D:/github/BaMkMg/latex/statscreen.png>]
-<createcharscreen.png, id=138, 542.025pt x 963.6pt>
-File: createcharscreen.png Graphic file (type png)
- <use createcharscreen.png>
-Package pdftex.def Info: createcharscreen.png used on input line 233.
-(pdftex.def)             Requested size: 143.9978pt x 255.99973pt.
+[31 <D:/test/cgBA_Latex/pathfinding3.png> <D:/test/cgBA_Latex/pathfinding4.png>
+] [32 <D:/test/cgBA_Latex/pathfinding5.png>]
+<sieg1.jpg, id=422, 1706.375pt x 803.0pt>
+File: sieg1.jpg Graphic file (type jpg)
+ <use sieg1.jpg>
+Package pdftex.def Info: sieg1.jpg used on input line 251.
+(pdftex.def)             Requested size: 302.29134pt x 142.26378pt.
 
-[31 <D:/github/BaMkMg/latex/createcharscreen.png>]
-<fightscreen.png, id=142, 963.6pt x 542.025pt>
-File: fightscreen.png Graphic file (type png)
- <use fightscreen.png>
-Package pdftex.def Info: fightscreen.png used on input line 242.
-(pdftex.def)             Requested size: 288.0011pt x 161.99672pt.
- [32 <D:/github/BaMkMg/latex/fightscreen.png>] <soldier.png, id=147, 722.7pt x 
-722.7pt>
+<sieg2.jpg, id=423, 1706.375pt x 803.0pt>
+File: sieg2.jpg Graphic file (type jpg)
+ <use sieg2.jpg>
+Package pdftex.def Info: sieg2.jpg used on input line 257.
+(pdftex.def)             Requested size: 302.29134pt x 142.26378pt.
+ [33 <D:/test/cgBA_Latex/sieg1.jpg>] [34 <D:/test/cgBA_Latex/sieg2.jpg>]
+<soldier.png, id=436, 722.7pt x 722.7pt>
 File: soldier.png Graphic file (type png)
-
-<use soldier.png>
-Package pdftex.def Info: soldier.png used on input line 256.
+ <use soldier.png>
+Package pdftex.def Info: soldier.png used on input line 266.
 (pdftex.def)             Requested size: 142.26576pt x 142.26378pt.
- <soldierbackground.png, id=149, 515.67656pt x 339.51843pt>
+
+Overfull \hbox (1.82053pt too wide) in paragraph at lines 262--269
+\T1/ppl/m/n/10.95 hen. Rea-lis-ti-sche-re Dar-stel-lun-gen (Abb.[]14[]) wa-ren 
+auf dem Test-Smartphone
+ []
+
+<soldierbackground.png, id=438, 515.67656pt x 339.51843pt>
 File: soldierbackground.png Graphic file (type png)
 
 <use soldierbackground.png>
-Package pdftex.def Info: soldierbackground.png used on input line 262.
+Package pdftex.def Info: soldierbackground.png used on input line 272.
 (pdftex.def)             Requested size: 369.88582pt x 243.5361pt.
 
-Overfull \hbox (9.88582pt too wide) in paragraph at lines 262--263
+Overfull \hbox (9.88582pt too wide) in paragraph at lines 272--273
  [][] 
  []
 
-<assachibi.jpg, id=150, 1003.75pt x 1003.75pt>
+[35 <D:/test/cgBA_Latex/soldier.png>]
+<assachibi.jpg, id=447, 1003.75pt x 1003.75pt>
 File: assachibi.jpg Graphic file (type jpg)
  <use assachibi.jpg>
-Package pdftex.def Info: assachibi.jpg used on input line 273.
+Package pdftex.def Info: assachibi.jpg used on input line 283.
 (pdftex.def)             Requested size: 142.26378pt x 142.25475pt.
 
-<egychibi.jpg, id=151, 1003.75pt x 1003.75pt>
+<egychibi.jpg, id=448, 1003.75pt x 1003.75pt>
 File: egychibi.jpg Graphic file (type jpg)
  <use egychibi.jpg>
-Package pdftex.def Info: egychibi.jpg used on input line 275.
+Package pdftex.def Info: egychibi.jpg used on input line 285.
 (pdftex.def)             Requested size: 142.26378pt x 142.25475pt.
- [33 <D:/github/BaMkMg/latex/soldier.png>] [34 <D:/github/BaMkMg/latex/soldierb
-ackground.png>] <viking.jpg, id=159, 501.875pt x 501.875pt>
+
+Overfull \hbox (13.40123pt too wide) in paragraph at lines 276--288
+\T1/ppl/m/n/10.95 (Abb.[]16[]) wa-ren stär-ker über-zeich-net und an den so-ge-
+nann-te Chibi-Zeichenstil
+ []
+
+[36 <D:/test/cgBA_Latex/soldierbackground.png>] [37]
+<viking.jpg, id=458, 501.875pt x 501.875pt>
 File: viking.jpg Graphic file (type jpg)
  <use viking.jpg>
-Package pdftex.def Info: viking.jpg used on input line 282.
+Package pdftex.def Info: viking.jpg used on input line 292.
 (pdftex.def)             Requested size: 227.62596pt x 227.62204pt.
- [35 <D:/github/BaMkMg/latex/assachibi.jpg> <D:/github/BaMkMg/latex/egychibi.jp
-g>]
-<vikingwallpaper.jpg, id=163, 2569.6pt x 1445.4pt>
+
+<vikingwallpaper.jpg, id=459, 2569.6pt x 1445.4pt>
 File: vikingwallpaper.jpg Graphic file (type jpg)
  <use vikingwallpaper.jpg>
-Package pdftex.def Info: vikingwallpaper.jpg used on input line 290.
+Package pdftex.def Info: vikingwallpaper.jpg used on input line 300.
 (pdftex.def)             Requested size: 128.0374pt x 72.00957pt.
 
-<vikingwallpaper2.jpg, id=164, 1371.1225pt x 770.88pt>
+<vikingwallpaper2.jpg, id=460, 1371.1225pt x 770.88pt>
 File: vikingwallpaper2.jpg Graphic file (type jpg)
 
 <use vikingwallpaper2.jpg>
-Package pdftex.def Info: vikingwallpaper2.jpg used on input line 292.
+Package pdftex.def Info: vikingwallpaper2.jpg used on input line 302.
 (pdftex.def)             Requested size: 128.0374pt x 71.97575pt.
 
-<vikingwallpaper3.jpg, id=165, 593.5776pt x 722.7pt>
+<vikingwallpaper3.jpg, id=461, 593.5776pt x 722.7pt>
 File: vikingwallpaper3.jpg Graphic file (type jpg)
 
 <use vikingwallpaper3.jpg>
-Package pdftex.def Info: vikingwallpaper3.jpg used on input line 294.
+Package pdftex.def Info: vikingwallpaper3.jpg used on input line 304.
 (pdftex.def)             Requested size: 85.35826pt x 103.92316pt.
- [36 <D:/github/BaMkMg/latex/viking.jpg>] [37 <D:/github/BaMkMg/latex/vikingwal
-lpaper.jpg> <D:/github/BaMkMg/latex/vikingwallpaper2.jpg> <D:/github/BaMkMg/lat
-ex/vikingwallpaper3.jpg>] [38]
-<morningstar.jpg, id=176, 401.5pt x 401.5pt>
+ [38 <D:/test/cgBA_Latex/assachibi.jpg> <D:/test/cgBA_Latex/egychibi.jpg> <D:/t
+est/cgBA_Latex/viking.jpg>] [39 <D:/test/cgBA_Latex/vikingwallpaper.jpg> <D:/te
+st/cgBA_Latex/vikingwallpaper2.jpg> <D:/test/cgBA_Latex/vikingwallpaper3.jpg>] 
+[40] <morningstar.jpg, id=478, 401.5pt x 401.5pt>
 File: morningstar.jpg Graphic file (type jpg)
- <use morningstar.jpg>
-Package pdftex.def Info: morningstar.jpg used on input line 305.
-(pdftex.def)             Requested size: 142.26698pt x 142.26378pt.
- [39 <D:/github/BaMkMg/latex/morningstar.jpg>] <berserker.jpg, id=180, 401.5pt 
-x 401.5pt>
-File: berserker.jpg Graphic file (type jpg)
 
-<use berserker.jpg>
-Package pdftex.def Info: berserker.jpg used on input line 312.
+<use morningstar.jpg>
+Package pdftex.def Info: morningstar.jpg used on input line 315.
 (pdftex.def)             Requested size: 142.26698pt x 142.26378pt.
- [40 <D:/github/BaMkMg/latex/berserker.jpg>] [41]
-(D:\github\BaMkMg\latex\ba2.aux) ) 
+ [41 <D:/test/cgBA_Latex/morningstar.jpg>]
+<berserker.jpg, id=484, 401.5pt x 401.5pt>
+File: berserker.jpg Graphic file (type jpg)
+ <use berserker.jpg>
+Package pdftex.def Info: berserker.jpg used on input line 323.
+(pdftex.def)             Requested size: 156.49246pt x 156.49014pt.
+ [42 <D:/test/cgBA_Latex/berserker.jpg>] <priestess.jpg, id=490, 501.875pt x 50
+1.875pt>
+File: priestess.jpg Graphic file (type jpg)
+
+<use priestess.jpg>
+Package pdftex.def Info: priestess.jpg used on input line 333.
+(pdftex.def)             Requested size: 170.71947pt x 170.71652pt.
+ <ra.jpg, id=491, 2031.59pt x 2441.12pt>
+File: ra.jpg Graphic file (type jpg)
+ <use ra.jpg>
+Package pdftex.def Info: ra.jpg used on input line 345.
+(pdftex.def)             Requested size: 118.38719pt x 142.26378pt.
+
+Overfull \hbox (11.01854pt too wide) in paragraph at lines 338--348
+\T1/ppl/m/n/10.95 den op-ti-scher Ab-wechs-lung. Die Idee war ur-sprüng-lich, e
+inen Falken-Krieger
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 338--348
+
+ []
+
+[43 <D:/test/cgBA_Latex/priestess.jpg>] [44] [45 <D:/test/cgBA_Latex/ra.jpg>]
+[46] <jackal.jpg, id=511, 501.875pt x 501.875pt>
+File: jackal.jpg Graphic file (type jpg)
+ <use jackal.jpg>
+Package pdftex.def Info: jackal.jpg used on input line 354.
+(pdftex.def)             Requested size: 199.16888pt x 199.16928pt.
+
+<jackalalpha.jpg, id=512, 351.3125pt x 351.3125pt>
+File: jackalalpha.jpg Graphic file (type jpg)
+ <use jackalalpha.jpg>
+Package pdftex.def Info: jackalalpha.jpg used on input line 362.
+(pdftex.def)             Requested size: 142.2647pt x 142.26378pt.
+
+[47 <D:/test/cgBA_Latex/jackal.jpg>]
+Overfull \hbox (1.16028pt too wide) in paragraph at lines 367--371
+\T1/ppl/m/n/10.95 Um die Fi-gur in-ter-essan-ter aus-se-hen zu las-sen, wur-de 
+der Kopf ge-gen einen
+ []
+
+
+Overfull \hbox (8.94856pt too wide) in paragraph at lines 367--371
+\T1/ppl/m/n/10.95 ori-gi-na-len Ent-wurf ge-fehlt hat-te. Nach-dem meh-re-re Sk
+iz-zen mit un-ter-schied-
+ []
+
+[48 <D:/test/cgBA_Latex/jackalalpha.jpg>] [49]
+<move1.jpg, id=527, 2007.5pt x 1003.75pt>
+File: move1.jpg Graphic file (type jpg)
+ <use move1.jpg>
+Package pdftex.def Info: move1.jpg used on input line 377.
+(pdftex.def)             Requested size: 284.50949pt x 142.26378pt.
+
+<animator.jpg, id=528, 807.7678pt x 355.3275pt>
+File: animator.jpg Graphic file (type jpg)
+ <use animator.jpg>
+Package pdftex.def Info: animator.jpg used on input line 383.
+(pdftex.def)             Requested size: 323.40953pt x 142.26378pt.
+ [50 <D:/test/cgBA_Latex/move1.jpg>] <attack1.jpg, id=535, 2509.375pt x 1003.75
+pt>
+File: attack1.jpg Graphic file (type jpg)
+
+<use attack1.jpg>
+Package pdftex.def Info: attack1.jpg used on input line 388.
+(pdftex.def)             Requested size: 355.63687pt x 142.26378pt.
+ [51 <D:/test/cgBA_Latex/animator.jpg>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 393.
+ [52 <D:/test/cgBA_Latex/attack1.jpg>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 393.
+ (D:\test\cgBA_Latex\ba2.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 393.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 393.
+Package rerunfilecheck Info: File `ba2.out' has not changed.
+(rerunfilecheck)             Checksum: AFDEF2D20A46BCEFBC03A3ADDDCCCC4E;3075.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 393.
+ ) 
 Here is how much of TeX's memory you used:
- 4324 strings out of 493921
- 57846 string characters out of 3150484
- 115964 words of memory out of 3000000
- 7508 multiletter control sequences out of 15000+200000
- 31340 words of font info for 68 fonts, out of 3000000 for 9000
+ 8301 strings out of 493921
+ 118394 string characters out of 3150484
+ 203110 words of memory out of 3000000
+ 11294 multiletter control sequences out of 15000+200000
+ 31961 words of font info for 70 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 43i,12n,40p,1549b,351s stack positions out of 5000i,500n,10000p,200000b,50000s
-{D:/Programme/MikTex/fonts/enc/dvips/fontname
-/8r.enc}<D:/Programme/MikTex/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Prog
-ramme/MikTex/fonts/type1/public/amsfonts/symbols/msam10.pfb><D:/Programme/MikTe
-x/fonts/type1/urw/palatino/uplb8a.pfb><D:/Programme/MikTex/fonts/type1/urw/pala
-tino/uplr8a.pfb>
-Output written on ba2.pdf (46 pages, 8912839 bytes).
+ 43i,12n,40p,1561b,456s stack positions out of 5000i,500n,10000p,200000b,50000s
+{D:/Programme/MikTex/fonts/enc/dvips/fontname/8r.enc}<D:/Programme/MikTex/fon
+ts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Programme/MikTex/fonts/type1/public/
+amsfonts/symbols/msam10.pfb><D:/Programme/MikTex/fonts/type1/urw/courier/ucrr8a
+.pfb><D:/Programme/MikTex/fonts/type1/urw/palatino/uplb8a.pfb><D:/Programme/Mik
+Tex/fonts/type1/urw/palatino/uplr8a.pfb>
+Output written on ba2.pdf (57 pages, 11325225 bytes).
 PDF statistics:
- 204 PDF objects out of 1000 (max. 8388607)
- 0 named destinations out of 1000 (max. 500000)
- 111 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 595 PDF objects out of 1000 (max. 8388607)
+ 131 named destinations out of 1000 (max. 500000)
+ 500 words of extra memory for PDF output out of 10000 (max. 10000000)
 

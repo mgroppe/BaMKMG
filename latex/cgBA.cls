@@ -204,7 +204,7 @@
 	\vspace*{2ex}
 	\noindent
 	\normalsize
-	Ich versichere, dass ich die vorliegende Arbeit selbst{\"a}ndig verfasst und keine anderen als die angegebenen Quellen und Hilfsmittel benutzt habe.\\
+	Wir versichern, dass wir die vorliegende Arbeit selbst{\"a}ndig verfasst und keine anderen als die angegebenen Quellen und Hilfsmittel benutzt habe.\\
 
 	\vspace*{2ex}
 	
@@ -212,7 +212,7 @@
 	\begin{tabularx}{\linewidth}{lcc}
 	{} & Ja & Nein \\
 	{} & {} & {} \\
-	Mit der Einstellung der Arbeit in die Bibliothek bin ich einverstanden. & $\square$ & $\square$ \\
+	Mit der Einstellung der Arbeit in die Bibliothek sind wir einverstanden. & $\square$ & $\square$ \\
 	\end{tabularx}
 	\end{flushleft}
 	\vspace*{3cm}
