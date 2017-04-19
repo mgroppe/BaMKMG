@@ -178,7 +178,7 @@
   	     		}{\@erstgutachterInfo} \\[.2cm]
     	   Zweitgutachter: & \@zweitgutachter \\
     	   { } & \@zweitgutachterInfo \\
-       \end{tabular}\\[2cm]}
+       \end{tabular}\\[1cm]}
   		\normalsize
   		\hspace*{.11cm}
       Koblenz, im \abgabe 
@@ -204,7 +204,7 @@
 	\vspace*{2ex}
 	\noindent
 	\normalsize
-	Wir versichern, dass wir die vorliegende Arbeit selbst{\"a}ndig verfasst und keine anderen als die angegebenen Quellen und Hilfsmittel benutzt habe.\\
+	Ich versichere, dass ich die vorliegende Arbeit selbst{\"a}ndig verfasst und keine anderen als die angegebenen Quellen und Hilfsmittel benutzt habe.\\
 
 	\vspace*{2ex}
 	
@@ -212,7 +212,7 @@
 	\begin{tabularx}{\linewidth}{lcc}
 	{} & Ja & Nein \\
 	{} & {} & {} \\
-	Mit der Einstellung der Arbeit in die Bibliothek sind wir einverstanden. & $\square$ & $\square$ \\
+	Mit der Einstellung der Arbeit in die Bibliothek bin ich einverstanden. & $\square$ & $\square$ \\
 	\end{tabularx}
 	\end{flushleft}
 	\vspace*{3cm}
