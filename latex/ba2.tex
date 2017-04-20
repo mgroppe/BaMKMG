@@ -10,6 +10,7 @@
 \title{Entwicklung eines Augmented Reality-Rollenspiels für Android}
 \zweitgutachter{M.Sc. Bastian Krayer}
 
+
 \begin{document}
 	
 	% Umschalten der Sprache (für englische Rubrikbezeichnungen etc.)
@@ -26,10 +27,10 @@
 	% \listoffigures   % fuer ein eventuelles Abbildungsverzeichnis
 	% \clearpage
 	\pagenumbering{arabic}
+	\bibliography{ba2}
 	
 	
 \section{Abstract}
-	
 Das Mobile-Game Pokémon Go wurde in den ersten drei Monaten nach seiner Veröffentlichung 500 Millionen mal heruntergeladen. Als Hybrid aus Rollen- und Augmented Reality (AR)-Spiel bleibt dieses Erfolgsspiel aber eher die Ausnahme. Außerdem weist es einige Schwächen auf. Insbesondere durch mangelnde Komplexität fehlte es vielen Spielern an längerfristiger Herausforderung, was dazu führte, dass ein großer Teil der Personen nach relativ kurzer Zeit wieder aufhörten, zu spielen.  
 \\Aufgabenstellung dieser Arbeit ist es, in einem ersten Schritt Pokémon Go und vergleichbare Produkte sowie Computer- und Konsolenspiele, die mehr Langzeitmotivation bieten, zu analysieren. In einem weiteren Schritt sollen die interessantesten Elemente aus ihnen identifiziert und dann miteinander kombiniert werden, um einen Prototyp für ein AR-Rollenspiel zu entwickeln, das sowohl Menschen anspricht, die einfache Spiele bevorzugen als auch solche, die längerfristigen Spaß durch eine tiefere Spieltiefe suchen. Mittels Testpersonen aus verschiedenen Altersgruppen, mit unterschiedlicher Spielerfahrung und voneinander abweichenden Vorlieben hinsichtlich der Spiel-Komplexität soll schließlich überprüft werden, ob die zu Beginn des Projekts aufgestellten Ziele mit dem kreierten Prototyp erreicht wurden.
 \section{Abstract (english)}
@@ -47,18 +48,18 @@ Da das Spiel auf dem Betriebssystem Android laufen soll, haben wir die Entscheid
 \\Die Kämpfe hingegen werden mit der Unity-game-engine umgesetzt, die bei Spielen auf Android die am weitesten verbreitete Open Source Game-Engine ist. Für die Erstellung der Grafik wurde ein Bildbearbeitungsprogramm benötigt. Die Wahl fiel dabei auf den Genre-Standard Adobe Photoshop.
 \subsection{Android}
 Android ist ein von Google entwickeltes Betriebssystem für Smartphones. Es basiert auf dem Linux-Kernel und ist eine freie, quelloffene Software. Wir haben uns dafür entschieden unser Projekt für Android zu entwickeln, weil es mit 87,5\% \footnote{\url{https://www.strategyanalytics.com/strategy-analytics/news/strategy-analytics-press-releases/strategy-analytics-press-release/2016/11/02/strategy-analytics-android-captures-record-88-percent-share-of-global-smartphone-shipments-in-q3-2016\#.WPgQiIiGOUk}}einen sehr hohen Marktanteil besitzt und wir ein möglichst großes Zielpublikum erreichen wollten. 
-\subsubsection{Android-Programmierung}Android Applikationen bestehen aus Komponenten. Es gibt vier verschiedene Komponententypen.\footnote{\url{https://developer.android.com/guide/components/fundamentals.html}}
+\subsubsection{Android-Programmierung}Android Applikationen bestehen aus Komponenten. Es gibt vier verschiedene Komponententypen.\cite{and1}
 \begin{itemize}
 	\item 
-	Activities in Android sind Oberflächen, in denen beschrieben wird, was momentan angezeigt wird und wie mit Benutzereingaben umzugehen ist. Android Applikationen haben meistens mehrere Activities. Zum Beispiel könnte es in einer Email-App eine Activity geben, die eine Liste neuer E-Mails anzeigt, eine weitere, in der man neue E-Mails schreiben kann, und eine dritte zum lesen von E-Mails. \footnote{\url{https://developer.android.com/guide/components/fundamentals.html}} 
+	Activities in Android sind Oberflächen, in denen beschrieben wird, was momentan angezeigt wird und wie mit Benutzereingaben umzugehen ist. Android Applikationen haben meistens mehrere Activities. Zum Beispiel könnte es in einer Email-App eine Activity geben, die eine Liste neuer E-Mails anzeigt, eine weitere, in der man neue E-Mails schreiben kann, und eine dritte zum lesen von E-Mails. \cite{and1}
 	\item
-	Services laufen im Hintergrund ab ohne dem Benutzer dargestellt zu werden. Während sie laufen, können andere Apps im Vordergrund sein. Services werden zum Beispiel zum  Abspielen von Musik verwendet, wenn diese weiterlaufen soll, während man auf dem Smartphone andere Dinge macht.\footnote{\url{https://developer.android.com/guide/components/fundamentals.html}}
-	\item Broadcast Receiver sind Komponenten die Systemnachrichten von außerhalb der eigenen Applikation entgegennehmen und verarbeiten. Solche Nachrichten sind beispielsweise Benachrichtungen über einen niedrigen Akkustand.\footnote{\url{https://developer.android.com/guide/components/fundamentals.html}}
-	\item Content Provider ermöglichen es, Daten in Datenbanken oder Dateien abzuspeichern und für andere Applikationen sichtbar zu machen. Außerdem können über sie solche Daten von anderen Apps abgerufen werden.\footnote{\url{https://developer.android.com/guide/components/fundamentals.html}}
+	Services laufen im Hintergrund ab ohne dem Benutzer dargestellt zu werden. Während sie laufen, können andere Apps im Vordergrund sein. Services werden zum Beispiel zum  Abspielen von Musik verwendet, wenn diese weiterlaufen soll, während man auf dem Smartphone andere Dinge macht.\cite{and1}
+	\item Broadcast Receiver sind Komponenten die Systemnachrichten von außerhalb der eigenen Applikation entgegennehmen und verarbeiten. Solche Nachrichten sind beispielsweise Benachrichtungen über einen niedrigen Akkustand.\cite{and1}
+	\item Content Provider ermöglichen es, Daten in Datenbanken oder Dateien abzuspeichern und für andere Applikationen sichtbar zu machen. Außerdem können über sie solche Daten von anderen Apps abgerufen werden.\cite{and1}
 \end{itemize}
-Um zwischen den Komponenten zu kommunizieren, werden sogenannte Intents verwendet.Ein Intent ist ein Nachrichtenobjekt, was verwendet wird um anderen Komponenten Dinge mitzuteilen\footnote{\url{https://developer.android.com/guide/components/intents-filters.html}}. Außerdem werden Activities, Services und Broadcast-Receiver über Intents gestartet. In einer E-Mail-App z.B. würde der Activity zum Lesen von E-Mails direkt beim Start über den Intent mitgeteilt werden, welche E-Mail angezeigt werden soll.
+Um zwischen den Komponenten zu kommunizieren, werden sogenannte Intents verwendet.Ein Intent ist ein Nachrichtenobjekt, was verwendet wird um anderen Komponenten Dinge mitzuteilen\cite{and2}. Außerdem werden Activities, Services und Broadcast-Receiver über Intents gestartet. In einer E-Mail-App z.B. würde der Activity zum Lesen von E-Mails direkt beim Start über den Intent mitgeteilt werden, welche E-Mail angezeigt werden soll.
 \subsubsection{AR-Funktionen von Android}
-Smartphones ermöglichen uns, die Umwelt in Spiele mit einzubinden (sogenannte Augmented Reality, erweiterte Realität). Mithilfe der Positionserkennung durch GPS, Wi-Fi und Mobilfunkmasten stellt Android Programmierern die Möglichkeit zur Verfügung, die Position des Spielers in ihr Spiel einzubinden. Google stellt einen Loaction-Service direkt bereit\footnote{\url{https://developer.android.com/training/location/index.html}}, der alle drei Möglichkeiten in Betracht zieht und das beste Ergebnis liefert.\\
+Smartphones ermöglichen uns, die Umwelt in Spiele mit einzubinden (sogenannte Augmented Reality, erweiterte Realität). Mithilfe der Positionserkennung durch GPS, Wi-Fi und Mobilfunkmasten stellt Android Programmierern die Möglichkeit zur Verfügung, die Position des Spielers in ihr Spiel einzubinden. Google stellt einen Loaction-Service direkt bereit\cite{and3}, der alle drei Möglichkeiten in Betracht zieht und das beste Ergebnis liefert.\\
 Auch Sensoren des Smartphones können in ein Spiel eingebaut werden. Durch das Accelorometer kann man Gesten erkennen und das Spiel darüber steuern.Zudem kann es im Spiel verschiedene Events geben, die von der Temperatur abhängen und über den Orientierungssensor kann abgefragt werden, ob ein Spieler auf virtuelle Objekte oder andere Mitspieler zeigt.\\
 Eine weitere Möglichkeit, die reale Welt in Spiele mit einzubinden, ist die Kamera des Smartphones. Durch sie können virtuelle Objekte in der realen Welt angezeigt werden. 
 \newpage
@@ -534,7 +535,10 @@ Und auch bei weiteren Teilnehmern spielt der Geospielgedanke eine wichtige Rolle
 \newpage
 \section{Ausblick}Um das Spiel weiterzuentwickeln ist es uns wichtig, in Umfragen angesprochene Wünsche aufzugreifen. Das größte Problem, das einer weiteren Verbreitung im Weg steht, ist das Fehlen eines Tutorials. Insbesondere ein paar unerfahrene Tester hatten dies angemerkt, auch wenn im Allgemeinen die Entwickler eine Einführung gaben und die Testspieler betreut hatten. Für eine etwaige Verbreitung über Googles Appstore würde ein solches jedoch benötigt, um einen leichten Einstieg zu garantieren. Dies würde in Form von Textblasen gelöst werden.
 \\Für die extrem erfahrenen Spieler hingegen wären Schwierigkeits-Einstellungen gut. Denkbar ist, dies über Optionen in der Haupt-Aktivität zu lösen, oder für die Kämpfe eine Grund-Schwierigkeit auswählbar zu machen. Fest steht jedoch, dass Schwierigkeit stärker variieren müsste als momentan. Das momentane Level-abhängige System erwies sich als guter Ansatz, die Ergebnisse, die es liefert sind aber möglicherweise nicht divers genug. Einige Spieler, die komplexe Spiele bevorzugen und häufig Spiele spielen hatten angegeben, dass das Spiel zwar Spaß macht, aber gelegentlich zu leicht sein kann.
-\\Zusätzlich können einige optische Verbesserungen vorgenommen werden. Um den Spielfluss klarer zu machen, wäre es sinnvoll, die Angriffsanimationen des Morgenstern-Wikingers und des Schakalkriegers etwas auffälliger zu gestalten, das Feld unter der Figur, die momentan am Zug ist anders einzufärben und Treffer-Animationen bei angegriffenen Figuren abzuspielen. Kleinere Verbesserungen wurden als Reaktion auf Feedback im Rahmen der Testreihe bereits vorgenommen.
+\\Zusätzlich können einige optische Verbesserungen vorgenommen werden. Um den Spielfluss klarer zu machen, wäre es sinnvoll, die Angriffsanimationen des Morgenstern-Wikingers und des Schakalkriegers etwas auffälliger zu gestalten, das Feld unter der Figur, die momentan am Zug ist anders einzufärben und Treffer-Animationen bei angegriffenen Figuren abzuspielen. Kleinere Verbesserungen wurden als 
+Reaktion auf Feedback im Rahmen der Testreihe bereits vorgenommen.
 \\Auf längere Sicht wäre ein Server, über den Kämpfe gesetzt werden, sinnvoll. Dadurch wird gewährleistet, dass Kämpfe, ähnlich wie bei Pokémon Go auf mehreren Smartphones an gleicher Stelle sind. Bei Tests fiel uns auf, dass Spieler unter anderem durch Quests, aber auch einfach durch die Orte, an die Kämpfe generiert wurden, in Gruppen starteten und sich nach und nach aufteilten. Ein gemeinsamer Server und damit gemeinsame Geo-Positionen der Kämpfe könnten ähnlich wie bei Pokémon Go neue Bekanntschaften ermöglichen und zumindest zusammengehörigen Gruppen erlauben, gemeinsam von Punkt A nach Punkt B zu kommen, dabei zu spielen und sich nicht aufzuteilen.
 \\Außerdem wäre ein Server der Startpunkt für Mehrspieler-Features. So wäre denkbar, den gewünschten PvP-Modus umzusetzen oder sich gegenseitig in PvE-Kämpfen zu unterstützen, etwa durch Bonis auf Belohnungen, die nahe Spieler geben, oder dadurch, dass Figuren anderen Spielern ausgeliehen werden können.
+\bibliography{ba2}
+\bibliographystyle{plain}
 \end{document}

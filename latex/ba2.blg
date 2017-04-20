@@ -1,0 +1,12 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: ba2.aux
+Illegal, another \bibdata command---line 137 of file ba2.aux
+ : \bibdata
+ :         {ba2}
+I'm skipping whatever remains of this command
+The style file: plain.bst
+Database file #1: ba2.bib
+I was expecting a `,' or a `}'---line 17 of file ba2.bib
+ : howpublished= "https://developer.android.com/training/location/index.html"
+ :                                                                           ",
+I'm skipping whatever remains of this entry
+(There were 2 error messages)

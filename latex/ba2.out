@@ -27,7 +27,7 @@
 \BOOKMARK [2][-]{subsection.8.1}{Karte und Men\374s auf Android}{section.8}% 27
 \BOOKMARK [3][-]{subsubsection.8.1.1}{Haupt-Activity und Karte}{subsection.8.1}% 28
 \BOOKMARK [3][-]{subsubsection.8.1.2}{Quest-Fragment}{subsection.8.1}% 29
-\BOOKMARK [3][-]{subsubsection.8.1.3}{Gruppen-Bildschirm Abb.4}{subsection.8.1}% 30
+\BOOKMARK [3][-]{subsubsection.8.1.3}{Gruppen-Bildschirm}{subsection.8.1}% 30
 \BOOKMARK [3][-]{subsubsection.8.1.4}{Statuswerte-Bildschirm}{subsection.8.1}% 31
 \BOOKMARK [3][-]{subsubsection.8.1.5}{Activity zum Erschaffen von Charakteren}{subsection.8.1}% 32
 \BOOKMARK [3][-]{subsubsection.8.1.6}{Unity/Kampf-Activity}{subsection.8.1}% 33
@@ -43,5 +43,9 @@
 \BOOKMARK [3][-]{subsubsection.8.6.5}{Der Schakalskrieger}{subsection.8.6}% 43
 \BOOKMARK [2][-]{subsection.8.7}{Animationen}{section.8}% 44
 \BOOKMARK [1][-]{section.9}{Auswertung der Frageb\366gen}{}% 45
-\BOOKMARK [1][-]{section.10}{Fazit}{}% 46
-\BOOKMARK [1][-]{section.11}{Ausblick}{}% 47
+\BOOKMARK [2][-]{subsection.9.1}{Ermittlung und Einstufung des Spielertyps}{section.9}% 46
+\BOOKMARK [2][-]{subsection.9.2}{Bewertung des User-Interface}{section.9}% 47
+\BOOKMARK [2][-]{subsection.9.3}{Gestaltung der K\344mpfe}{section.9}% 48
+\BOOKMARK [2][-]{subsection.9.4}{Allgemeine Gesamtbewertung des Spiels}{section.9}% 49
+\BOOKMARK [1][-]{section.10}{Fazit}{}% 50
+\BOOKMARK [1][-]{section.11}{Ausblick}{}% 51
