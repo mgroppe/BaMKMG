@@ -5,11 +5,10 @@
 \usepackage{float}
 %\onehalfspacing
 \doublespacing
-
+	
 \author{Martin Groppe und Malte Kremer}
 \title{Entwicklung eines Augmented Reality-Rollenspiels für Android}
 \zweitgutachter{M.Sc. Bastian Krayer}
-
 
 \begin{document}
 	
@@ -30,6 +29,20 @@
 	
 	
 \section{Abstract}
+	
+Das Mobile-Game Pokémon Go wurde in den ersten drei Monaten nach seiner Veröffentlichung 500 Millionen mal heruntergeladen. Als Hybrid aus Rollen- und Augmented Reality (AR)-Spiel bleibt dieses Erfolgsspiel aber eher die Ausnahme. Außerdem weist es einige Schwächen auf. Insbesondere durch mangelnde Komplexität fehlte es vielen Spielern an längerfristiger Herausforderung, was dazu führte, dass ein großer Teil der Personen nach relativ kurzer Zeit wieder aufhörten, zu spielen.  
+\\Aufgabenstellung dieser Arbeit ist es, in einem ersten Schritt Pokémon Go und vergleichbare Produkte sowie Computer- und Konsolenspiele, die mehr Langzeitmotivation bieten, zu analysieren. In einem weiteren Schritt sollen die interessantesten Elemente aus ihnen identifiziert und dann miteinander kombiniert werden, um einen Prototyp für ein AR-Rollenspiel zu entwickeln, das sowohl Menschen anspricht, die einfache Spiele bevorzugen als auch solche, die längerfristigen Spaß durch eine tiefere Spieltiefe suchen. Mittels Testpersonen aus verschiedenen Altersgruppen, mit unterschiedlicher Spielerfahrung und voneinander abweichenden Vorlieben hinsichtlich der Spiel-Komplexität soll schließlich überprüft werden, ob die zu Beginn des Projekts aufgestellten Ziele mit dem kreierten Prototyp erreicht wurden.
+\section{Abstract (english)}
+
+The mobile game Pokémon Go was downloaded 500 million times in the first three months after its release. As a hybrid of role and Augmented Reality (AR) games this successful game remains almost unique. Also, it shows some weaknesses. For its lack of complexity many players were missing a long-term challenge which resulted in a great number of the players giving up the game after a relatively short period of time.
+
+The task of this thesis is, in a first step, to analyze Pokémon Go and comparable games as well as computer and console games that offer more long-term motivation. In a second step the most interesting elements will be identified and combined in an attempt to develop a prototype for an AR role playing game that people who prefer simple games as well as people who are looking for long-term fun based on greater depth of a game will appreciate. With the help of test players of different ages and with diverse gaming experience and diverse wishes in terms of game complexity we will eventually measure the success of the game prototype we have created against the objectives that we set forth at the start of the project.
+\newpage
+\section{Motivation}
+Spätestens seit dem massiven Erfolg von Pokémon Go sind Smartphones als Spieleplattform nicht mehr wegzudenken. Dennoch blieb Pokémon Go bislang eher eine Ausnahme insofern, als die AR-Möglichkeiten des Smartphones selten mit klassischen Spielkonzepten kombiniert werden. Dies ist vor dem Hintergrund überraschend, dass Pokémon Go gezeigt hat, dass es relativ einfach ist, Elemente der realen Welt in Rollenspiele zu integrieren. 
+\\In der vorliegenden Arbeit haben wir es uns somit zum Ziel, gesetzt zu erforschen, inwieweit es möglich ist, in einem relativ kurzen Zeitraum und mit geringem Budget einen Prototyp zu entwickeln, der AR-Elemente verwendet, einen leichten Einstieg bietet und das Potenzial hat, langfristig Spaß zu machen und zu fesseln.
+\newpage
+\section{Abstract}
 Das Mobile-Game Pokémon Go wurde in den ersten drei Monaten nach seiner Veröffentlichung 500 Millionen mal heruntergeladen. Als Hybrid aus Rollen- und Augmented Reality (AR)-Spiel bleibt dieses Erfolgsspiel aber eher die Ausnahme. Außerdem weist es einige Schwächen auf. Insbesondere durch mangelnde Komplexität fehlte es vielen Spielern an längerfristiger Herausforderung, was dazu führte, dass ein großer Teil der Personen nach relativ kurzer Zeit wieder aufhörten, zu spielen.  
 \\Aufgabenstellung dieser Arbeit ist es, in einem ersten Schritt Pokémon Go und vergleichbare Produkte sowie Computer- und Konsolenspiele, die mehr Langzeitmotivation bieten, zu analysieren. In einem weiteren Schritt sollen die interessantesten Elemente aus ihnen identifiziert und dann miteinander kombiniert werden, um einen Prototyp für ein AR-Rollenspiel zu entwickeln, das sowohl Menschen anspricht, die einfache Spiele bevorzugen als auch solche, die längerfristigen Spaß durch eine tiefere Spieltiefe suchen. Mittels Testpersonen aus verschiedenen Altersgruppen, mit unterschiedlicher Spielerfahrung und voneinander abweichenden Vorlieben hinsichtlich der Spiel-Komplexität soll schließlich überprüft werden, ob die zu Beginn des Projekts aufgestellten Ziele mit dem kreierten Prototyp erreicht wurden.
 \section{Abstract (english)}
@@ -44,13 +57,13 @@ Spätestens seit dem massiven Erfolg von Pokémon Go sind Smartphones als Spiele
 \newpage
 \section{Grundlagen}
 Da das Spiel auf dem Betriebssystem Android laufen soll, haben wir die Entscheidung gefällt, Interface und Basis-Programm in Java für Android zu programmieren. Als Entwicklungsumgebung für den Java-Code wird Google's hauseigenes Android Studio verwendet, da es gut dokumentiert und weit verbreitet ist.
-\\Die Kämpfe hingegen werden mit der Unity-game-engine umgesetzt, die bei Spielen auf Android die am weitesten verbreitete Open Source Game-Engine ist. Für die Erstellung der Grafik wurde ein Bildbearbeitungsprogramm benötigt. Die Wahl fiel dabei auf den Genre-Standard Adobe Photoshop.
+\\Die Kämpfe hingegen werden mit der Unity-game-engine umgesetzt, die bei Spielen auf Android die am weitesten verbreitete Open Source Game-Engine\cite{unpub} ist. Für die Erstellung der Grafik wurde ein Bildbearbeitungsprogramm benötigt. Die Wahl fiel dabei auf den Genre-Standard Adobe Photoshop.
 \subsection{Android}
-Android ist ein von Google entwickeltes Betriebssystem für Smartphones. Es basiert auf dem Linux-Kernel und ist eine freie, quelloffene Software. Wir haben uns dafür entschieden unser Projekt für Android zu entwickeln, weil es mit 87,5\% \cite{and0} einen sehr hohen Marktanteil besitzt und wir ein möglichst großes Zielpublikum erreichen wollten. 
+Android ist ein von Google entwickeltes Betriebssystem für Smartphones. Es basiert auf dem Linux-Kernel und ist eine freie, quelloffene Software. Wir haben uns dafür entschieden unser Projekt für Android zu entwickeln, weil es mit 87,5\%\cite{and0} einen sehr hohen Marktanteil besitzt und wir ein möglichst großes Zielpublikum erreichen wollten. 
 \subsubsection{Android-Programmierung}Android Applikationen bestehen aus Komponenten. Es gibt vier verschiedene Komponententypen.\cite{and1}
 \begin{itemize}
 	\item 
-	Activities in Android sind Oberflächen, in denen beschrieben wird, was momentan angezeigt wird und wie mit Benutzereingaben umzugehen ist. Android Applikationen haben meistens mehrere Activities. Zum Beispiel könnte es in einer Email-App eine Activity geben, die eine Liste neuer E-Mails anzeigt, eine weitere, in der man neue E-Mails schreiben kann, und eine dritte zum lesen von E-Mails. \cite{and1}
+	Activities in Android sind Oberflächen, in denen beschriebesn wird, was momentan angezeigt wird und wie mit Benutzereingaben umzugehen ist. Android Applikationen haben meistens mehrere Activities. Zum Beispiel könnte es in einer Email-App eine Activity geben, die eine Liste neuer E-Mails anzeigt, eine weitere, in der man neue E-Mails schreiben kann, und eine dritte zum lesen von E-Mails. \cite{and1}
 	\item
 	Services laufen im Hintergrund ab ohne dem Benutzer dargestellt zu werden. Während sie laufen, können andere Apps im Vordergrund sein. Services werden zum Beispiel zum  Abspielen von Musik verwendet, wenn diese weiterlaufen soll, während man auf dem Smartphone andere Dinge macht.\cite{and1}
 	\item Broadcast Receiver sind Komponenten die Systemnachrichten von außerhalb der eigenen Applikation entgegennehmen und verarbeiten. Solche Nachrichten sind beispielsweise Benachrichtungen über einen niedrigen Akkustand.\cite{and1}
@@ -64,35 +77,41 @@ Eine weitere Möglichkeit, die reale Welt in Spiele mit einzubinden, ist die Kam
 \newpage
 \subsection{Unity}
 Unity, eine von Unity Technologies entwickelte Game-Engine ist seit ihrer Veröffentlichung 2005 zunehmend erfolgreich. %laut wikipedia nutzen 47% der Spiele auf mobilen Geräten unity.
-	Sie wird von Indie-Entwicklern wie William Chyr Studios ebenso wie von Publisher-abhängigen Entwicklungsstudios wie z.B. Square Enix Montreal benutzt. Unity ermöglicht eine einfache Entwicklung für die Smartphone-Betriebssysteme iOS, Android, Windows Phone, aber auch für Computer-Betriebssysteme und für Konsolen wie die Playstation 4 oder den Nintendo 3DS.
-	\\Insgesamt sind mit Unity über 238.000 Spiele\footnote{https://blogs.unity3d.com/2016/07/20/games-by-the-numbers-2016-q2-bric-countries-dominate-global-mobile-game-installs/} für den mobilen Markt 
-	und etwa 34\% der Top 1.000 mobilen Spiele entwickelt worden, es ist die meistbenutzte abgesehen von hauseigenen Engines. Allein im dritten Quartal 2016 hatte Unity über fünf Milliarden Downloads. Außerdem ist es benutzerfreundlich und gut dokumentiert. Darüber hinaus vereinfacht die große Verbreitung den Einstieg zusätzlich.
-	\\Unity bietet die Möglichkeit Spiele in 2D sowie in 3D zu programmieren und bietet übersichtliche objektorientierte Verknüpfungen von Scripts und Game-Objekten. Unitys Script Compiler arbeitet mit C\# oder JavaScript. Darüber hinaus hat es Automatismen für die Erstellung von Animationen aus Basis-Data wie 3D-Modellen oder Spritesheets. %Spritesheet erklärung von animation hierhin
+	Sie wird von Indie-Entwicklern wie Vivid Helix\cite{unindie} ebenso wie von Publisher-abhängigen Entwicklungsstudios wie z.B. Square Enix Montreal\cite{unpubl} benutzt. Unity ermöglicht eine einfache Entwicklung für die Smartphone-Betriebssysteme iOS, Android, Windows Phone, aber auch für Computer-Betriebssysteme und für Konsolen wie die Playstation 4 oder den Nintendo 3DS\cite{unpub}.
+	\\Insgesamt sind mit Unity über 238.000 Spiele\cite{unblog} für den mobilen Markt 
+	und etwa 34\%\cite{unpub} der Top 1.000 mobilen Spiele entwickelt worden, es ist die meistbenutzte abgesehen von hauseigenen Engines. Allein im dritten Quartal 2016 hatte Unity über fünf Milliarden Downloads\cite{unpub}. Außerdem ist es benutzerfreundlich und gut dokumentiert. Darüber hinaus vereinfacht die große Verbreitung den Einstieg zusätzlich.
+	\\Unity bietet die Möglichkeit Spiele in 2D sowie in 3D zu programmieren\cite{un} und bietet übersichtliche objektorientierte Verknüpfungen von Scripts und Game-Objekten. Unitys Script Compiler arbeitet mit C\# oder JavaScript. Darüber hinaus hat es Automatismen für die Erstellung von Animationen aus Basis-Data wie 3D-Modellen oder Spritesheets. Spritesheets sind mehrere Bilder, die in einem Bild gespeichert werden, sodass nicht jedes Bild einzeln geladen werden muss.
 	\newpage 
 	\subsection{Photoshop}
-	Das Bildbearbeitungsprogramm Photoshop wurde 1988 von Adobe veröffentlicht. Seitdem wurden mehrfach neue Versionen entwickelt. Mit Photoshop werden Bilder auf Pixel-Basis bearbeitet. Dies ermöglicht relativ einfache Erstellung von sogenannten Sprites, also Bildern die als Basis für 2D-Figuren dienen.
+	Das Bildbearbeitungsprogramm Photoshop wurde 1990 von Adobe veröffentlicht\cite{pswiki}. Seitdem wurden mehrfach neue Versionen entwickelt\cite{pswiki}. Mit Photoshop werden Bilder auf Pixel-Basis bearbeitet. Dies ermöglicht relativ einfache Erstellung von sogenannten Sprites, also Bildern die als Basis für 2D-Figuren dienen.
 	\\
-	Photoshop ist unter Game-Artists weit verbreitet und wird für die Erstellung von Storyboards, Sketches und Sprites benutzt. Animation Career Review, eine Website, die verschiedene Hilfestellungen für Animatoren und Game-Artists wie Jobangebote, Beschreibungen von Jobs und Studiengängen, Stipendien und Interviews bietet, listet es als die essenziellste Software für Künstler und Designer. Bloopanimation.com, eine Website, die Tutorials, Artikel und Guides zu Animation im Allgemeinen und zu Filmanimation im Speziellen bietet, empfiehlt Photoshop ebenfalls für 2D-Animation und bezeichnet es als "großartige Wahl" ("great choice")%link
+	Photoshop ist unter Game-Artists weit verbreitet und wird für die Erstellung von Storyboards, Sketches und Sprites benutzt. Animation Career Review, eine Website, die verschiedene Hilfestellungen für Animatoren und Game-Artists wie Jobangebote, Beschreibungen von Jobs und Studiengängen, Stipendien und Interviews bietet, listet es als die essenziellste Software\footnote{\url{http://www.animationcareerreview.com/articles/top-20-most-essential-software-artists-and-designers?page=0,1}} für Künstler und Designer. Bloopanimation.com, eine Website, die Tutorials, Artikel und Guides zu Animation im Allgemeinen und zu Filmanimation im Speziellen bietet, empfiehlt Photoshop ebenfalls für 2D-Animation und bezeichnet es als "großartige Wahl" ("great choice")\footnote{\url{https://www.bloopanimation.com/animation-software/}}
 	. 2005 lag Photoshops' Marktanteil zwischen 60\% und 70\% \footnote{Bundeskartellamt, \url{http://www.bundeskartellamt.de/SharedDocs/Entscheidung/DE/Entscheidungen/Fusionskontrolle/2005/B7-162-05.pdf?\_\_blob=publicationFile\&v=3}
-	} im Bereich Bildbearbeitungssoftware für Rastergrafik, 2010 hatte Photoshop über 10 Millionen Nutzer weltweit.%link
+	} im Bereich Bildbearbeitungssoftware für Rastergrafik, 2010 hatte Photoshop über 10 Millionen Nutzer weltweit\cite{psbuis}.
 	\\
 	Außerdem ist das Programm gut dokumentiert und leicht zu lernen (eine Google-Suche nach "Photoshop Tutorial" lieferte rund 14.500.000 Ergebnisse). 
 	\newpage
 	
 	\section{Recherche von Rollenspiel und AR-Hybriden auf Android}
 	\subsection{Pokémon Go}
-	Pokémon Go ist ein freemium/free-to-play Smartphone-Spiel für iOS und Android. Es wurde von Niantic im Juli 2016 veröffentlicht und benutzt GPS sowie situational das Gyroskop und die Kamera für AR-Funtionen.
-	\\Pokémon Go ist bis heute das erfolgreichste Spiel, das für Smartphones erschienen ist, mit über 650 Millionen Downloads (Stand 27.02.2017) und über 500 Millionen Downloads in den ersten zwei  Monaten. %http://archive.is/XCgwL
-	In 2016 haben gleichzeitig an einem Tag über 23 Millionen Nutzer\footnote{\url{https://appinstitute.com/pokemongo-realtime-stats/}} gespielt.%search
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=.5\textwidth]{pgcam.jpg}
+		\caption{Spieler beim Fangen eines Pokémon}
+	\end{figure}
+	Pokémon Go ist ein freemium/free-to-play Smartphone-Spiel für iOS und Android. Es wurde von Niantic im Juli 2016 und benutzt situational die Kamera für AR-Funtionen\cite{pokewiki}.
+	\\Pokémon Go ist bis heute das erfolgreichste Spiel, das für Smartphones erschienen ist, mit über 650 Millionen Downloads (Stand 27.02.2017)\cite{popol} und über 500 Millionen Downloads\cite{pobuis} in den ersten zwei  Monaten.
+	In 2016 haben gleichzeitig an einem Tag über 23 Millionen Nutzer\cite{poapp} gespielt.
 	\\
 	Im Folgenden wird grob die Funktionsweise von Pokémon Go erklärt. Pokémon Go benutzt GPS, um die Position der Spieler zu erfassen und auf einer Google Maps-ähnlichen Karte anzuzeigen.
-	Niantics' Server erzeugt Pokémon (Monster, die man fangen und zum kämpfen benutzen kann) an mehr oder weniger zufälligen realen GPS-Positionen. Dabei berücksichtigt der Server eine Reihe von Faktoren, wie Ort, Uhrzeit. Pokémon vom Typ 'Wasser' werden z.B. eher in der Nähe von Flüssen, Seen und Brunnen erschaffen, während Pokémon vom Typ 'Geist' eine erhöhte Chance haben, bei Nacht aufzutauchen. Sobald der Spieler nah genug an ein Pokémon heran kommt, kann er das Pokémon sehen und antippen, um einen Bildschirm aufzurufen, in dem er versuchen kann, es mit einem Pokéball zu fangen. Gelingt es dem Spieler nicht, das Pokémon nach einer zufälligen Anzahl an Versuchen zu fangen, entkommt es.
-	\\Außerdem gibt es an festgelegten Orten sogenannte Poké-Stops, an denen Spieler Items wie die bereits erwähnten Pokébälle bekommen können. Zusätzlich gibt es Arenen, an denen Spieler mit ihren Pokémon gegen die von anderen Spielern kämpfen können, um Items zu bekommen. Dies führt dazu, dass Spieler häufig in der realen Welt bestimmte Routen ablaufen und sich an festgelegten Orten immer wieder begegnen, was mehr oder weniger automatisch zu neuen Kontakten und Freundschaften führt. Für eine gute Verknüpfung von realer Welt mit virtuellen Features sorgen reale Kontakte, mit denen man das Spiel spielen kann, reale Orte, die man besucht, aber auch die Kamera-Anzeige, in der Pokémon vor einem realen Hintergrund angezeigt werden und die Anpassung von Pokémon an reale Gebiete.
-	\\Das Spiel ist kostenlos herunterladbar, im Shop kann man z.B. Pokébälle oder Inventar-Erweiterungen für eine Ingame-Währung erwerben, die man auch mit realem Geld kaufen kann. Nutzer, die reales Geld ausgeben, haben dementsprechend Vorteile, die einen schnelleren Fortschritt ermöglichen. Laut Schätzungen hat Pokémon Go 2016 etwa 950 Millionen US-Dollar Einnahmen\footnote{\url{https://venturebeat.com/2017/01/17/pokemon-go-generated-revenues-of-950-million-in-2016/}} erzeugt.
-	\\Auch wenn Pokémon Go alle Smartphone-Spiel-Rekorde gebrochen hat, gibt es doch einige Kritik. Vor allem fehlt es an Elementen, die Langzeit-Motivation fördern. Dafür hätte es verschiedene Ansätze geben können. Interaktionsmöglichkeiten mit anderen Spielern wie Handel oder Kämpfe gegeneinander, bei denen beide Spieler aktiv Einfluss auf das Kampfgeschehen haben, waren kaum vorhanden, Arena-Kämpfe erwiesen sich als recht repetetiv und anspruchslos. Es gibt auch keinen anderen fordernden Endgame-Inhalt, sodass viele Spieler erst Zeit investierten, um ihr Pokémon hochzustufen, schließlich aber feststellen mussten, dass sie nicht viel mit den gestärkten Pokémon machen konnten. %http://archive.is/bFBtX
+	Niantics' Server erzeugt Pokémon (Monster, die man fangen und zum kämpfen benutzen kann) an mehr oder weniger zufälligen realen GPS-Positionen. Dabei berücksichtigt der Server eine Reihe von Faktoren, wie Ort, Uhrzeit. Pokémon vom Typ 'Wasser' werden z.B. eher in der Nähe von Flüssen, Seen und Brunnen erschaffen, während Pokémon vom Typ 'Geist' eine erhöhte Chance haben, bei Nacht aufzutauchen. Sobald der Spieler nah genug an ein Pokémon heran kommt, kann er das Pokémon sehen und antippen, um einen Bildschirm aufzurufen, in dem er versuchen kann, es mit einem sogenannten Pokéball zu fangen. Gelingt es dem Spieler nicht, das Pokémon nach einer zufälligen Anzahl an Versuchen zu fangen, entkommt es.
+	\\Pokébälle sind verbrauchbar, sodass Spieler gelegentlich neue brauchen. Dafür gibt es an festgelegten Orten sogenannte Poké-Stops, an denen Spieler zufällige Items wie die bereits erwähnten Pokébälle bekommen können. Zusätzlich gibt es Arenen, an denen Spieler mit ihren Pokémon gegen die von anderen Spielern kämpfen können, um Items zu bekommen. Dies führt dazu, dass Spieler häufig in der realen Welt bestimmte Routen ablaufen und sich an festgelegten Orten immer wieder begegnen, was häufig zu neuen Kontakten und Freundschaften führt\cite{posoc}. Für eine gute Verknüpfung von realer Welt mit virtuellen Features sorgen reale Kontakte, mit denen man das Spiel spielen kann, reale Orte, die man besucht, aber auch die Kamera-Anzeige, in der Pokémon vor einem realen Hintergrund angezeigt werden und die Anpassung von Pokémon an reale Gebiete.
+	\\Das Spiel ist kostenlos herunterladbar, im Shop kann man z.B. Pokébälle oder Inventar-Erweiterungen für eine Ingame-Währung erwerben, die man auch mit realem Geld kaufen kann. Nutzer, die reales Geld ausgeben, haben dementsprechend Vorteile, die einen schnelleren Fortschritt ermöglichen. Laut Schätzungen hat Pokémon Go 2016 etwa 950 Millionen US-Dollar Einnahmen\cite{poven} erzeugt.
+	\\Auch wenn Pokémon Go alle Smartphone-Spiel-Rekorde gebrochen hat, gibt es doch einige Kritik. Vor allem fehlt es an Elementen, die Langzeit-Motivation fördern\cite{pofor}. Dafür hätte es verschiedene Ansätze geben können. Interaktionsmöglichkeiten mit anderen Spielern wie Handel oder Kämpfe gegeneinander, bei denen beide Spieler aktiv Einfluss auf das Kampfgeschehen haben, waren kaum vorhanden, Arena-Kämpfe erwiesen sich als recht repetetiv und anspruchslos. Es gibt auch keinen anderen fordernden Endgame-Inhalt, sodass viele Spieler erst Zeit investierten, um ihr Pokémon hochzustufen, schließlich aber feststellen mussten, dass sie nicht viel mit den gestärkten Pokémon machen konnten\cite{pofor}. %http://archive.is/bFBtX
 	\newpage
+	
 	\subsection{Parallel Kingdom}
-	Das von PerBlue 2008 auf den Markt gebrachte Smartphone-Spiel Parallel Kingdom kombiniert Elemente aus verschiedenen Spieltypen. So verwendet es Elemente von Massive Multiplayer Online Role-Playing-Games (MMORPG), Geocache-Spielen, also Spielen, die ihre Spieler in der realen Welt nach virtuellen Gegenständen suchen lassen, und von Echtzeit-Browser-basierten Multiplayer-Titeln wie OGame, in denen man Gebiete einnimmt, sie verteidigt und bebaut. Es lief komplett online auf einem Server, der im November 2016 abgeschaltet wurde. % mmorpg, geocache und ogame sind total unbekannte begriffe hier wenn du damit vergleichen willst erkläre sie
+	Das von PerBlue 2008 auf den Markt gebrachte Smartphone-Spiel Parallel Kingdom kombiniert Elemente aus verschiedenen Spieltypen. So verwendet es Elemente von Massive Multiplayer Online Role-Playing-Games (MMORPG)\cite{paki}, Geocache-Spielen \cite{paki}, also Spielen, die ihre Spieler in der realen Welt nach virtuellen Gegenständen suchen lassen, und von freemium Echtzeit-MMO(Massive Multiple Online)-Strategie-Titeln wie OGame oder das später erschienene Clash of Clans, in denen man Gebiete einnimmt, sie verteidigt und bebaut. Es lief komplett online auf einem Server, der im November 2016 abgeschaltet wurde. % mmorpg, geocache und ogame sind total unbekannte begriffe hier wenn du damit vergleichen willst erkläre sie
 	\\So konnte man z.B. Ressourcen und Items sammeln und tauschen, Dungeons erforschen und Monster bekämpfen. Das Spiel fand weitgehend auf einer Karte der realen Welt statt, auf der man sich im Gegensatz zu Pokémon Go auch virtuell fortbewegen und Territorium beanspruchen konnte. OGame Features wie Gebäude, die stetigen Ertrag bringen, und Kriege von Spielern gegen Spieler (kurz PvP von Player versus Player) um Gebiete erzeugten zusätzliche Langzeitmotivation.
 	\\Das Spiel war mit über 1.000.000 Spielern\footnote{url{https://www.nowgamer.com/parallel-kingdom-interview-when-mmo-meets-gps/}} recht erfolgreich, wurde mehrfach für Awards nominiert\footnote{\url{http://www.bestappever.com/awards/2009/}} und hatte mit acht Jahren eine für ein Android Spiel sehr lange Lebensdauer. 
 	Die Abschaltung war laut Entwickler hauptsächlich wegen der veralteten Technik notwendig\footnote{\url{http://www.parallelkingdom.com/community/update-hut.aspx\#302}}.
@@ -160,63 +179,62 @@ Am Ende haben wir uns entschieden, vier unterschiedliche Klassen zu designen. Di
 \\Gegnergruppen setzen sich aus zufälligen Konstellationen der Klassen zusammen und bekommen zunehmend mehr Statuspunkte, um auszugleichen, dass sie keine Items tragen. Anfangs sind Gegner schwächer, weil Spieler noch keine Items haben. Damit Kämpfe abwechslungsreich sind, wird nicht nur drei gegen drei gekämpft, sondern es können auch einzelne oder auch zwei Gegner auftauchen. Damit die Kämpfe nicht trivial werden, haben zwei Gegner jeweils 25\% mehr Leben, Angriff und Initiative als gegnerische Figuren in Dreiergruppen, während ein einzelner Gegner, ein sogenannter Boss, eine Herausforderung darstellt. Er verfügt über 2,5-fache Statuswerte in Lebenspunkten, Schaden und Initiative, hat ein deutlich vergrößertes Modell, ist dadurch optisch gut erkennbar und gibt bessere Belohnungen. Damit Boss-Kämpfe außergewöhnlich bleiben, treten sie deutlich seltener auf. Das Gegner-Level hängt ungefähr vom Durchschnitts-Level der aktiven Spielerfiguren ab, wobei Gegnergruppen aus zwei Gegnern häufiger und Bosse immer ein höheres Level haben. Gegnergruppen werden auf der Karte abhängig von ihrem Level und ihrer Anzahl in Schwierigkeiten unterteilt, die an der Farbe ihres Informations-Fensters erkennbar ist.
 \\Bei den Items wurde sich für drei unterschiedliche Typen entschieden. Waffen erhöhen den Schaden und tauchen in unterschiedlichen Formen auf, die jeweils nur von einer Klasse getragen werden können. Dies ermöglicht uns, Waffen für die Klassen einzeln anzupassen und zu verhindern, dass z.B. die Fernkampf-Klasse auf lange Distanzen nahezu den gleichen Schaden verursacht, wie die Klasse mit hohem Schaden. Rüstungen erhöhen die Lebenspunkte und kommen ebenso wie unsere dritte Kategorie, Schuhe, nur in einer Variante vor, die von allen Klassen tragbar ist. Schuhe erhöhen die Initiative und geben einen kleinen Bonus auf Lebenspunkte, während seltenere Formen zusätzlich die Bewegungsreichweite erhöhen.
 \\Unsere Quests unterteilen wir in kleine und große Quests. Während kleine Quests in der Regel innerhalb einer Stunde abschließbar sein und für eher kurze Zeit fesseln sollen, sind große Quests dazu gedacht, Spielern über einen längeren Zeitraum ein Ziel zu geben. Dadurch wird für Langzeit-Motivation gesorgt.
-\newpage
-\section{Implementierung}
+\newpage\section{Implementierung}
 Die Implementierung umfasste mehrere verschiedene Teilaspekte und Sprachen sowie das Erstellen von Grafik und Menüs, wobei Martin Groppe die Android-App und das eigentliche Kampfmodul programmierte und Malte Kremer die Grafik, die Questtexte und die Erstellung des Siegesbildschirms in Unity übernommen hat. Game-Design und Menüführung wurden gemeinschaftlich erstellt, wobei Martin Groppe mehr Zeit beim Erstellen der Android Menüs investierte und Malte Kremer einen größeren Fokus auf das Gamedesign und die Konzeption gelegt hat.
 \subsection{Karte und Menüs auf Android}
 Unser Android-Code besteht aus vier Activities. Diese werden im folgenden nun einzeln beschrieben.
 \begin{figure}[H] 
-		\centering
-		\includegraphics[width=0.6\textwidth]{map.png}
-		\caption{Karte mit Spielfigur in der Mitte. Die Portraits in den Kreisen repräsentieren Gegnergruppen}
-		\label{map}
+	\centering
+	\includegraphics[width=0.6\textwidth]{map.png}
+	\caption{Karte mit Spielfigur in der Mitte. Die Portraits in den Kreisen repräsentieren Gegnergruppen}
+	\label{map}
 \end{figure}
 \subsubsection{Haupt-Activity und Karte}Die Haupt-Activity , auf der der Benutzer startet, besteht aus drei Fragmenten, zwischen denen man hin- und herwechseln kann, indem man mit dem Finger über den Bildschirm wischt. In der Mitte befindet sich die Karte der realen Umgebung (Abb.\ref{map}), in der sich der Spieler befindet. Auf ihr wird die Position des Spielers, die über Googles Location Service abgerufen wird, sowie die Position von Gegnergruppen, gegen die man kämpfen kann, angezeigt. Wird eine Gegnergruppe angeklickt, werden in einem Fenster Informationen zu den Gegnern angezeigt. Über dieses Fenster können Spieler den Kampf starten, wenn die Distanz zwischen ihnen und dem virtuellen Marker geringer als 20 Meter beträgt. Die notwendigen Daten für den Kampf werden als Json Strings serialisiert und der Activity, mit der Unity ausgeführt wird, über den Intent mitgeteilt. Json, kurz für Java Script Object Notation, ist ein kompaktes Datenformat, in dem man leicht Java Objekte serialisieren kann. Wir verwenden es auch um die Daten unserer Heldengruppe abzuspeichern.	
 \newpage
 \begin{figure}[H] 
-		\centering
-		\includegraphics[width=0.6\textwidth]{questfragment.png}
-		\caption{Questfragment mit momentan aktiven Aufgaben}
-		\label{questfragment}
+	\centering
+	\includegraphics[width=0.6\textwidth]{questfragment.png}
+	\caption{Questfragment mit momentan aktiven Aufgaben}
+	\label{questfragment}
 \end{figure}
 \subsubsection{Quest-Fragment}
 Im rechten Fragment der Haupt-Activity, das wiederum durch ein Wischen mit dem Finger über den Bildschirm erreicht wird, befindet sich eine Anzeige für momentane Aufgaben mit etwas erzählerischem Text\ref{questfragment}, die der Spieler erfüllen kann, um zusätzliche Belohnungen zu erhalten. Wenn der Spieler die jeweilige Aufgabe erfüllt hat, kann er diese über den Button abgeben und er bekommt einen zufälligen Gegenstand auf dem Level seiner Gruppe als Belohnung.
-	
-	
+
+
 \newpage
 \begin{figure}[H] 
-		\centering
-		\includegraphics[width=0.6\textwidth]{charfragment.png}
-		\caption{Charakter Fragment. Die aktive Party ist in der roten Leiste. Waterloo wurde angeklickt um ihn auszutauschen. Die möglichen Ziele für den Tausch sind Leipzig, Aspern und Chiara}
-		\label{charfragment}
+	\centering
+	\includegraphics[width=0.6\textwidth]{charfragment.png}
+	\caption{Charakter Fragment. Die aktive Party ist in der roten Leiste. Waterloo wurde angeklickt um ihn auszutauschen. Die möglichen Ziele für den Tausch sind Leipzig, Aspern und Chiara}
+	\label{charfragment}
 \end{figure} 
 \subsubsection{Gruppen-Bildschirm}
 Im linken Fragment befindet sich der Gruppen-Bildschirm (Abb.\ref{charfragment}). Auf ihm wird dem Spieler die eigene Gruppe angezeigt und er kann auswählen, welche Charaktere am Kampf teilnehmen sollen. Die Charaktere in der oberen roten Leiste sind momentan aktiv und man kann sie gegen einen beliebigen inaktiven Charakter austauschen, indem man sie und anschließend den Charakter, den man aktiv setzen will, anklickt.
 Wenn man auf einen Charakter im unteren Teil klickt, wird die Activity zur Darstellung der Statuswerte gestartet und ihr werden mit einem Intent die Daten des angeklickten Charakters übergeben. Über den Button 'Charakter erstellen' unten rechts wird eine Activity gestartet, die dem Spieler ermöglicht, neue Charaktere zu erstellen.
 \newpage
 \begin{figure}[H] 
-		\centering
-		\includegraphics[width=0.6\textwidth]{statscreen.png}
-		\caption{Statusbildschirm von Waterloo. Unten kann man die momentan ausgerüstete Waffe austauschen. Über die drei Symbole kann man zwischen Waffen, Rüstungen und Schuhen wechseln.}
-		\label{statscreen}
+	\centering
+	\includegraphics[width=0.6\textwidth]{statscreen.png}
+	\caption{Statusbildschirm von Waterloo. Unten kann man die momentan ausgerüstete Waffe austauschen. Über die drei Symbole kann man zwischen Waffen, Rüstungen und Schuhen wechseln.}
+	\label{statscreen}
 \end{figure} 
 \subsubsection{Statuswerte-Bildschirm}
 Die Activity zur Darstellung der Statuswerte(Abb.\ref{statscreen}) zeigt alle Werte der Figur an, über die sie aufgerufen wird. Außerdem kann man hier die Figur mit gewonnenen Gegenstände ausrüsten, um ihre Statuswerte zu verbessern.
 \newpage
 \begin{figure}[H] 
-		\centering
-		\includegraphics[width=0.6\textwidth]{createcharscreen.png}
-		\caption{Hier kann man einen neuen Charakter erstellen.}
-		\label{createcharscreen}
+	\centering
+	\includegraphics[width=0.6\textwidth]{createcharscreen.png}
+	\caption{Hier kann man einen neuen Charakter erstellen.}
+	\label{createcharscreen}
 \end{figure} 
 \subsubsection{Activity zum Erschaffen von Charakteren}
 In der vierten Activity (Abb.\ref{createcharscreen}) kann man sich aus den vorhandenen Klassen weitere Figuren erstellen. Über die vier Bilder kann man die Klasse des Charakters aussuchen und über das Textfeld einen Namen eingeben. Die Activity zeigt einem zusätzlich die Basis-Statuswerte der momentan ausgewählten Klasse an. Diese unterscheiden sich klassen-abhängig stark.
 \newpage
 \begin{figure}[H]
-		\centering
-		\includegraphics[width=1.0\textwidth]{fightscreen.png}
-		\caption{Kampfactivity. Die Figuren mit blauem Lebenspunktbalken gehören dem Spieler. Die mit rotem sind die AI gesteuerten Gegner.}
-		\label{fightscreen}
+	\centering
+	\includegraphics[width=1.0\textwidth]{fightscreen.png}
+	\caption{Kampfactivity. Die Figuren mit blauem Lebenspunktbalken gehören dem Spieler. Die mit rotem sind die AI gesteuerten Gegner.}
+	\label{fightscreen}
 \end{figure}
 \subsubsection{Unity/Kampf-Activity}
 In der auf der Karte aufgerufenen Kampf-Activity (Abb.\ref{fightscreen}) kann der von Unity kompilierte Code abgespielt werden. Um zwischen Java und Unity-Code zu kommunizieren, verwenden wir Java Native Interface, kurz JNI. JNI ist eine Programmierschnittstelle, die es uns erlaubt, von Unity aus Java Funktionen aufzurufen, die sich in unserer Kampf-Activity befinden. Wir benutzen JNI, um die Kampfinformationen, die der Activity mitgeteilt werden, im Unity-Code aufzurufen und um zurück zur Haupt-Activity zu kommen, nachdem der Kampf abgeschlossen ist.
@@ -226,104 +244,104 @@ In Unity werden Gameobjects als Basiseinheit für die Erstellung von Spielen ver
 Für die Steuerung unseres rundenbasierten Kampfes generieren wir in Unity ein Gitter aus Quadraten, die sich anklicken lassen und ihre Position im Gitter kennen. Damit Kämpfe abwechslungsreicher sind, erzeugen wir zufällig auf unseren Quadraten Steine als Hindernisse, die Felder blockieren.\\ Anschließend werden aus unseren sogenannten Prefabs, Schablonen aus denen man ein Gameobject instanziieren kann, die am Kampf beteiligten Spielfiguren erzeugt und an die Ränder des Spielfeldes gesetzt. Figuren sind nun reihum am Zug. Wenn eine Figur, die dem Spieler gehört, an der Reihe ist, markieren wir alle Felder, zu denen sie sich bewegen kann mit einem hellgrünen Rand und einem helleren Untergrund. Dadurch kann der Spieler den Raum, innerhalb dessen sich die Figur bewegen kann, besser erkennen. Wird eines dieser Felder angeklickt, generieren wir wie in \ref{Pfadfindung} beschrieben einen Pfad, den unsere Figur dann entlangläuft. In unseren Prefabs sind die zugehörigen Animationen für die verschiedenen Befehle vorgemerkt. Wenn der Benutzer auf eine gegnerische Figur in Reichweite der aktiven eigenen Figur klickt, wird diese angegriffen und der Zug beendet. Alternativ kann man die eigene Figur anklicken, um den Zug ohne Angriff zu beenden. Wenn die aktive Figur dem Gegner gehört, übernimmt eine simple künstliche Intelligenz (fortan AI genannt) die Entscheidungen, die sonst der Spieler trifft. Die AI überprüft, ob eine feindliche Figur in Reichweite ist und greift diese, falls möglich, an. Wenn nicht, bewegt sie sich auf die nächste feindliche Figur auf dem Feld zu. Falls sie nun in Reichweite ist, greift sie die Figur an, andernfalls beendet sie ihren Zug.
 \subsection{A*-Pfadfindung}\label{Pfadfindung}
 Um Figuren auf unserem Spielfeld zu bewegen, benötigen wir einen Suchalgorithmus, um einen Pfad zu finden. Wir haben dazu den sogenannten A*-Algorithmus implementiert. Im Gegensatz zu uninformierten Suchalgorithmen wie z.B. Dijkstra wird in A* eine Heuristik benutzt, um zielgerichtet zu suchen. Alle Felder werden in drei Gruppen unterteilt. \\Die erste Gruppe sind die Felder, zu denen noch kein Weg gefunden wurde. Am Anfang sind dies alle außer dem Startfeld. \\Die zweite Gruppe sind die Felder, zu denen mindestens ein Weg bekannt ist. Diese werden, zusammen mit einem Wert f(x), in einer Liste gespeichert. Der Wert von f(x) ergibt sich aus der Summe der Kosten g(x), um das Feld zu erreichen, und den geschätzten Kosten h(x), um von dort zum Ziel zu kommen. Im Falle unseres Spiels kostet es einen Punkt, um sich orthogonal und zwei, um sich diagonal zu bewegen. Die Schätzfunktion ergibt sich aus der Summe der Abstände in x- und y-Koordinate zwischen einem Feld und dem Zielfeld. Zusätzlich wird für jedes Feld in dieser sogenannten Open List vermerkt, von welchem Feld ausgehend der momentane Weg dort ankommt. \\Die dritte Gruppe besteht aus den Feldern, zu denen bereits ein optimaler Weg gefunden wurde. Diese Felder werden in der sogenannten Closed List ebenfalls mit dem Feld, von dem der kürzeste Weg zu ihm ausgeht, gespeichert.
-	
+
 Zu Beginn befindet sich nur das Startfeld in der Open List und die Closed List ist leer. Nun wird in jedem Schritt das Feld a mit dem geringsten f-Wert aus der Open List in die Closed List aufgenommen. 
-	
+
 Für jedes Nachbarfeld b wird nun g(b) berechnet aus g(a)+1, falls es ein orthogonaler Nachbar, und g(a)+2, falls es ein diagonaler Nachbar ist. Zusammen mit der oben beschriebenen Heuristik wird nun f(b) = g(b)+h(b) berechnet und b wird in die Open List mit a als Vorgänger aufgenommen, falls es dort nicht schon mit einem gleichgroßen oder kleineren f-Wert vorhanden ist. Der Algorithmus endet, sobald das Zielfeld in die Closed List aufgenommen wird. Der Weg ergibt sich nun, indem man über die gemerkten Vorgänger die Felder bis zum Start zurückverfolgt. Zum besseren Verständnis folgt nun ein Beispiel für die Pfadfindung mit Bildern (Abb. \ref{pathfinding1} bis \ref{pathfinding5}).
 \begin{figure}[H]
-		\centering
-		\includegraphics[width=0.8\textwidth]{pathfinding1.png}
-		\caption{Der Schakalskrieger sucht einen Weg zum Ziel. Im ersten Schritt werden die Nachbarfelder mit ihrem f, g und h Werten in die Open List eingetragen.}
-		\label{pathfinding1}
+	\centering
+	\includegraphics[width=0.8\textwidth]{pathfinding1.png}
+	\caption{Der Schakalskrieger sucht einen Weg zum Ziel. Im ersten Schritt werden die Nachbarfelder mit ihrem f, g und h Werten in die Open List eingetragen.}
+	\label{pathfinding1}
 \end{figure}
 \begin{figure}[H]
-		\centering
-		\includegraphics[width=0.8\textwidth]{pathfinding2.png}
-		\caption{Die Felder mit f = 4 wurden nun in die Closed List übernommen (markierte Felder). Für ihre Nachbarn wurde der f Wert berechnet und sie wurden in die Open List aufgenommen}
-		\label{pathfinding2}
+	\centering
+	\includegraphics[width=0.8\textwidth]{pathfinding2.png}
+	\caption{Die Felder mit f = 4 wurden nun in die Closed List übernommen (markierte Felder). Für ihre Nachbarn wurde der f Wert berechnet und sie wurden in die Open List aufgenommen}
+	\label{pathfinding2}
 \end{figure}
 \begin{figure}[H]
-		\centering
-		\includegraphics[width=0.8\textwidth]{pathfinding3.png}
-		\caption{Die kleinsten f-Werte aus der Open List wurden wieder in die Closed List aufgenommen.}
-		\label{pathfinding3}
+	\centering
+	\includegraphics[width=0.8\textwidth]{pathfinding3.png}
+	\caption{Die kleinsten f-Werte aus der Open List wurden wieder in die Closed List aufgenommen.}
+	\label{pathfinding3}
 \end{figure}
 \begin{figure}[H]
-		\centering
-		\includegraphics[width=0.9\textwidth]{pathfinding4.png}
-		\caption{Das Zielfeld ist jetzt in der Open List angekommen. Da es den kleinsten f-Wert hat, sind wir im nächsten Schritt fertig.}
-		\label{pathfinding4}
+	\centering
+	\includegraphics[width=0.9\textwidth]{pathfinding4.png}
+	\caption{Das Zielfeld ist jetzt in der Open List angekommen. Da es den kleinsten f-Wert hat, sind wir im nächsten Schritt fertig.}
+	\label{pathfinding4}
 \end{figure}
 \begin{figure}[H]
-		\centering
-		\includegraphics[width=0.8\textwidth]{pathfinding5.png}
-		\caption{Das Ziel ist nun in der Closed List. Der Pfad ergibt sich nun dadurch, dass sich jedes Feld gemerkt hat, von welchem Vorgänger aus der kürzeste Weg zu ihm führt.}
-		\label{pathfinding5}
+	\centering
+	\includegraphics[width=0.8\textwidth]{pathfinding5.png}
+	\caption{Das Ziel ist nun in der Closed List. Der Pfad ergibt sich nun dadurch, dass sich jedes Feld gemerkt hat, von welchem Vorgänger aus der kürzeste Weg zu ihm führt.}
+	\label{pathfinding5}
 \end{figure}
 \newpage
 \subsection{Der Sieg-Bildschirm}
 Nachdem eine Seite keine Figuren mehr hat, endet der Kampf. Hat der Spieler verloren, ruft die Unity-Activity wieder die Karte auf und wird beendet. Hat der Spieler gewonnen, wird ihm das mitgeteilt und er bekommt Erfahrung und ein Item als Belohnung. Zur Darstellung dessen wird in Unity eine neue Scene aufgerufen und die alte verworfen. Der Siegesbildschirm liest aus dem Json-Objekt die notwendigen Daten aus und stellt den Erfahrungsfortschritt mit Balken dar, die neben den Namen und Gesichtern der Figuren angezeigt werden. 
 \begin{figure}[H]
-		\centering
-		\includegraphics[width=1\textwidth]{sieg1}
-		\caption{die erste Anzeige des Sieg-Bildschirm}
+	\centering
+	\includegraphics[width=1\textwidth]{sieg1}
+	\caption{die erste Anzeige des Sieg-Bildschirm}
 \end{figure}
 Danach löscht Unity die Erfahrungsbalken, Namen und Gesichter und stellt das ebenfalls aus dem Json-Objekt ausgelesene Item dar. Nach sechs Sekunden wird die Unity-Activity beendet und die Karte wieder aufgerufen.
 \begin{figure}[H]
-		\centering
-		\includegraphics[width=1\textwidth]{sieg2}
-		\caption{die Präsentation des Items}
+	\centering
+	\includegraphics[width=1\textwidth]{sieg2}
+	\caption{die Präsentation des Items}
 \end{figure}
 \newpage
 \subsection{Grafik und Stil}
 Der Stil hatte den Anspruch, sowohl auf Smartphones als auch auf Tablets gut auszusehen, ein breites Publikum anzusprechen und sich vom Gewöhnlichen abheben. Das hieß, dass es mehrere Herausforderungen zu meistern gab:
 \begin{enumerate}
 	\item 
- Die größten Tablet-Bildschirme wie die des Google Pixel C können eine Bildschirmdiagonale von mehr als 25cm haben, während unser Test-Smartphone z.B. gerade mal 11cm hat. Unser Spiel sollte auf beiden Bildschirmen gut aussehen und erkennbar sein. Realistischere Darstellungen (siehe Abb. \ref{speerträger}) waren auf dem Test-Smartphone kaum erkennbar (siehe Abb. \ref{speerkarte}), sodass wir uns für einen Comic-Look mit unrealistischen Proportionen entschieden haben. Dabei galt es, eine gute Balance zu finden zwischen stark unterschiedlichen Proportionen der Figuren, was insbesondere ältere Spieler häufig abschreckt, und Erkennbarkeit auf kleinen Bildschirmen durch auffällige vergrößerte Merkmale.
-\begin{figure}[H]
+	Die größten Tablet-Bildschirme wie die des Google Pixel C können eine Bildschirmdiagonale von mehr als 25cm haben, während unser Test-Smartphone z.B. gerade mal 11cm hat. Unser Spiel sollte auf beiden Bildschirmen gut aussehen und erkennbar sein. Realistischere Darstellungen (siehe Abb. \ref{speerträger}) waren auf dem Test-Smartphone kaum erkennbar (siehe Abb. \ref{speerkarte}), sodass wir uns für einen Comic-Look mit unrealistischen Proportionen entschieden haben. Dabei galt es, eine gute Balance zu finden zwischen stark unterschiedlichen Proportionen der Figuren, was insbesondere ältere Spieler häufig abschreckt, und Erkennbarkeit auf kleinen Bildschirmen durch auffällige vergrößerte Merkmale.
+	\begin{figure}[H]
 		\centering
 		\includegraphics[height=5cm]{soldier.png}
 		\caption{Früher Entwurf eines Speerträgers}
 		\label{speerträger}
-\end{figure}
-\begin{figure}[H]
+	\end{figure}
+	\begin{figure}[H]
 		\centering
 		\includegraphics[width=13cm]{soldierbackground.png}
 		\caption{Speerträger auf unserem Schlachtfeld}
 		\label{speerkarte}
-\end{figure}
-\item Das Spiel sollte Erwachsene und Jugendliche anziehen und fesseln, aber immer noch bedenkenlos von Kindern spielbar sein. Das bedeutete für die Umsetzung unserer Grafik, dass der Grafikstil nicht zu düster sein durfte, aber auch nicht zu kindlich, ohne austauschbar zu wirken.
-\item Die hohe Detaildichte, welche für die Entwicklung für Tablets erforderlich ist, benötigt einen großen Zeitaufwand. Folglich mussten Animationen vom Grundmodell aus einfach zu erzeugen sein und eine Ansicht gewählt werden, in der dies sich nicht negativ auf die Optik des Spiels auswirkt.
+	\end{figure}
+	\item Das Spiel sollte Erwachsene und Jugendliche anziehen und fesseln, aber immer noch bedenkenlos von Kindern spielbar sein. Das bedeutete für die Umsetzung unserer Grafik, dass der Grafikstil nicht zu düster sein durfte, aber auch nicht zu kindlich, ohne austauschbar zu wirken.
+	\item Die hohe Detaildichte, welche für die Entwicklung für Tablets erforderlich ist, benötigt einen großen Zeitaufwand. Folglich mussten Animationen vom Grundmodell aus einfach zu erzeugen sein und eine Ansicht gewählt werden, in der dies sich nicht negativ auf die Optik des Spiels auswirkt.
 \end{enumerate}
 Die meisten Taktik-Rollenspiele haben sehr abwechslungsreiche und tendenziell zufällige Karten mit teils zufälligen Startpositionen und verschiedenen Terrain-Höhen. Da allerdings unser Fokus stärker auf strategischen als zufälligen Kämpfen lag, entschieden wir uns bei dem Aufbau des Schlachtfeldes für ein flaches Feld mit Gegnern auf der einen und Spielern auf der anderen Seite, wie es in Strategie-Spielen wie Schach oder der Heroes-Serie zum Einsatz kommt. Dies erleichterte auch das Grafikdesign, da Figuren sich hauptsächlich auf der horizontalen Achse bewegen, sodass eine 3/4-Ansicht mit situationaler Spiegelung für fast alle möglichen Lauf-Richtungen gut aussieht. Zusätzlich legten wir fest, das Feld breiter als hoch zu gestalten, was auf das Gameplay positive Auswirkungen hatte, und zudem bedeutete, dass zum einen das Schlachtfeld der 16:9-Auflösung der meisten Smartphones besser entspricht, zum anderen die optisch schlechter aussehenden Bewegungen nach gerade oben oder gerade unten seltener sind.
 \\Danach wurden mehrere Skizzen erstellt, um eine geeignete Balance zwischen realistischem Look und übertriebem Comic-Look zu finden. So entschieden wir uns, den Kopf beziehungsweise Helm der Figuren zu vergrößern und als durchgängiges Identifikationsmerkmal zu verwenden. Erste Versuche (s. Abb. \ref{earlydesign}) waren stärker überzeichnet und an den sogenannte Chibi-Zeichenstil angelehnt, da ein vergrößerter Kopf leicht auszumachen ist und eine gute Differenzierung der verschiedenen Figuren ermöglichte. Es gab allerdings Bedenken, dass diese Optik Hardcore-Spieler abschrecken könnte, die wir ebenfalls ansprechen wollten. Daher wurde der Kopf in folgenden Versuchen etwas weniger überzeichnet, der restliche Körper etwas realistischer proportioniert. Zudem wurde die Bewaffnung ebenfalls etwas vergrößert. 
 \\Da geplant war, einige Modelle durch farbliche Veränderung sowie das Abändern einiger Details als neue Modelle zu benutzen, erlaubte eine größere Waffe eine gute Erkennbarkeit von Elementen, die für Statuswerte wichtig sein sollten. So sollte der Spieler intuitiv verstehen können, dass die Figur mit dem Schild mehr Schaden aushält und die Figur mit den zwei Äxten mehr Schaden anrichtet. Dies wäre bei reinem Verändern der farblichen Gestaltung nicht möglich gewesen.
 
 \begin{figure}[H]
-		%	\raggedleft
-		\centering
-		\includegraphics[width=.5\textwidth]{assachibi.jpg}
+	%	\raggedleft
+	\centering
+	\includegraphics[width=.5\textwidth]{assachibi.jpg}
 \end{figure}
 \begin{figure}[H]
-		\centering
-		\includegraphics[width=.5\textwidth]{egychibi.jpg}
-		\caption{Frühe Skizzen im Chibi-Stil}
-		\label{earlydesign}
+	\centering
+	\includegraphics[width=.5\textwidth]{egychibi.jpg}
+	\caption{Frühe Skizzen im Chibi-Stil}
+	\label{earlydesign}
 \end{figure}
 \newpage
 \subsection{Die Figuren}
 \begin{figure}[H]
-		\centering
-		\includegraphics[height=8cm]{viking.jpg}
-		\caption{Der finale Wikinger}
-		\label{viking}
+	\centering
+	\includegraphics[height=8cm]{viking.jpg}
+	\caption{Der finale Wikinger}
+	\label{viking}
 \end{figure}
 \subsubsection{Der erste Wikinger}
 Da die klassischen Fantasy-Skizzen zu kindlich oder zu generisch gerieten, wurden als zunehmend Motive abseits des Mainstreams verwendet. So wurde sich für ein Wikinger-Motiv entschieden, was es erlaubte, eine Figur düster und trotzdem niedlich aussehen zu lassen. Außerdem sind die gehörnten Helme in Medien ikonisch (wenn auch historisch falsch\cite{helm}), sodass Spieler auch auf sehr kleinen Bildschirmen erkennen sollten, dass es sich um einen Wikinger handelt.
 \\Wikinger sind seit dem 18. Jahrhundert als noble Wilde verklärt, sie werden aber seit dem frühen 20. Jh. auch häufig als heidnische, brutale Piraten\cite{viki} dargestellt.%wikipedia
 Attribute, die ihnen häufig zugeschrieben werden sind Wildheit, Unabhängigkeit, Kraft und Aggressivität. Darstellungen zeigen sie meistens als Krieger oder Seefahrer, oft mit Äxten und bemalten Holzschilden. Ihre Kleidung setzt sich in modernen Darstellungen aus mehreren Lagen von Kleidungsstücken oder Pelzen über leichten Rüstungen wie Kettenhemden zusammen (was historisch akkurat ist), dazu die ikonischen gehörnten Helme (die historisch falsch sind). In fantastischeren Darstellungen tragen sie oft mehrere Gürtel und Medallions und gelegentlich Lamellenpanzer (Metallplättchen, die auf Leder aufgenäht werden). Wikinger haben in modernen Darstellungen nahezu immer lange Haare und Bärte, beides häufig zu Zöpfen geflochten. 
 \\Dementsprechend setzten wir den ersten Wikinger (s. Abb. \ref{viking}), der es in das finale Spiel schaffte, aus mehreren dieser Elemente zusammen. Er trägt einen auffälligen gehörnten Helm, eine Axt und ein hölzernes Rundschild. Die Axt und der Kopf/Helm sind bewusst vergrößert, um auch auf einem Handy-Bildschirm klar sichtbar zu sein. Die Rüstung setzt sich aus mehreren Gürteln mit Metallplättchen über einem roten Wams zusammen und wird durch Lamellenpanzer über Schulter und Waffenrock komplementiert. Die Detaildichte der Rüstung stört nicht auf dem Smartphone, da Axt, Schild und Helm den Wikinger klar erkennbar machen, durch sie sieht der Wikinger aber auf Tablets besser aus. Durch die Gürtel und Medallions setzt sich die Rüstung klar von 'normaler' mittelalterlicher Kleidung und Rüstung ab und der Lamellenpanzer lässt ihn kriegerisch aussehen. Zusätzlich trägt er einen Pelz um die Schultern und Pelzbesatz auf den Stiefelrändern sowie eine aus Pelz gemachte Hose, damit er einen 'wilden' Eindruck hinterlässt. Die Stiefel haben im Stile von Beinschienen einen metallenen Clip, um interessanter auszusehen. Dabei wurden Ränder der Figur bewusst schwarz, Lichtreflexionen z.B auf Helm und Axt plakativ und die Schatten mit geringen Farbverlauf gelassen, um die Figur vom Hintergrund abzuheben und einen Comic-Eindruck zu erzielen. Später ist die Figur unser Avatar Essling auf der Karte geworden.
-	
+
 \newpage
 \subsubsection{Der Morgenstern-Wikinger}
 \begin{figure}[H]
@@ -393,29 +411,29 @@ Danach wurden zunehmend fantastische Elemente hinzugefügt, um die Figur außerg
 , teilweise wurden sie allerdings aufpoliert, z.B. indem Licht und Schatten korrigiert, oder Muskulatur und sich bewegende Elemente wie Stofffalten neu gezeichnet wurden.\\
 \begin{figure}[H]
 	\centering
-	\includegraphics[height=5cm]{move.jpg}
+	\includegraphics[width=1\textwidth]{move.jpg}
 	\caption{Ein Spritesheet für eine Laufanimation}
 \end{figure}
 Unsere Figuren bekamen Lauf- und Angriffsanimationen, wobei die Laufanimationen im Spiel solange wiederholt werden, bis die Figur ihr Ziel erreicht hat und die Angriffsanimationen einmal ausgeführt werden. Die Animationen wurden in sogenannten Spritesheets gespeichert, die in Unity dann wieder in einzelne Bilder zerlegt werden. Spritesheets sind mehrere Bilder, die in einem Bild gespeichert werden, sodass nicht jedes Bild einzeln geladen werden muss. Unity ist in der Lage, aus mehreren Bildern automatisch Animationen von einer Sekunde Dauer zu generieren, wobei an einigen Stellen die Animationen beschleunigt oder verlangsamt wurden, um bessere Ergebnisse zu erzielen. So wurden z. B. diverse Angriffsanimationen in eine langsamer abgespielte Aushol-Phase und eine schneller abgespielte Schlag-Phase aufgeteilt. Die Anbindung der Animationen an den Code geschieht dabei mithilfe des sogenannten Animator Controller, eines Zustandsautomaten, der für verschiedene Auslöser Animationen wechselt oder abspielt.
 \begin{figure}[H]
 	\centering
-	\includegraphics[height=5cm]{animator.jpg}
+	\includegraphics[width=1\textwidth]{animator.jpg}
 	\caption{Unity's Animator Contoller}
 \end{figure}
 \begin{figure}[H]
 	\centering
-	\includegraphics[height=5cm]{attack.jpg}
+	\includegraphics[width=1\textwidth]{attack.jpg}
 	\caption{Ein Spritesheet für eine Angriffsanimation}
 \end{figure}
-	
-\section{Auswertung der Fragebögen}	Sowohl im Sinne einer objektiven Bewertung als auch um mögliche Fehler durch eine größere Anzahl von Tests zu ermitteln wurde das Spiel von einigen Personen getestet und deren Wertung mit einem Fragebogen erfasst. Da es Ziel war, im Gegensatz zu Pokemon Go möglichst zusätzliche Spielergruppen zu motivieren, das Spiel zu spielen, wurde nach der Entwicklung großer Wert darauf gelegt, möglichst unterschiedliche Testspieler zu finden und diese das Spiel ausprobieren zu lassen. Dabei war die schriftliche Befragung der Testpersonen in vier Themenbereiche gegliedert:
+
+\section{Ermittlung und Einstufung des Spielertyps}	Sowohl im Sinne einer objektiven Bewertung als auch um mögliche Fehler durch eine größere Anzahl von Tests zu ermitteln, wurde das Spiel von einigen Personen getestet und deren Wertung mit einem Fragebogen erfasst. Da es Ziel war, im Vergleich zu Pokemon Go möglichst zusätzliche Spielergruppen zu motivieren, das Spiel zu spielen, wurde nach der Entwicklung großer Wert darauf gelegt, möglichst unterschiedliche Testspieler zu finden und diese das Spiel ausprobieren zu lassen. Dabei war die schriftliche Befragung der Testpersonen in vier Themenbereiche gegliedert:
 \begin{itemize}
 	\item Unter 'Spielertyp' wurde die Nutzung von Computer und Smartphone sowie die Spielerneigung erfasst (Fragen 1-4). 
 	\item Unter dem Oberbegriff 'User-Interface' wurde die Benutzerfreundlichkeit, die technische Umsetzung insbesondere bei der Steuerung sowie die Gestaltung der Menüs abgefragt (Fragen 5-10).
 	\item Im Bereich 'Kämpfe' wurden deren Spaßfaktor und die strategische Tiefe sowie die grafische Gestaltung beurteilt (Fragen 11-15).
 	\item Abschließend wurde die allgemeine Gesamtwertung unter den Aspekten Spielespaß, Verknüpfung der Spielelemente, längerfristiges Spielerinteresse sowie die Geeignetheit als mobiles Spiel erfragt (Fragen 16-20).
 \end{itemize}
-\subsection{Ermittlung und Einstufung des Spielertyps}
+\subsection{Ergebnisse der empirischen Verifizierungen}
 Im ersten Themenblock wurde die Computeraffinität und die Selbsteinschätzung des jeweiligen individuellen Spielertypus erfragt. Ergänzend wurden Alter und Geschlecht angegeben. Insgesamt haben 12 Testpersonen im Alter von 10 bis 68 Jahren das Spiel getestet und ihre Bewertung abgegeben. Davon waren vier weiblichen und acht männlichen Geschlechts. Dieses Datenmaterial bildet die Basis für die Untersuchung möglicher Korrelationen bei den weiteren Themenfeldern und ermöglicht am Ende ein Urteil, ob es gelungen ist, ein Spiel für breite Spielerschichten zu schaffen. 
 \begin{figure}[H]
 	\centering
@@ -432,7 +450,7 @@ Eine breite Streuung ergab sich bei der Frage, ob eher einfache oder eher komple
 	\centering
 	\includegraphics[width=1\textwidth]{table2.jpg}
 \end{figure}
-Die Ränder der Verteilung  waren stärker ausgeprägt bei der Frage nach der Anzahl der Rollenspiele, die bisher gespielt wurden. Hier hat 1/3 der Befragten in der Vergangenheit mehr als acht Rollenspiele gespielt, aber immerhin 42 % bislang noch keins gespielt?
+Die Ränder der Verteilung  waren stärker ausgeprägt bei der Frage nach der Anzahl der Rollenspiele, die bisher gespielt wurden. Hier hat 1/3 der Befragten in der Vergangenheit mehr als acht Rollenspiele, aber immerhin 42\% bislang noch keines gespielt.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\textwidth]{table3.jpg}
@@ -442,16 +460,16 @@ Gerade im Hinblick auf die gewünschte breite Streuung der Testpersonen ist die 
 	\centering
 	\includegraphics[width=1\textwidth]{testspieler.jpg}
 \end{figure} 
-Unterm Strich zeigt sich, dass die Gruppe der Testpersonen die gewünschte breite Streuung von verschiedenen Spielertypen mit unterschiedlichem Nutzerverhalten und Erfahrungen aufweist.  Durch diese sehr vielfältige Gruppe von Testern wird es besonders spannend, herauszufinden, wem unser Prototyp Spaß macht und welchen Personen nicht und wer welche Verbesserungsideen vorschlägt.
+Unterm Strich zeigt sich, dass die Gruppe der Testpersonen die gewünschte breite Streuung von verschiedenen Spielertypen mit unterschiedlichem Nutzerverhalten und Erfahrungen aufweist.  Durch diese sehr vielfältige Gruppe von Testern wird es besonders interessant, herauszufinden, wem unser Prototyp Spaß macht und wer welche Verbesserungsideen vorschlägt.
 \newpage
 \subsection{Bewertung des User-Interface}
-Da eine möglichst breite Ansprache unterschiedlicher Spielertypen erfolgen sollte, sollte der Einstieg in das Spiel möglichst einfach erfolgen. Gerade vor dem Hintergrund, dass das Spiel als Handygame konzipiert wurde, ist zu erwarten, dass Spieler hier nicht die Geduld bzw. Zeit mitbringen, sich auf einen langwierigen Einstieg einzulassen. 
+Da eine möglichst breite Ansprache unterschiedlicher Spielertypen erfolgen sollte, sollte der Einstieg in das Spiel möglichst einfach erfolgen. Gerade vor dem Hintergrund, dass das Spiel u.a. für Smartphones konzipiert wurde, ist zu erwarten, dass Spieler hier nicht die Geduld bzw. Zeit mitbringen, sich auf einen langwierigen Einstieg einzulassen. 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\textwidth]{table4.jpg}
 \end{figure}
 Mit drei von zwölf Testpersonen fanden 25\% den Einstieg als 'einfach' und weitere sieben Personen (58\%) als 'relativ einfach'. Nur zwei Personen empfanden den Einstieg als 'relativ schwierig' und keiner als 'schwierig'. Somit dürfte dieser Zielsetzungspunkt verwirklicht worden sein. 
-Dies bestätigen auch die Erfahrungen der Handhabung der Menüs. Diese empfanden 33\% als 'intuitiv' und weiter 58\% nach der Eingewöhnungszeit als 'gut'. Nur eine einzige Testperson empfand die Menüs als 'gewöhnungsbedürftig. 
+Dies bestätigen auch die Erfahrungen der Handhabung der Menüs. Diese empfanden 33\% als 'intuitiv' und weiter 58\% nach der Eingewöhnungszeit als 'gut'. Nur eine einzige Testperson empfand die Menüs als 'gewöhnungsbedürftig'. 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\textwidth]{table5.jpg}
@@ -472,7 +490,7 @@ Weitreichende Zustimmung fand die Gestaltung des Party- und Quest-Menüs, denn d
 	\includegraphics[width=1\textwidth]{table8.jpg}
 \end{figure}
 Als Wünsche oder Kommentierung zum Map- oder Party-Menü (Frage 10: Haben Sie andere Anmerkungen oder Wünsche zum Map- oder zum Party-Menü?) wurden von den Testpersonen ganz überwiegend Wünsche im Hinblick auf eine Erweiterung des Spiels bzw. der -funktionen ausgesprochen: ++ \textit{“Mehrspieler-Modus wäre gut“}  ++ \textit{„Buttons im Artwork des Spiels designen; Items ablegbar machen, ohne ein weiteres diesen Typs zu besitzen“} ++ \textit{„Alles gut organisiert/konzipiert. Einziger Wunsch: Erklärung wie man Figuren auswählt und wie man Items den Figuren zuordnen kann. Außerdem: Möglichkeit, Gegner mit seinen Fähigkeiten anzuschauen, kreieren“} oder ++ \textit{„Ich würde die Orientierung auf dem Map-Screen an der Orientierung des Smartphones ausrichten.“}
-Bis auf einen vereinzelten Fall in den jeweiligen Fragen beurteilten die Testpersonen die technische Handhabung und die Gestaltung der Benutzerschnittstelle positiv bis sehr positiv. Wünsche wurden vor allem im Hinblick auf die Erweiterung der Spielfunktionen geäußert.
+Bis auf einen vereinzelten Fall in den jeweiligen Fragen beurteilten die Testpersonen die technische Handhabung und die Gestaltung der Benutzerschnittstelle positiv bis sehr positiv.
 \subsection{Gestaltung der Kämpfe}
 Über 90\% der Testpersonen antworteten auf die Frage 11 'Machen Ihnen die Kämpfe Spaß?' mit 'Ja sehr'  (42\%) oder 'Ja meistens' (50\%). Eine einzige Probandin fand die Kämpfe eher langweilig. Diese Testperson (20 Jahre, weiblich) kann aufgrund ihres Spielprofils als wenig aktiv und auch wenig erfahren eingestuft werden und hat auch hier wohl als einzige keine Freude an den Kämpfen entwickeln können. 
 \begin{figure}[H]
@@ -489,19 +507,18 @@ Im direkten Vergleich zu dem eher kindlicheren Stil von Pokémon fanden wiederum
 	\centering
 	\includegraphics[width=1\textwidth]{table11.jpg}
 \end{figure}
-Wie intensiv sich die Testpersonen mit den Kämpfen beschäftigt haben, haben wir nachfolgend in Frage 14 'Haben die Kämpfe Tiefe? Denken Sie über Ihre Züge nach?' untersucht. Hier zeigte sich dass die ganz große Mehrheit die strategischere Ausrichtung des Spiels aufgreift: 42\% der Befragten denken 'häufig' über ihre Züge nach und ebenfalls 42\% gemäß der nächsten Kategorie 'gelegentlich'. 'Eher selten' oder 'Nie' tat dies keiner, während zwei Personen angaben 'fast nie' über ihre Züge nachzudenken. Dabei handelt es sich bei beiden um 'Intensiv-Spieler' mit großer Rollenspielerfahrung, denen vermutlich ihr Handeln in 'Fleisch und Blut' übergegangen ist. 
+Wie intensiv sich die Testpersonen mit den Kämpfen beschäftigt haben, haben wir nachfolgend in Frage 14 'Haben die Kämpfe Tiefe? Denken Sie über Ihre Züge nach?' untersucht. Hier zeigte sich dass die ganz große Mehrheit die strategischere Ausrichtung des Spiels aufgreift: 42\% der Befragten denken 'häufig' über ihre Züge nach und ebenfalls 42\% gemäß der nächsten Kategorie 'gelegentlich'. 'Eher selten' oder 'Nie' tat dies keiner, während zwei Personen angaben 'fast nie' über ihre Züge nachzudenken. Dabei handelt es sich bei beiden um 'Intensiv-Spieler' mit großer Rollenspielerfahrung, die ihre Fähigkeiten mittlerweile wahrscheinlich intuitiv anwenden. 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\textwidth]{table12.jpg}
 \end{figure}
 Mit Frage 15 'Haben Sie Anmerkungen oder Verbesserungsvorschläge für die Kämpfe?' wurde dieser Themenbereich abgeschlossen. Zweimal wurde erwähnt, dass nicht kenntlich ist, wer am Zug ist: ++  \textit{„Wer kämpft ist unklar“} ++ \textit{„Anzeige, was gerade passiert wäre hilfreich, und wer gerade dran ist.“} Da die Figuren durch die Anzeige (hellerer) Zugfelder kenntlich gemacht werden, könnte hier die Ursache darin liegen, dass aufgrund der Bewegung draußen und möglicher Sonneneinstrahlung der Kontrast zu gering ist, wie nachfolgendes Statement untermauert. \textit{„Hintergrund des Bildschirms beim Kampf finde ich zu dunkel. Man muss Handy sehr hell einstellen (Akkuverbrauch).“}\\
-Eine weitere Gruppe hat Erweiterungen vorgeschlagen: ++  \textit{“Man könnte noch mehr Elemente in die Karte der Kämpfe einbauen (neben den Felsen).“} ++ \textit{„Relativ einfach nach kurzer Zeit“} ++ \textit{”I found it impossible to beat the bosses at first. I loved the fireballs. It might be nice to have more and other visually interesting weapons. But I thought it was fun.”} Während andere die vorhandenen unterschiedlichen Spielelemente ausdrücklich lobten: ++ \textit{„Spiel macht noch mehr Spaß, als die Quests dazukamen- Damit wurden längerfristige Ziele gesetzt, so dass Spielmotivation erhöht wurde. Man spielt also länger.“} ++ \textit{„Sehr gut finde ich unterschiedliche Kämpfer mit unterschiedlichen Funktionen, die Kämpfe interessanter gestalten.“}
+Eine weitere Gruppe hat Erweiterungen vorgeschlagen: ++  \textit{“Man könnte noch mehr Elemente in die Karte der Kämpfe einbauen (neben den Felsen).“} ++ \textit{„Relativ einfach nach kurzer Zeit“} ++ \textit{”I found it impossible to beat the bosses at first. I loved the fireballs. It might be nice to have more and other visually interesting weapons. But I thought it was fun.”} Andere lobten die vorhandenen unterschiedlichen Spielelemente ausdrücklich: ++ \textit{„Spiel macht noch mehr Spaß, als die Quests dazukamen- Damit wurden längerfristige Ziele gesetzt, so dass Spielmotivation erhöht wurde. Man spielt also länger.“} ++ \textit{„Sehr gut finde ich unterschiedliche Kämpfer mit unterschiedlichen Funktionen, die Kämpfe interessanter gestalten.“}
 \\
-\\
-Zielsetzung waren sowohl mit einer 'erwachseneren' Darstellung als auch durch eine bessere Spieltiefe und die Integration strategischer Element die Spieler besser anzusprechen und so zu veranlassen, sich intensiver mit dem Spiel zu befassen und sie dadurch längerfristig zu binden. Sowohl die Spielidee in den Kämpfen als auch die Grafik wurden von den Testpersonen in hohem Maße positiv bis sehr positiv bewertet. Bei der Spieltiefe denken zwei sehr intensive Spieler wenig über die Kämpfe nach, alle anderen aber setzen sich durchaus intensiv mit dem Spielgeschehen auseinander. Zusammenfassend zeigt sich, dass sich die Testpersonen sowohl von der Grafik als auch der Spielidee in den Kämpfen positiv angesprochen fühlen.
+Zielsetzung waren sowohl mit einer 'erwachseneren' Darstellung als auch durch eine bessere Spieltiefe und die Integration strategischer Elemente die Spieler besser anzusprechen und so zu veranlassen, sich intensiver mit dem Spiel zu befassen und sie dadurch längerfristig zu binden. Sowohl die Spielidee in den Kämpfen als auch die Grafik wurden von den Testpersonen in hohem Maße positiv bis sehr positiv bewertet. Bei der Spieltiefe denken zwei sehr intensive Spieler wenig über die Kämpfe nach, alle anderen aber setzen sich durchaus intensiv mit dem Spielgeschehen auseinander. Zusammenfassend zeigt sich, dass sich die Testpersonen sowohl von der Grafik als auch der Spielidee in den Kämpfen positiv angesprochen fühlen.
 \newpage
 \subsection{Allgemeine Gesamtbewertung des Spiels}
-Im vierten Block der Umfrage sollten die Testpersonen das Spiel insgesamt bewerten. Zunächst wurde mit Frage 16 'Macht Ihnen das Spiel Spaß? Wenn Nein, warum nicht?'  die Spielfreude ermittelt.  Mit 58\% beurteilte mehr als die Hälfte der Probanden die Spielfreude mit der höchsten Stufe ('Ja, sehr) gefolgt von 48\% in der zweitbesten Beurteilung ('Meistens'). Da es keine schlechteren Bewertungen gab, entfiel in dieser Frage auch die Kommentierung, auf die wir insgesamt bei Frage 20 zurückkommen werden. 
+Im vierten Block der Umfrage sollten die Testpersonen das Spiel insgesamt bewerten. Zunächst wurde mit Frage 16 'Macht Ihnen das Spiel Spaß? Wenn Nein, warum nicht?'  die Spielfreude ermittelt.  Mit 58\% beurteilte mehr als die Hälfte der Probanden die Spielfreude mit der höchsten Stufe ('Ja, sehr) gefolgt von 48\% in der zweitbesten Beurteilung ('Meistens'). Da es keine schlechteren Bewertungen gab, entfiel in dieser Frage auch die Kommentierung.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\textwidth]{table13.jpg}
@@ -511,22 +528,22 @@ Da für das Gefühl des Spielflusses das Zusammenwirken der einzelnen Elemente e
 	\centering
 	\includegraphics[width=1\textwidth]{table14.jpg}
 \end{figure}
-Die Aufgabenstellung war es einen Prototyp zu entwickeln, der AR-Elemente verwendet, einen leichten Einstieg bietet und das Potenzial hat, langfristig Spaß zu machen und zu fesseln. Nach der Gesamtbewertung von Spielspaß und –fluss sollte die Bindung an das Spiel und die längerfristige Tragfähigkeit des Spiels in Frage 18 'Könnten Sie sich vorstellen, das Spiel über einen  längeren Zeitraum zu spielen, wenn mehr Inhalte existieren würden oder das Spiel etwas besser ausbalanciert wäre?' ermittelt werden. Alle 12 Testpersonen konnten sich dies vorstellen und urteilten mit der besten Wertungskategorie 'Ja, das Prinzip ist gut und könnte auf längere Zeit fesseln. Die unter Frage 20 folgenden Kommentierungen zeigen die Gründe für die durchweg positive Beurteilung  
+Die Aufgabenstellung war es einen Prototyp zu entwickeln, der AR-Elemente verwendet, einen leichten Einstieg bietet und das Potenzial hat, langfristig Spaß zu machen und zu fesseln. Nach der Gesamtbewertung von Spielspaß und –fluss sollte die Bindung an das Spiel und die längerfristige Tragfähigkeit des Spiels in Frage 18 'Könnten Sie sich vorstellen, das Spiel über einen  längeren Zeitraum zu spielen, wenn mehr Inhalte existieren würden oder das Spiel etwas besser ausbalanciert wäre?' ermittelt werden. Alle 12 Testpersonen konnten sich dies vorstellen und urteilten mit der besten Wertungskategorie 'Ja, das Prinzip ist gut und könnte auf längere Zeit fesseln. Die unter Frage 20 folgenden Kommentierungen zeigen die Gründe für die durchweg positive Beurteilung.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\textwidth]{table15.jpg}
 \end{figure} 
-Gerade vor dem Hintergrund, dass die Testpersonen über einen sehr unterschiedlichen Background  verfügen und die wenigstens intensive Handygamer sind, ist dies ein schöner Erfolg. Doch 'funktioniert das Spiel auch gut als mobiles Spiel? Kann man es gut unterwegs spielen, z.B. als Zeitvertreib auf dem Weg zum Einkaufen?' lautet Frage 19, um den mobilen Nutzwert, der speziell durch das Geo-Prinzip begründet wird, zu ermitteln. Auch hier waren 75\% der Testpersonen der Ansicht, dass das Spiel uneingeschränkt dafür geeignet ist und nur 25\% sahen leichte Einschränkungen, da das Spiel eine  entsprechende Konzentration beanspruche. Größere Einschränkungen oder das völlige Versagen als mobiles Spiel sah keine der Personen. 
+Gerade vor dem Hintergrund, dass die Testpersonen über einen sehr unterschiedlichen Background verfügen und die wenigsten momentan intensiv auf ihrem Smartphone spielen, ist dies ein schöner Erfolg. Doch 'funktioniert das Spiel auch gut als mobiles Spiel? Kann man es gut unterwegs spielen, z.B. als Zeitvertreib auf dem Weg zum Einkaufen?' lautet Frage 19, um den mobilen Nutzwert, der speziell durch das Geo-Prinzip begründet wird, zu ermitteln. Auch hier waren 75\% der Testpersonen der Ansicht, dass das Spiel uneingeschränkt dafür geeignet ist und nur 25\% sahen leichte Einschränkungen, da das Spiel eine  entsprechende Konzentration beanspruche. Größere Einschränkungen oder das völlige Versagen als mobiles Spiel sah keine der Personen. 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\textwidth]{table16.jpg}
 \end{figure}
-Mit Frage 20 'Welchen Gesamteindruck haben Sie von dem Spiel? Würden Sie bestimmte Elemente/Aspekte ändern? Haben Sie noch andere Anmerkungen? ' wurden die Testpersonen zu einer umfassenden Kommentierung gebeten.\\
-Obwohl die große Mehrzahl den Spieleinstieg 'einfach' oder 'relativ einfach' fanden, wurde eine einleitende Erläuterung vorgeschlagen: ++ \textit{„Es wäre gut, wenn am Anfang ein Tutorial wäre. Entweder könnte eine Stimme erklären, was man tun muss, oder es könnten Sprechblasen (mit Pfeilen) erscheinen, in denen steht, was man tun muss. An sich hat mir das Spiel gut gefallen. Die Figuren gefielen mir gut.“} ++\textit{“ Kritik: Die Auswahl der Figuren ist nicht selbsterklärend, könnte für Anfänger erklärt werden, Erste Schritte sollten grundsätzlich erklärt werde.“} Zwar traten die Probleme vereinzelt und bei  wenig PC-spielaffinen Testpersonen auf, doch ist dies gerade für diese Zielgruppe ein wichtiger Hinweis. Für die meisten auch der weniger spielerfahrenen Personen war der Einstieg jedoch intuitiv möglich: ++ \textit{“Easy to get into, but lots to learn” ++ „Das Spiel ist sehr leicht zu lernen, wird aber durch die Konzeption nicht langweilig, da – das Levelsystem Anreize setzt sich selbst fortzuentwickeln und auch mal starke/übermächtige Gegner anzugreifen – unterschiedlich besetzte Teams unterschiedliche Strategien ermöglichen (Nahkampf/Fernkampf  mit Flucht und Distanz) – Items Anreize setzen, eigene Charakter zu erstellen, weiterzuentwickeln und so die Spielfiguren vom gleichen Typ zusätzliche Variationen bieten.“}\\
+Mit Frage 20 'Welchen Gesamteindruck haben Sie von dem Spiel? Würden Sie bestimmte Elemente/Aspekte ändern? Haben Sie noch andere Anmerkungen? ' wurden die Testpersonen zu einer umfassenden Kommentierung gebeten.
+\\Obwohl die große Mehrzahl den Spieleinstieg 'einfach' oder 'relativ einfach' fanden, wurde eine einleitende Erläuterung vorgeschlagen: ++ \textit{„Es wäre gut, wenn am Anfang ein Tutorial wäre. Entweder könnte eine Stimme erklären, was man tun muss, oder es könnten Sprechblasen (mit Pfeilen) erscheinen, in denen steht, was man tun muss. An sich hat mir das Spiel gut gefallen. Die Figuren gefielen mir gut.“} ++\textit{“ Kritik: Die Auswahl der Figuren ist nicht selbsterklärend, könnte für Anfänger erklärt werden, Erste Schritte sollten grundsätzlich erklärt werde.“} Zwar traten die Probleme vereinzelt und bei wenig PC-Spiel-affinen Testpersonen auf, doch ist dies gerade für diese Zielgruppe ein wichtiger Hinweis. Für die meisten auch der weniger spielerfahrenen Personen war der Einstieg jedoch intuitiv möglich: ++ \textit{“Easy to get into, but lots to learn” ++ „Das Spiel ist sehr leicht zu lernen, wird aber durch die Konzeption nicht langweilig, da – das Levelsystem Anreize setzt sich selbst fortzuentwickeln und auch mal starke/übermächtige Gegner anzugreifen – unterschiedlich besetzte Teams unterschiedliche Strategien ermöglichen (Nahkampf/Fernkampf  mit Flucht und Distanz) – Items Anreize setzen, eigene Charakter zu erstellen, weiterzuentwickeln und so die Spielfiguren vom gleichen Typ zusätzliche Variationen bieten.“}\\
 Die Vielspieler hingegen schlagen hier Erweiterungen und insbesondere einen Multiplayer-Modus vor: ++ \textit{„Gutes Design, Langzeitmotivation (noch) gering, da es noch keinen Multiplayer gibt.“} ++ \textit{„Ein Multiplayer-Modus (Kampf gegen andere Spieler) könnte dazu beitragen, die Langzeitmotivation zu verbessern.“} ++ \textit{„Komplexität ist für ein Mobile-Spiel angemessen und läuft recht stabil (Slowdowns können auch an meinem Gerät liegen). Da Pokemon Go einen Geospielehype ausgelöst hat, könnte so ein Spiel ebenfalls erfolgreich sein, wenn mehr Inhalte vorhanden sind. Für eine offizielle Veröffentlichung fehlen noch Designkniffe wie Soundeffekte, um das Spiel ansprechender zu machen (z. B. Angriff- und Treffersounds).“}
-\\Durch die Bank positiv kommentiert wurde das optische Design: ++ \textit{„It's a brilliant design.“} ++ \textit{„Optisch finde ich das Spiel deutlich ansprechender als Pokemon Go, da für mich die Pokemon-Figuren eher für ein sehr junges Publikum designed sind. Die Figuren hier sind interessanter.“} ++ \textit{„Gestaltung der Figuren finde ich sehr gut und optisch viel ansprechender, als bei Pokemon Go.“} ++ \textit{„Interessant sind die unterschiedlichen Fähigkeiten der Figuren. Insbesondere die Priesterin, die aus weiter Entfernung den Gegner mit dem Feuerball schädigt, ist cool.“} 
+\\Durchweg positiv kommentiert wurde das optische Design: ++ \textit{„It's a brilliant design.“} ++ \textit{„Optisch finde ich das Spiel deutlich ansprechender als Pokemon Go, da für mich die Pokemon-Figuren eher für ein sehr junges Publikum designed sind. Die Figuren hier sind interessanter.“} ++ \textit{„Gestaltung der Figuren finde ich sehr gut und optisch viel ansprechender, als bei Pokemon Go.“} ++ \textit{„Interessant sind die unterschiedlichen Fähigkeiten der Figuren. Insbesondere die Priesterin, die aus weiter Entfernung den Gegner mit dem Feuerball schädigt, ist cool.“} 
 \\
-Ebenso wie der Spielfluss und die Konzeption: ++ \textit{„Die Kämpfe sind in Bezug auf Gewinne und Verluste gut ausbalanciert, so dass man nicht immer gewinnt, aber auch als 'Absolute beginner' Chancen hat, die Gegner zu zerstören und zusätzliche Waffen zu erhalten was wiederum motiviert, weiterzuspielen. Schön ist, dass die Gegner sehr schnell agieren, so dass man eigentlich die meiste Zeit selbst spielt und nicht warten muss“} ++ \textit{„Die Kämpfe sind machbar, nicht zu schwierig und nicht zu leicht. Die Figuren sehen gut aus. Hat Spaß gemacht, draußen die Figuren zu suchen.“}
+Ebenso gut schnitten Spielfluss und Konzeption ab: ++ \textit{„Die Kämpfe sind in Bezug auf Gewinne und Verluste gut ausbalanciert, so dass man nicht immer gewinnt, aber auch als 'Absolute beginner' Chancen hat, die Gegner zu zerstören und zusätzliche Waffen zu erhalten was wiederum motiviert, weiterzuspielen. Schön ist, dass die Gegner sehr schnell agieren, so dass man eigentlich die meiste Zeit selbst spielt und nicht warten muss“} ++ \textit{„Die Kämpfe sind machbar, nicht zu schwierig und nicht zu leicht. Die Figuren sehen gut aus. Hat Spaß gemacht, draußen die Figuren zu suchen.“}
 \\
 Und auch bei weiteren Teilnehmern spielt der Geospielgedanke eine wichtige Rolle: ++ \textit{„Gut durchdachtes Spielekonzept, das die Spieleanreize aus leistungsstärkeren PC-Spielen mit der 'Realität' vor Ort verknüpft und in mobiler Variante umsetzt. Man kann so die Wartezeit bspw. an der Bushaltestelle gut überbrücken und immer wieder nachschauen, welche Gegner an bestimmten Orten sind, an denen man häufiger ist, aber auch dort, wo man gerade zufällig/seltener ist. Da Gegner sich zeitabhängig aufbauen, bleiben auch häufig genutzte Wege interessant.“} ++ \textit{„Besonders der Übergang zwischen den Fenstern ist super. GPS am coolsten. Perfekt – Klasse in der kurzen Zeit.“}
 
@@ -534,8 +551,7 @@ Und auch bei weiteren Teilnehmern spielt der Geospielgedanke eine wichtige Rolle
 \newpage
 \section{Ausblick}Um das Spiel weiterzuentwickeln ist es uns wichtig, in Umfragen angesprochene Wünsche aufzugreifen. Das größte Problem, das einer weiteren Verbreitung im Weg steht, ist das Fehlen eines Tutorials. Insbesondere ein paar unerfahrene Tester hatten dies angemerkt, auch wenn im Allgemeinen die Entwickler eine Einführung gaben und die Testspieler betreut hatten. Für eine etwaige Verbreitung über Googles Appstore würde ein solches jedoch benötigt, um einen leichten Einstieg zu garantieren. Dies würde in Form von Textblasen gelöst werden.
 \\Für die extrem erfahrenen Spieler hingegen wären Schwierigkeits-Einstellungen gut. Denkbar ist, dies über Optionen in der Haupt-Aktivität zu lösen, oder für die Kämpfe eine Grund-Schwierigkeit auswählbar zu machen. Fest steht jedoch, dass Schwierigkeit stärker variieren müsste als momentan. Das momentane Level-abhängige System erwies sich als guter Ansatz, die Ergebnisse, die es liefert sind aber möglicherweise nicht divers genug. Einige Spieler, die komplexe Spiele bevorzugen und häufig Spiele spielen hatten angegeben, dass das Spiel zwar Spaß macht, aber gelegentlich zu leicht sein kann.
-\\Zusätzlich können einige optische Verbesserungen vorgenommen werden. Um den Spielfluss klarer zu machen, wäre es sinnvoll, die Angriffsanimationen des Morgenstern-Wikingers und des Schakalkriegers etwas auffälliger zu gestalten, das Feld unter der Figur, die momentan am Zug ist anders einzufärben und Treffer-Animationen bei angegriffenen Figuren abzuspielen. Kleinere Verbesserungen wurden als 
-Reaktion auf Feedback im Rahmen der Testreihe bereits vorgenommen.
+\\Zusätzlich können einige optische Verbesserungen vorgenommen werden. Um den Spielfluss klarer zu machen, wäre es sinnvoll, die Angriffsanimationen des Morgenstern-Wikingers und des Schakalkriegers etwas auffälliger zu gestalten, das Feld unter der Figur, die momentan am Zug ist anders einzufärben und Treffer-Animationen bei angegriffenen Figuren abzuspielen. Kleinere Verbesserungen wurden als Reaktion auf Feedback im Rahmen der Testreihe bereits vorgenommen.
 \\Auf längere Sicht wäre ein Server, über den Kämpfe gesetzt werden, sinnvoll. Dadurch wird gewährleistet, dass Kämpfe, ähnlich wie bei Pokémon Go auf mehreren Smartphones an gleicher Stelle sind. Bei Tests fiel uns auf, dass Spieler unter anderem durch Quests, aber auch einfach durch die Orte, an die Kämpfe generiert wurden, in Gruppen starteten und sich nach und nach aufteilten. Ein gemeinsamer Server und damit gemeinsame Geo-Positionen der Kämpfe könnten ähnlich wie bei Pokémon Go neue Bekanntschaften ermöglichen und zumindest zusammengehörigen Gruppen erlauben, gemeinsam von Punkt A nach Punkt B zu kommen, dabei zu spielen und sich nicht aufzuteilen.
 \\Außerdem wäre ein Server der Startpunkt für Mehrspieler-Features. So wäre denkbar, den gewünschten PvP-Modus umzusetzen oder sich gegenseitig in PvE-Kämpfen zu unterstützen, etwa durch Bonis auf Belohnungen, die nahe Spieler geben, oder dadurch, dass Figuren anderen Spielern ausgeliehen werden können.
 \bibliography{ba2}
