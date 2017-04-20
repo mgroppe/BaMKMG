@@ -1,12 +1,21 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: ba2.aux
-Illegal, another \bibdata command---line 137 of file ba2.aux
- : \bibdata
- :         {ba2}
-I'm skipping whatever remains of this command
 The style file: plain.bst
 Database file #1: ba2.bib
-I was expecting a `,' or a `}'---line 17 of file ba2.bib
- : howpublished= "https://developer.android.com/training/location/index.html"
- :                                                                           ",
+I was expecting a `,' or a `}'---line 33 of file ba2.bib
+ : 
+ : Year = "Stand 2017"}
+(Error may have been on previous line)
 I'm skipping whatever remains of this entry
-(There were 2 error messages)
+Warning--to sort, need author or key in and0
+Warning--to sort, need author or key in helm
+Warning--to sort, need author or key in viki
+Warning--to sort, need author or key in morg
+Warning--to sort, need author or key in color1
+Warning--to sort, need author or key in aoe2
+Warning--to sort, need author or key in color2
+Warning--to sort, need author or key in egy
+Warning--to sort, need author or key in egyrel
+Warning--to sort, need author or key in harp
+Warning--to sort, need author or key in ra
+Warning--to sort, need author or key in egynoarm
+(There was 1 error message)

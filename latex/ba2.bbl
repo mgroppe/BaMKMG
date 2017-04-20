@@ -1,8 +1,42 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
-\bibitem{and3}
-Android Developer.
-\newblock https://developer.android.com/training/location/index.html.
+\bibitem{color1}
+https://en.99designs.de/blog/tips/how-color-impacts-emotions-and-behaviors/.
+
+\bibitem{and0}
+https://www.strategyanalytics.com/strategy-analytics/news/strategy-analytics-press-releases/strategy-analytics-press-release/2016/11/02/strategy-analytics-android-captures-record-88-percent-share-of-global-smartphone-shipments-in-q3-2016\#.WPgQiIiGOUk,
+  Stand 2017.
+
+\bibitem{helm}
+https://en.wikipedia.org/wiki/Horned\_helmet.html, Stand 2017.
+
+\bibitem{viki}
+https://en.wikipedia.org/wiki/Vikings, Stand 2017.
+
+\bibitem{morg}
+https://de.wikipedia.org/wiki/Morgenstern\_(Waffe), Stand 2017.
+
+\bibitem{aoe2}
+http://ageofempires.wikia.com/wiki/Berserk, Stand 2017.
+
+\bibitem{color2}
+http://www.arttherapyblog.com/online/color-psychology-psychologica-effects-of-colors/,
+  Stand 2017.
+
+\bibitem{egy}
+https://de.wikipedia.org/wiki/Altes\_%C3%84gypten, Stand 2017.
+
+\bibitem{egyrel}
+https://de.wikipedia.org/wiki/Alt%C3%A4gyptische\_Religion, Stand 2017.
+
+\bibitem{harp}
+https://en.wikipedia.org/wiki/Harpy, Stand 2017.
+
+\bibitem{ra}
+https://en.wikipedia.org/wiki/Ra, Stand 2017.
+
+\bibitem{egynoarm}
+https://en.wikipedia.org/wiki/Military\_of\_ancient\_Egypt, Stand 2017.
 
 \bibitem{and1}
 Android Developer.
@@ -13,5 +47,10 @@ Android Developer.
 Android Developer.
 \newblock https://developer.android.com/guide/components/intents-filters.html,
   Stand 2017.
+
+\bibitem{and3}
+Android Developer.
+\newblock https://developer.android.com/training/location/index.html, Stand
+  2017.
 
 \end{thebibliography}
