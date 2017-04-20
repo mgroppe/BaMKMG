@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.10)  18 APR 2017 17:41
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.10)  20 APR 2017 04:06
 entering extended mode
 **ba2.tex
 (D:\test\cgBA_Latex\ba2.tex
@@ -556,21 +556,21 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks26
 \@floatcapt=\box29
 ) (D:\test\cgBA_Latex\ba2.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Try loading font information for T1+ppl on input line 15.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Try loading font information for T1+ppl on input line 13.
 
 (D:\Programme\MikTex\tex\latex\psnfss\t1ppl.fd
 File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
@@ -594,7 +594,7 @@ Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \AtBeginShipoutBox=\box31
-Package hyperref Info: Link coloring OFF on input line 15.
+Package hyperref Info: Link coloring OFF on input line 13.
  (D:\Programme\MikTex\tex\latex\hyperref\nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
@@ -603,75 +603,66 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count120
 )
-LaTeX Info: Redefining \ref on input line 15.
-LaTeX Info: Redefining \pageref on input line 15.
-LaTeX Info: Redefining \nameref on input line 15.
+LaTeX Info: Redefining \ref on input line 13.
+LaTeX Info: Redefining \pageref on input line 13.
+LaTeX Info: Redefining \nameref on input line 13.
 
 (D:\test\cgBA_Latex\ba2.out) (D:\test\cgBA_Latex\ba2.out)
 \@outlinefile=\write3
-LaTeX Font Info:    Try loading font information for U+msa on input line 22.
+LaTeX Font Info:    Try loading font information for U+msa on input line 20.
 
 (D:\Programme\MikTex\tex\latex\amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 22.
+LaTeX Font Info:    Try loading font information for U+msb on input line 20.
 
 (D:\Programme\MikTex\tex\latex\amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<logos/UniLogoNeu.pdf, id=175, 566.12401pt x 162.73297pt>
+<logos/UniLogoNeu.pdf, id=191, 566.12401pt x 162.73297pt>
 File: logos/UniLogoNeu.pdf Graphic file (type pdf)
 
 <use logos/UniLogoNeu.pdf>
-Package pdftex.def Info: logos/UniLogoNeu.pdf used on input line 22.
+Package pdftex.def Info: logos/UniLogoNeu.pdf used on input line 20.
 (pdftex.def)             Requested size: 211.82086pt x 60.88887pt.
 
-Overfull \hbox (186.21356pt too wide) in paragraph at lines 22--22
+Overfull \hbox (186.21356pt too wide) in paragraph at lines 20--20
 []|[]| 
  []
 
-File: logos/UniLogoNeu.pdf Graphic file (type pdf)
-<use logos/UniLogoNeu.pdf>
-Package pdftex.def Info: logos/UniLogoNeu.pdf used on input line 22.
-(pdftex.def)             Requested size: 212.25774pt x 61.01477pt.
 
-Overfull \hbox (41.54121pt too wide) in paragraph at lines 22--22
- []|[]|
- []
-
-
-Overfull \hbox (59.4931pt too wide) in alignment at lines 22--22
+Overfull \hbox (59.4931pt too wide) in alignment at lines 20--20
 [][][] 
  []
 
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <20.74> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 22.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 20.
 
-Overfull \hbox (18.99358pt too wide) in paragraph at lines 22--22
+Overfull \hbox (18.99358pt too wide) in paragraph at lines 20--20
 [] 
  []
 
 [-1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <D:/test/cgBA_Latex/logos/
-UniLogoNeu.pdf>] [0]
-Underfull \hbox (badness 10000) in paragraph at lines 22--22
+UniLogoNeu.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 20--20
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 22--22
+Underfull \hbox (badness 10000) in paragraph at lines 20--20
 
  []
 
 
-Overfull \hbox (55.52159pt too wide) in alignment at lines 22--22
+Overfull \hbox (55.52159pt too wide) in alignment at lines 20--20
 [][][] 
  []
 
 [1]
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 26.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 24.
  (D:\test\cgBA_Latex\ba2.toc
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <10.95> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 2.
@@ -679,376 +670,452 @@ LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <10.95> not available
 \tf@toc=\write4
  [2] [1
 
-] [2]
+] [2] [3]
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <12> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 48.
-LaTeX Font Info:    Try loading font information for OMS+ppl on input line 53.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 49.
 
+(D:\Programme\MikTex\tex\latex\psnfss\t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
+Underfull \hbox (badness 10000) in paragraph at lines 49--49
+[][][][]$\T1/pcr/m/n/9 https : / / www . strategyanalytics . com / strategy-[]a
+nalytics / news /$
+ []
+
+
+Overfull \hbox (4.79959pt too wide) in paragraph at lines 49--49
+$\T1/pcr/m/n/9 strategy-[]analytics-[]press-[]releases / strategy-[]analytics-[
+]press-[]release /$
+ []
+
+
+Overfull \hbox (257.19931pt too wide) in paragraph at lines 49--49
+$\T1/pcr/m/n/9 2016 / 11 / 02 / strategy-[]analytics-[]android-[]captures-[]rec
+ord-[]88-[]percent-[]share-[]of-[]global-[]smartphone-[]shipments-[]in-[]q3-[]2
+016 #$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--50
+[][][][]$\T1/pcr/m/n/9 https : / / developer . android . com / guide / componen
+ts / fundamentals .$
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+ppl on input line 53.
 (D:\Programme\MikTex\tex\latex\psnfss\omsppl.fd
 File: omsppl.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 53.
- [3] [4] [5]
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--53
+[][][][]$\T1/pcr/m/n/9 https : / / developer . android . com / guide / componen
+ts / fundamentals .$
+ []
+
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 55--55
+[][][][]$\T1/pcr/m/n/9 https : / / developer . android . com / guide / componen
+ts / fundamentals .$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 56--56
+[][][][]$\T1/pcr/m/n/9 https : / / developer . android . com / guide / componen
+ts / fundamentals .$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 57--57
+[][][][]$\T1/pcr/m/n/9 https : / / developer . android . com / guide / componen
+ts / fundamentals .$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 59--59
+[][][][]$\T1/pcr/m/n/9 https : / / developer . android . com / guide / componen
+ts / intents-[]filters .$
+ []
+
+[5] [6]
+Underfull \hbox (badness 10000) in paragraph at lines 68--68
+[][][]\T1/ppl/m/n/9 https://blogs.unity3d.com/2016/07/20/games-by-the-numbers-2
+016-q2-bric-
+ []
+
+
 Overfull \hbox (14.42377pt too wide) in paragraph at lines 66--71
 \T1/ppl/m/n/10.95 Ver-öf-fent-li-chung 2005 zu-neh-mend er-folg-reich. Sie wird
  von Indie-Entwicklern
  []
 
-
-Overfull \hbox (1.19318pt too wide) in paragraph at lines 66--71
-\T1/ppl/m/n/10.95 fa-che Ent-wick-lung für die Smartphone-Betriebssysteme iOS, 
-An-dro-id, Win-
- []
-
-[6]
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 76.
- (D:\Programme\MikTex\tex\latex\psnfss\t1pcr.fd
-File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-)
-Underfull \hbox (badness 10000) in paragraph at lines 76--76
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 77--77
 [][][]\T1/ppl/m/n/9 Bundeskartellamt, []$\T1/pcr/m/n/9 http : / / www . bundesk
 artellamt . de / SharedDocs /$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 76--76
+Underfull \hbox (badness 10000) in paragraph at lines 77--77
 $\T1/pcr/m/n/9 Entscheidung / DE / Entscheidungen / Fusionskontrolle / 2005 / B
 7-[]162-[]05 .$
  []
 
-[7]
-Overfull \hbox (9.05804pt too wide) in paragraph at lines 83--92
-\T1/ppl/m/n/10.95 un-ter-ent-wi-ckelt und es gab kein wirk-lich for-dern-des El
-e-ment. Arena-Kämpfe
+[8]
+Overfull \hbox (135.39949pt too wide) in paragraph at lines 91--91
+[][][][]$\T1/pcr/m/n/9 https : / / venturebeat . com / 2017 / 01 / 17 / pokemon
+-[]go-[]generated-[]revenues-[]of-[]950-[]million-[]in-[]2016/$[]| 
  []
 
-[8] [9] [10] [11] [12]
-Overfull \hbox (4.646pt too wide) in paragraph at lines 114--115
-\T1/ppl/m/n/10.95 fluss. Langzeit-Motivation wird häu-fig durch zu-fäl-lig ge-n
-e-rier-te Items, Klas-
+[9] [10]
+Underfull \hbox (badness 10000) in paragraph at lines 97--97
+[][][]\T1/ppl/m/n/9 urlhttps://www.nowgamer.com/parallel-kingdom-interview-when
+-mmo-meets-
  []
 
-[13]
-Overfull \hbox (1.50218pt too wide) in paragraph at lines 118--119
+[11] [12]
+Overfull \hbox (25.89961pt too wide) in paragraph at lines 109--109
+[][][][]$\T1/pcr/m/n/9 http : / / www . statisticbrain . com / skyrim-[]the-[]e
+lder-[]scrolls-[]v-[]statistics/$[]| 
+ []
+
+[13] [14]
+Overfull \hbox (1.50218pt too wide) in paragraph at lines 119--120
 \T1/ppl/m/n/10.95 un-ter den Taktik-Rollenspielen. Aus-ge-reif-te und kom-ple-x
 e Level- und Klas-
  []
 
-[14] [15]
-Overfull \hbox (0.26563pt too wide) in paragraph at lines 130--134
-\T1/ppl/m/n/10.95 vor-zeig-ba-res Er-geb-nis zu schaf-fen ist. Au-ÿer-dem brauc
-h-ten wir einen zwei-
- []
-
-
-Overfull \hbox (3.46294pt too wide) in paragraph at lines 130--134
-\T1/ppl/m/n/10.95 dings den Spiel-fluss zu stark be-las-ten wür-de. Das ein-zi-
-ge Motion-Capturing
- []
-
-
-Overfull \hbox (7.18246pt too wide) in paragraph at lines 130--134
+[15] [16]
+Overfull \hbox (7.18246pt too wide) in paragraph at lines 129--133
 \T1/ppl/m/n/10.95 Vorstellbar wä-re ein sol-ches Kon-zept, wenn die Smartphone-
 VR-Technologie
  []
 
 
-Overfull \hbox (3.27654pt too wide) in paragraph at lines 130--134
-\T1/ppl/m/n/10.95 tio-nie-ren-de Rollenspiel-Systeme als ei-ne stär-ke-re AR-An
-bindung. Da-zu war
+Overfull \hbox (23.8585pt too wide) in paragraph at lines 129--133
+\T1/ppl/m/n/10.95 Infolgedessen ver-scho-ben wir un-se-ren Fo-kus von ei-ner be
+s-se-ren AR-Anbindung
  []
 
-[16] [17]
-Overfull \hbox (12.27364pt too wide) in paragraph at lines 136--143
-\T1/ppl/m/n/10.95 dau-ern konn-ten, die-se in den Taktik-Rollenspielen sehr ähn
--li-chen Rollenspiel-
+[17] [18]
+Overfull \hbox (23.72725pt too wide) in paragraph at lines 135--143
+\T1/ppl/m/n/10.95 dau-ern konn-ten, die-se in - den Taktik-Rollenspielen sehr ä
+hn-li-chen - Rollenspiel-
  []
 
 
-Overfull \hbox (3.33862pt too wide) in paragraph at lines 136--143
-\T1/ppl/m/n/10.95 In Tests sorg-ten 3D-Modelle ins-be-son-de-re bei Ani-ma-tio-
-nen häu-fig für Ecken
+Overfull \hbox (7.82733pt too wide) in paragraph at lines 135--143
+\T1/ppl/m/n/10.95 Level- und Item-sys-te-me sol-len sich hin-ge-gen stär-ker an
+ Action-Rollenspielen
  []
 
-[18] [19]
-Overfull \hbox (3.18506pt too wide) in paragraph at lines 145--147
+
+Overfull \hbox (7.17084pt too wide) in paragraph at lines 135--143
+\T1/ppl/m/n/10.95 Zusätzlich sieht un-ser Kon-zept ein Quest-sys-tem vor, wel-c
+hes Spie-lern mittel-
+ []
+
+[19] [20]
+Overfull \hbox (5.41986pt too wide) in paragraph at lines 147--148
+\T1/ppl/m/n/10.95 Scha-dens-wert zu-fäl-lig zwi-schen dem mi-ni-ma-len und ma-x
+i-ma-len Scha-
+ []
+
+<statscreen.png, id=418, 614.295pt x 1149.29375pt>
+File: statscreen.png Graphic file (type png)
+ <use statscreen.png>
+Package pdftex.def Info: statscreen.png used on input line 154.
+(pdftex.def)             Requested size: 216.0022pt x 404.11774pt.
+LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <10> not available
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 155.
+
+[21]
+Overfull \hbox (5.21124pt too wide) in paragraph at lines 157--163
+\T1/ppl/m/n/10.95 wer-den auf der Kar-te ab-hän-gig von ih-rem Le-vel und ih-re
+r An-zahl in Schwie-
+ []
+
+[22 <D:/test/cgBA_Latex/statscreen.png>] [23] [24] [25]
+Overfull \hbox (3.18506pt too wide) in paragraph at lines 165--166
 \T1/ppl/m/n/10.95 Die Im-ple-men-tie-rung um-fass-te meh-re-re ver-schie-de-ne 
 Tei-la-spek-te und Spra-
  []
 
-
-Overfull \hbox (1.53603pt too wide) in paragraph at lines 145--147
-\T1/ppl/m/n/10.95 und Gra-fik kon-zen-trier-te. Da-nach er-zeug-te Mar-tin das 
-Android-Modul und
- []
-
-<map.png, id=344, 542.025pt x 963.6pt>
+<map.png, id=443, 614.295pt x 1149.29375pt>
 File: map.png Graphic file (type png)
  <use map.png>
-Package pdftex.def Info: map.png used on input line 151.
-(pdftex.def)             Requested size: 143.9978pt x 255.99973pt.
-LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <10> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 153.
- [20] [21 <D:/test/cgBA_Latex/map.png>] [22] <questfragment.png, id=359, 542.02
-5pt x 963.6pt>
+Package pdftex.def Info: map.png used on input line 170.
+(pdftex.def)             Requested size: 216.0022pt x 404.11774pt.
+ [26] [27 <D:/test/cgBA_Latex/map.png>] [28] <questfragment.png, id=460, 614.29
+5pt x 1149.29375pt>
 File: questfragment.png Graphic file (type png)
 
 <use questfragment.png>
-Package pdftex.def Info: questfragment.png used on input line 161.
-(pdftex.def)             Requested size: 143.9978pt x 255.99973pt.
- [23 <D:/test/cgBA_Latex/questfragment.png>]
-<charfragment.png, id=365, 542.025pt x 963.6pt>
+Package pdftex.def Info: questfragment.png used on input line 178.
+(pdftex.def)             Requested size: 216.0022pt x 404.11774pt.
+ [29 <D:/test/cgBA_Latex/questfragment.png>] [30]
+<charfragment.png, id=471, 614.295pt x 1149.29375pt>
 File: charfragment.png Graphic file (type png)
  <use charfragment.png>
-Package pdftex.def Info: charfragment.png used on input line 172.
-(pdftex.def)             Requested size: 143.9978pt x 255.99973pt.
- [24 <D:/test/cgBA_Latex/charfragment.png>]
-<statscreen.png, id=371, 542.025pt x 963.6pt>
+Package pdftex.def Info: charfragment.png used on input line 189.
+(pdftex.def)             Requested size: 216.0022pt x 404.11774pt.
+
+[31 <D:/test/cgBA_Latex/charfragment.png>] [32]
 File: statscreen.png Graphic file (type png)
  <use statscreen.png>
-Package pdftex.def Info: statscreen.png used on input line 182.
-(pdftex.def)             Requested size: 143.9978pt x 255.99973pt.
- [25 <D:/test/cgBA_Latex/statscreen.png>]
-<createcharscreen.png, id=377, 542.025pt x 963.6pt>
+Package pdftex.def Info: statscreen.png used on input line 199.
+(pdftex.def)             Requested size: 216.0022pt x 404.11774pt.
+ [33]
+<createcharscreen.png, id=488, 614.295pt x 1149.29375pt>
 File: createcharscreen.png Graphic file (type png)
- <use createcharscreen.png>
-Package pdftex.def Info: createcharscreen.png used on input line 191.
-(pdftex.def)             Requested size: 143.9978pt x 255.99973pt.
 
-[26 <D:/test/cgBA_Latex/createcharscreen.png>]
-<fightscreen.png, id=384, 963.6pt x 542.025pt>
+<use createcharscreen.png>
+Package pdftex.def Info: createcharscreen.png used on input line 208.
+(pdftex.def)             Requested size: 216.0022pt x 404.11774pt.
+ [34 <D:/test/cgBA_Latex/createcharscreen.png>]
+<fightscreen.png, id=495, 1149.29375pt x 614.295pt>
 File: fightscreen.png Graphic file (type png)
  <use fightscreen.png>
-Package pdftex.def Info: fightscreen.png used on input line 200.
-(pdftex.def)             Requested size: 288.0011pt x 161.99672pt.
- [27 <D:/test/cgBA_Latex/fightscreen.png>]
-Overfull \hbox (2.32065pt too wide) in paragraph at lines 211--212
+Package pdftex.def Info: fightscreen.png used on input line 217.
+(pdftex.def)             Requested size: 360.0pt x 192.41663pt.
+
+[35 <D:/test/cgBA_Latex/fightscreen.png>]
+Overfull \hbox (2.32065pt too wide) in paragraph at lines 228--229
 \T1/ppl/m/n/10.95 Um Fi-gu-ren auf un-se-rem Spiel-feld zu be-we-gen, be-nö-ti-
 gen wir einen Suchal-
  []
 
-[28] <pathfinding1.png, id=395, 368.87813pt x 319.1925pt>
+[36] <pathfinding1.png, id=509, 368.87813pt x 319.1925pt>
 File: pathfinding1.png Graphic file (type png)
 
 <use pathfinding1.png>
-Package pdftex.def Info: pathfinding1.png used on input line 218.
-(pdftex.def)             Requested size: 216.0022pt x 186.90462pt.
- [29]
-<pathfinding2.png, id=400, 372.64218pt x 312.41719pt>
+Package pdftex.def Info: pathfinding1.png used on input line 235.
+(pdftex.def)             Requested size: 288.0011pt x 249.2078pt.
+ [37]
+<pathfinding2.png, id=514, 372.64218pt x 312.41719pt>
 File: pathfinding2.png Graphic file (type png)
  <use pathfinding2.png>
-Package pdftex.def Info: pathfinding2.png used on input line 224.
-(pdftex.def)             Requested size: 216.0022pt x 181.09244pt.
+Package pdftex.def Info: pathfinding2.png used on input line 241.
+(pdftex.def)             Requested size: 288.0011pt x 241.46295pt.
 
-<pathfinding3.png, id=401, 380.92313pt x 317.68687pt>
+<pathfinding3.png, id=515, 380.92313pt x 317.68687pt>
 File: pathfinding3.png Graphic file (type png)
  <use pathfinding3.png>
-Package pdftex.def Info: pathfinding3.png used on input line 230.
-(pdftex.def)             Requested size: 216.0022pt x 180.14297pt.
+Package pdftex.def Info: pathfinding3.png used on input line 247.
+(pdftex.def)             Requested size: 288.0011pt x 240.1987pt.
 
-<pathfinding4.png, id=402, 454.69875pt x 298.11375pt>
+[38 <D:/test/cgBA_Latex/pathfinding1.png>]
+<pathfinding4.png, id=522, 454.69875pt x 298.11375pt>
 File: pathfinding4.png Graphic file (type png)
  <use pathfinding4.png>
-Package pdftex.def Info: pathfinding4.png used on input line 236.
-(pdftex.def)             Requested size: 216.0022pt x 141.61914pt.
+Package pdftex.def Info: pathfinding4.png used on input line 253.
+(pdftex.def)             Requested size: 323.9978pt x 212.42645pt.
 
-[30 <D:/test/cgBA_Latex/pathfinding1.png> <D:/test/cgBA_Latex/pathfinding2.png>
-] <pathfinding5.png, id=409, 391.4625pt x 256.70906pt>
+<pathfinding5.png, id=523, 391.4625pt x 256.70906pt>
 File: pathfinding5.png Graphic file (type png)
  <use pathfinding5.png>
-Package pdftex.def Info: pathfinding5.png used on input line 242.
-(pdftex.def)             Requested size: 216.0022pt x 141.6487pt.
+Package pdftex.def Info: pathfinding5.png used on input line 259.
+(pdftex.def)             Requested size: 288.0011pt x 188.87277pt.
 
-[31 <D:/test/cgBA_Latex/pathfinding3.png> <D:/test/cgBA_Latex/pathfinding4.png>
-] [32 <D:/test/cgBA_Latex/pathfinding5.png>]
-<sieg1.jpg, id=422, 1706.375pt x 803.0pt>
+[39 <D:/test/cgBA_Latex/pathfinding2.png> <D:/test/cgBA_Latex/pathfinding3.png>
+] [40 <D:/test/cgBA_Latex/pathfinding4.png> <D:/test/cgBA_Latex/pathfinding5.pn
+g>] <sieg1.jpg, id=536, 1706.375pt x 803.0pt>
 File: sieg1.jpg Graphic file (type jpg)
  <use sieg1.jpg>
-Package pdftex.def Info: sieg1.jpg used on input line 251.
-(pdftex.def)             Requested size: 302.29134pt x 142.26378pt.
+Package pdftex.def Info: sieg1.jpg used on input line 268.
+(pdftex.def)             Requested size: 360.0pt x 169.40689pt.
 
-<sieg2.jpg, id=423, 1706.375pt x 803.0pt>
+<sieg2.jpg, id=537, 1706.375pt x 803.0pt>
 File: sieg2.jpg Graphic file (type jpg)
  <use sieg2.jpg>
-Package pdftex.def Info: sieg2.jpg used on input line 257.
-(pdftex.def)             Requested size: 302.29134pt x 142.26378pt.
- [33 <D:/test/cgBA_Latex/sieg1.jpg>] [34 <D:/test/cgBA_Latex/sieg2.jpg>]
-<soldier.png, id=436, 722.7pt x 722.7pt>
+Package pdftex.def Info: sieg2.jpg used on input line 274.
+(pdftex.def)             Requested size: 360.0pt x 169.40689pt.
+ [41 <D:/test/cgBA_Latex/sieg1.jpg>] [42 <D:/test/cgBA_Latex/sieg2.jpg>]
+<soldier.png, id=550, 722.7pt x 722.7pt>
 File: soldier.png Graphic file (type png)
  <use soldier.png>
-Package pdftex.def Info: soldier.png used on input line 266.
+Package pdftex.def Info: soldier.png used on input line 285.
 (pdftex.def)             Requested size: 142.26576pt x 142.26378pt.
 
-Overfull \hbox (1.82053pt too wide) in paragraph at lines 262--269
-\T1/ppl/m/n/10.95 hen. Rea-lis-ti-sche-re Dar-stel-lun-gen (Abb.[]14[]) wa-ren 
-auf dem Test-Smartphone
- []
-
-<soldierbackground.png, id=438, 515.67656pt x 339.51843pt>
+<soldierbackground.png, id=551, 515.67656pt x 339.51843pt>
 File: soldierbackground.png Graphic file (type png)
 
 <use soldierbackground.png>
-Package pdftex.def Info: soldierbackground.png used on input line 272.
+Package pdftex.def Info: soldierbackground.png used on input line 291.
 (pdftex.def)             Requested size: 369.88582pt x 243.5361pt.
 
-Overfull \hbox (9.88582pt too wide) in paragraph at lines 272--273
+Overfull \hbox (9.88582pt too wide) in paragraph at lines 291--292
  [][] 
  []
 
-[35 <D:/test/cgBA_Latex/soldier.png>]
-<assachibi.jpg, id=447, 1003.75pt x 1003.75pt>
-File: assachibi.jpg Graphic file (type jpg)
- <use assachibi.jpg>
-Package pdftex.def Info: assachibi.jpg used on input line 283.
-(pdftex.def)             Requested size: 142.26378pt x 142.25475pt.
-
-<egychibi.jpg, id=448, 1003.75pt x 1003.75pt>
-File: egychibi.jpg Graphic file (type jpg)
- <use egychibi.jpg>
-Package pdftex.def Info: egychibi.jpg used on input line 285.
-(pdftex.def)             Requested size: 142.26378pt x 142.25475pt.
-
-Overfull \hbox (13.40123pt too wide) in paragraph at lines 276--288
-\T1/ppl/m/n/10.95 (Abb.[]16[]) wa-ren stär-ker über-zeich-net und an den so-ge-
-nann-te Chibi-Zeichenstil
+[43 <D:/test/cgBA_Latex/soldier.png>]
+Overfull \hbox (12.81079pt too wide) in paragraph at lines 298--301
+\T1/ppl/m/n/10.95 als zu-fäl-li-gen Kämp-fen lag, ent-schie-den wir uns bei dem
+ Auf-bau des Schlacht-
  []
 
-[36 <D:/test/cgBA_Latex/soldierbackground.png>] [37]
-<viking.jpg, id=458, 501.875pt x 501.875pt>
+
+Overfull \hbox (9.29578pt too wide) in paragraph at lines 298--301
+\T1/ppl/m/n/10.95 der meis-ten Smart-pho-nes bes-ser ent-spricht, zum an-de-ren
+ die op-tisch schlech-
+ []
+
+[44 <D:/test/cgBA_Latex/soldierbackground.png>] [45]
+<assachibi.jpg, id=573, 1003.75pt x 1003.75pt>
+File: assachibi.jpg Graphic file (type jpg)
+ <use assachibi.jpg>
+Package pdftex.def Info: assachibi.jpg used on input line 305.
+(pdftex.def)             Requested size: 180.0pt x 179.9933pt.
+
+<egychibi.jpg, id=574, 1003.75pt x 1003.75pt>
+File: egychibi.jpg Graphic file (type jpg)
+ <use egychibi.jpg>
+Package pdftex.def Info: egychibi.jpg used on input line 309.
+(pdftex.def)             Requested size: 180.0pt x 179.9933pt.
+ [46 <D:/test/cgBA_Latex/assachibi.jpg> <D:/test/cgBA_Latex/egychibi.jpg>]
+<viking.jpg, id=580, 501.875pt x 501.875pt>
 File: viking.jpg Graphic file (type jpg)
  <use viking.jpg>
-Package pdftex.def Info: viking.jpg used on input line 292.
+Package pdftex.def Info: viking.jpg used on input line 317.
 (pdftex.def)             Requested size: 227.62596pt x 227.62204pt.
-
-<vikingwallpaper.jpg, id=459, 2569.6pt x 1445.4pt>
-File: vikingwallpaper.jpg Graphic file (type jpg)
- <use vikingwallpaper.jpg>
-Package pdftex.def Info: vikingwallpaper.jpg used on input line 300.
-(pdftex.def)             Requested size: 128.0374pt x 72.00957pt.
-
-<vikingwallpaper2.jpg, id=460, 1371.1225pt x 770.88pt>
-File: vikingwallpaper2.jpg Graphic file (type jpg)
-
-<use vikingwallpaper2.jpg>
-Package pdftex.def Info: vikingwallpaper2.jpg used on input line 302.
-(pdftex.def)             Requested size: 128.0374pt x 71.97575pt.
-
-<vikingwallpaper3.jpg, id=461, 593.5776pt x 722.7pt>
-File: vikingwallpaper3.jpg Graphic file (type jpg)
-
-<use vikingwallpaper3.jpg>
-Package pdftex.def Info: vikingwallpaper3.jpg used on input line 304.
-(pdftex.def)             Requested size: 85.35826pt x 103.92316pt.
- [38 <D:/test/cgBA_Latex/assachibi.jpg> <D:/test/cgBA_Latex/egychibi.jpg> <D:/t
-est/cgBA_Latex/viking.jpg>] [39 <D:/test/cgBA_Latex/vikingwallpaper.jpg> <D:/te
-st/cgBA_Latex/vikingwallpaper2.jpg> <D:/test/cgBA_Latex/vikingwallpaper3.jpg>] 
-[40] <morningstar.jpg, id=478, 401.5pt x 401.5pt>
+ [47 <D:/test/cgBA_Latex/viking.jpg>] [48] [49] <morningstar.jpg, id=598, 401.5
+pt x 401.5pt>
 File: morningstar.jpg Graphic file (type jpg)
 
 <use morningstar.jpg>
-Package pdftex.def Info: morningstar.jpg used on input line 315.
-(pdftex.def)             Requested size: 142.26698pt x 142.26378pt.
- [41 <D:/test/cgBA_Latex/morningstar.jpg>]
-<berserker.jpg, id=484, 401.5pt x 401.5pt>
+Package pdftex.def Info: morningstar.jpg used on input line 331.
+(pdftex.def)             Requested size: 227.62596pt x 227.62204pt.
+
+Overfull \hbox (2.58669pt too wide) in paragraph at lines 335--336
+\T1/ppl/m/n/10.95 wur-de mit einen Mor-gens-tern aus-ge-stat-tet. Mor-gens-ter-
+ne sind stump-fe spe-
+ []
+
+[50 <D:/test/cgBA_Latex/morningstar.jpg>]
+<berserker.jpg, id=604, 401.5pt x 401.5pt>
 File: berserker.jpg Graphic file (type jpg)
  <use berserker.jpg>
-Package pdftex.def Info: berserker.jpg used on input line 323.
+Package pdftex.def Info: berserker.jpg used on input line 339.
 (pdftex.def)             Requested size: 156.49246pt x 156.49014pt.
- [42 <D:/test/cgBA_Latex/berserker.jpg>] <priestess.jpg, id=490, 501.875pt x 50
-1.875pt>
-File: priestess.jpg Graphic file (type jpg)
 
-<use priestess.jpg>
-Package pdftex.def Info: priestess.jpg used on input line 333.
+Overfull \hbox (16.42316pt too wide) in paragraph at lines 344--345
+\T1/ppl/m/n/10.95 dern auch in eher his-to-risch an-ge-hauch-ten Ti-teln wie de
+m be-kann-ten Strategie-
+ []
+
+
+Overfull \hbox (8.4846pt too wide) in paragraph at lines 344--345
+\T1/ppl/m/n/10.95 Spiel Age of Em-pi-res 2 und in meh-re-ren Tei-len der hoch-g
+e-lob-ten Civilization-
+ []
+
+[51 <D:/test/cgBA_Latex/berserker.jpg>]
+<priestess.jpg, id=611, 501.875pt x 501.875pt>
+File: priestess.jpg Graphic file (type jpg)
+ <use priestess.jpg>
+Package pdftex.def Info: priestess.jpg used on input line 348.
 (pdftex.def)             Requested size: 170.71947pt x 170.71652pt.
- <ra.jpg, id=491, 2031.59pt x 2441.12pt>
+
+<ra.jpg, id=612, 2031.59pt x 2441.12pt>
 File: ra.jpg Graphic file (type jpg)
  <use ra.jpg>
-Package pdftex.def Info: ra.jpg used on input line 345.
+Package pdftex.def Info: ra.jpg used on input line 361.
 (pdftex.def)             Requested size: 118.38719pt x 142.26378pt.
 
-Overfull \hbox (11.01854pt too wide) in paragraph at lines 338--348
-\T1/ppl/m/n/10.95 den op-ti-scher Ab-wechs-lung. Die Idee war ur-sprüng-lich, e
-inen Falken-Krieger
+Overfull \hbox (9.98787pt too wide) in paragraph at lines 353--364
+\T1/ppl/m/n/10.95 nen wa-ren, ins-be-son-de-re Mus-ku-la-tur, Mas-ken, be-weg-l
+i-cher Stoff, einen Pries-
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 338--348
-
- []
-
-[43 <D:/test/cgBA_Latex/priestess.jpg>] [44] [45 <D:/test/cgBA_Latex/ra.jpg>]
-[46] <jackal.jpg, id=511, 501.875pt x 501.875pt>
+[52 <D:/test/cgBA_Latex/priestess.jpg>] [53] [54] [55 <D:/test/cgBA_Latex/ra.jp
+g>] [56] <jackal.jpg, id=635, 501.875pt x 501.875pt>
 File: jackal.jpg Graphic file (type jpg)
  <use jackal.jpg>
-Package pdftex.def Info: jackal.jpg used on input line 354.
+Package pdftex.def Info: jackal.jpg used on input line 371.
 (pdftex.def)             Requested size: 199.16888pt x 199.16928pt.
 
-<jackalalpha.jpg, id=512, 351.3125pt x 351.3125pt>
+<jackalalpha.jpg, id=636, 351.3125pt x 351.3125pt>
 File: jackalalpha.jpg Graphic file (type jpg)
  <use jackalalpha.jpg>
-Package pdftex.def Info: jackalalpha.jpg used on input line 362.
+Package pdftex.def Info: jackalalpha.jpg used on input line 379.
 (pdftex.def)             Requested size: 142.2647pt x 142.26378pt.
 
-[47 <D:/test/cgBA_Latex/jackal.jpg>]
-Overfull \hbox (1.16028pt too wide) in paragraph at lines 367--371
-\T1/ppl/m/n/10.95 Um die Fi-gur in-ter-essan-ter aus-se-hen zu las-sen, wur-de 
-der Kopf ge-gen einen
- []
-
-
-Overfull \hbox (8.94856pt too wide) in paragraph at lines 367--371
-\T1/ppl/m/n/10.95 ori-gi-na-len Ent-wurf ge-fehlt hat-te. Nach-dem meh-re-re Sk
-iz-zen mit un-ter-schied-
- []
-
-[48 <D:/test/cgBA_Latex/jackalalpha.jpg>] [49]
-<move1.jpg, id=527, 2007.5pt x 1003.75pt>
-File: move1.jpg Graphic file (type jpg)
- <use move1.jpg>
-Package pdftex.def Info: move1.jpg used on input line 377.
+[57 <D:/test/cgBA_Latex/jackal.jpg> <D:/test/cgBA_Latex/jackalalpha.jpg>]
+[58] [59] <move.jpg, id=652, 2007.5pt x 1003.75pt>
+File: move.jpg Graphic file (type jpg)
+ <use move.jpg>
+Package pdftex.def Info: move.jpg used on input line 396.
 (pdftex.def)             Requested size: 284.50949pt x 142.26378pt.
 
-<animator.jpg, id=528, 807.7678pt x 355.3275pt>
+Underfull \hbox (badness 10000) in paragraph at lines 391--398
+
+ []
+
+<animator.jpg, id=653, 807.7678pt x 355.3275pt>
 File: animator.jpg Graphic file (type jpg)
  <use animator.jpg>
-Package pdftex.def Info: animator.jpg used on input line 383.
+Package pdftex.def Info: animator.jpg used on input line 402.
 (pdftex.def)             Requested size: 323.40953pt x 142.26378pt.
- [50 <D:/test/cgBA_Latex/move1.jpg>] <attack1.jpg, id=535, 2509.375pt x 1003.75
-pt>
-File: attack1.jpg Graphic file (type jpg)
+ [60 <D:/test/cgBA_Latex/move.jpg>] <attack.jpg, id=659, 2509.375pt x 1003.75pt
+>
+File: attack.jpg Graphic file (type jpg)
 
-<use attack1.jpg>
-Package pdftex.def Info: attack1.jpg used on input line 388.
+<use attack.jpg>
+Package pdftex.def Info: attack.jpg used on input line 407.
 (pdftex.def)             Requested size: 355.63687pt x 142.26378pt.
- [51 <D:/test/cgBA_Latex/animator.jpg>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 393.
- [52 <D:/test/cgBA_Latex/attack1.jpg>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 393.
+ [61 <D:/test/cgBA_Latex/animator.jpg>]
+Overfull \hbox (2.55046pt too wide) in paragraph at lines 412--413
+\T1/ppl/m/n/10.95 exis-tie-ren-den Han-dy-spie-len und PC-/Konsolenpielen, ein 
+Aug-men-ted Rea-
+ []
+
+[62 <D:/test/cgBA_Latex/attack.jpg>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 419.
+
+Overfull \hbox (22.76302pt too wide) in paragraph at lines 414--419
+\T1/ppl/m/n/10.95 Für die ex-trem er-fah-re-nen Spie-ler hin-ge-gen wä-ren Schw
+ierigkeits-Einstellungen
+ []
+
+
+Overfull \hbox (1.67789pt too wide) in paragraph at lines 414--419
+\T1/ppl/m/n/10.95 für die Kämp-fe ei-ne Grund-Schwierigkeit aus-wähl-bar zu ma-
+chen. Fest steht
+ []
+
+[63] [64]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 419.
  (D:\test\cgBA_Latex\ba2.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 393.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 393.
-Package rerunfilecheck Info: File `ba2.out' has not changed.
-(rerunfilecheck)             Checksum: AFDEF2D20A46BCEFBC03A3ADDDCCCC4E;3075.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 393.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 419.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 419.
+
+
+Package rerunfilecheck Warning: File `ba2.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `ba2.out':
+(rerunfilecheck)             Before: B496B42FDEADC090412376962A1A7402;3302
+(rerunfilecheck)             After:  227C84980ED136F8FAE459AE5EDCB079;3301.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 419.
  ) 
 Here is how much of TeX's memory you used:
- 8301 strings out of 493921
- 118394 string characters out of 3150484
- 203110 words of memory out of 3000000
- 11294 multiletter control sequences out of 15000+200000
+ 8323 strings out of 493921
+ 118387 string characters out of 3150484
+ 206223 words of memory out of 3000000
+ 11285 multiletter control sequences out of 15000+200000
  31961 words of font info for 70 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 43i,12n,40p,1561b,456s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 43i,12n,40p,1848b,474s stack positions out of 5000i,500n,10000p,200000b,50000s
 {D:/Programme/MikTex/fonts/enc/dvips/fontname/8r.enc}<D:/Programme/MikTex/fon
 ts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Programme/MikTex/fonts/type1/public/
 amsfonts/symbols/msam10.pfb><D:/Programme/MikTex/fonts/type1/urw/courier/ucrr8a
 .pfb><D:/Programme/MikTex/fonts/type1/urw/palatino/uplb8a.pfb><D:/Programme/Mik
 Tex/fonts/type1/urw/palatino/uplr8a.pfb>
-Output written on ba2.pdf (57 pages, 11325225 bytes).
+Output written on ba2.pdf (68 pages, 8359139 bytes).
 PDF statistics:
- 595 PDF objects out of 1000 (max. 8388607)
- 131 named destinations out of 1000 (max. 500000)
- 500 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 735 PDF objects out of 1000 (max. 8388607)
+ 165 named destinations out of 1000 (max. 500000)
+ 517 words of extra memory for PDF output out of 10000 (max. 10000000)
 
